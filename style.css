@@ -1,6 +1,10 @@
 body{
     background-color: #0F3739;
 }
+.upper_header{
+    width: 95%;
+    margin:20px 2.5%;
+}
 .upper_block{
     position: relative;
     display:  flex;
@@ -9,7 +13,6 @@ body{
     justify-items: center;
 }
 .select_country{
-    margin: 29px 68px 0;
     color: #fff;
     font-weight: 400;
     font-size: 20px;
@@ -21,5 +24,12 @@ body{
     height: 2px;
 }
 .logo{
-    margin: 20px 13px 0 0;
+    display: flex;
+}
+.logo>img{
+    margin: 0 14px 0 0;
+}
+.upper_header > img{
+    width: 100%;
+    display: flex;
 }
