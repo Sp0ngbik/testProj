@@ -1,35 +1,94 @@
-body{
-    background-color: #0F3739;
+body {
+  width: 95%;
+  background-color: #0f3739;
 }
-.upper_header{
-    width: 95%;
-    margin:20px 2.5%;
+.upper_header {
+  position: relative;
+  width: 70%;
+  margin: 20px auto 0;
 }
-.upper_block{
-    position: relative;
-    display:  flex;
-    justify-content: space-between;
-    align-items: center;
-    justify-items: center;
+.upper_block {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  justify-items: center;
+  margin: 0 0 25px;
 }
-.select_country{
-    color: #fff;
-    font-weight: 400;
-    font-size: 20px;
+.select_country {
+  font-family: "Raleway", sans-serif;
+  color: #fff;
+  font-weight: 200;
+  font-size: 20px;
+  text-decoration: none;
 }
-.line_select{
-    content: '';
-    color: #fff;
-    width: 28.5px;
-    height: 2px;
+.line_select {
+  margin: 0 35px 10px 0;
 }
-.logo{
-    display: flex;
+.line_select::before {
+  position: absolute;
+  content: "";
+
+  vertical-align: middle;
+  width: 30px;
+  height: 2px;
+  background-color: #e0e0e0;
 }
-.logo>img{
-    margin: 0 14px 0 0;
+.line_select::after {
+  margin: 10px 0 0 0px;
+  position: absolute;
+  content: "";
+  vertical-align: middle;
+  width: 30px;
+  height: 2px;
+  background-color: #e0e0e0;
 }
-.upper_header > img{
-    width: 100%;
-    display: flex;
+.logo {
+  position: relative;
+
+  height: 15%;
+  display: flex;
+}
+.logo > img {
+  margin: 0 14px 0 0;
+}
+.upper_header > img {
+  width: 100%;
+  display: flex;
+}
+.nav_block > img {
+  width: 100%;
+}
+.nav_links {
+  display: flex;
+}
+.nav_links a {
+  margin: 30px auto;
+  justify-content: space-between;
+  text-decoration: none;
+  font-size: 1.2vw;
+  text-align: center;
+  font-family: "Raleway", sans-serif;
+  font-weight: 400;
+  color: #fff;
+  opacity: 50%;
+}
+.nav_links a:hover {
+  opacity: 100%;
+  font-weight: 700;
+}
+.coffe_bar > h1 {
+  letter-spacing: 8%;
+  font-family: "Raleway", sans-serif;
+  font-size: 4vw;
+  font-weight: 800;
+  margin: 1vw 0 0 0;
+  color: #fff;
+  text-align: center;
+}
+.coffe_bar > h3 {
+  font-family: "Raleway", sans-serif;
+  font-weight: 600;
+  color: #fff;
+  font-size: 32px;
+  text-align: center;
 }
