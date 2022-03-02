@@ -1,10 +1,15 @@
+*{
+    margin: 0;
+    padding: 0;
+  background-color: #0f3739;
+
+}
 body {
   width: 95%;
-  background-color: #0f3739;
 }
 .upper_header {
   position: relative;
-  width: 70%;
+  width: 55%;
   margin: 20px auto 0;
 }
 .upper_block {
@@ -14,12 +19,17 @@ body {
   justify-items: center;
   margin: 0 0 25px;
 }
-.select_country {
+.select_country a{
+    margin: 0 2px 0 0;
   font-family: "Raleway", sans-serif;
   color: #fff;
   font-weight: 200;
   font-size: 20px;
   text-decoration: none;
+}
+.select_country > img{ 
+    width: 15px;
+    
 }
 .line_select {
   margin: 0 35px 10px 0;
@@ -27,7 +37,6 @@ body {
 .line_select::before {
   position: absolute;
   content: "";
-
   vertical-align: middle;
   width: 30px;
   height: 2px;
@@ -65,7 +74,7 @@ body {
   margin: 30px auto;
   justify-content: space-between;
   text-decoration: none;
-  font-size: 1.2vw;
+  font-size: 1vw;
   text-align: center;
   font-family: "Raleway", sans-serif;
   font-weight: 400;
@@ -81,14 +90,60 @@ body {
   font-family: "Raleway", sans-serif;
   font-size: 4vw;
   font-weight: 800;
-  margin: 1vw 0 0 0;
+  margin: 3vw 0 0 0;
   color: #fff;
   text-align: center;
 }
-.coffe_bar > h3 {
+.coffe_bar > div {
+  display: flex;
   font-family: "Raleway", sans-serif;
   font-weight: 600;
   color: #fff;
   font-size: 32px;
-  text-align: center;
+  justify-content: center;
+  align-items: center;
+  margin: 20px 0 55px 0;
+}
+.coffe_bar > div > h3{
+    margin-right: 10px;
+    font-size: 1.5vw;
+}
+.coffe_bar > div > img{
+    width: 1vw;
+}
+.adress_map{
+    text-align: center;
+    border: 2px #165659 solid ;
+    border-radius: 12px;
+    box-sizing: border-box;
+    height: 60px;
+
+}
+.adress_map h2{
+    font-family: "Raleway", sans-serif;
+    justify-content: space-around;
+    font-weight: 500;
+    display: flex;
+    width: 100%;
+    align-items: center;
+    font-size: 18px;
+}
+.adress{
+    background: #165659;
+    border-radius: 8px;
+    margin: 0 3px 0;
+    height: 90%;
+}
+.our_adress{
+    position: relative;
+    text-align: center;
+    width: 55%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 50px;
+}
+.our_adress > a > img{
+    border-radius: 15px;
+    width: 100%;
 }
