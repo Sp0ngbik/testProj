@@ -3,10 +3,10 @@
   padding: 0;
 }
 body {
-  background-color: #082627;
+  background-color: #0f3739;
   font-family: "Raleway", sans-serif;
 }
-.upper_header {
+.header {
   position: relative;
   width: 70%;
   margin: 20px auto 0;
@@ -153,6 +153,7 @@ body {
 .our_adress_links {
   width: 93.2%;
   position: absolute;
+  border-radius: 12px;
   background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #000000 100%);
   opacity: 0.9;
   color: white;
@@ -188,4 +189,204 @@ body {
 .deserts:hover {
   padding: 0 0 25px;
   border-bottom: 3px solid #fff;
+}
+.button_more > a {
+  display: flex;
+  margin: 50px auto;
+  border-radius: 12px;
+  justify-content: center;
+  width: 21.5%;
+  padding: 1% 0;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 600;
+  text-decoration: none;
+  border: 2px solid #165659;
+}
+.confectionery {
+  margin: 0 auto;
+  width: 70%;
+}
+.confectionery > h1 {
+  letter-spacing: 8%;
+  font-size: 4vw;
+  font-weight: 800;
+  margin: 8vw 0 0 0;
+  color: #fff;
+  text-align: center;
+}
+.image_block {
+  width: 100%;
+  position: relative;
+}
+.image_block > img {
+  width: 100%;
+  margin: 29px 0 0 0;
+  border-radius: 12px;
+}
+.image_shadow {
+  width: 93.2%;
+  position: absolute;
+  border-radius: 12px;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #000000 100%);
+  opacity: 0.9;
+  color: white;
+  font-size: 1vw;
+  z-index: 1;
+  border-radius: 12px;
+  font-weight: 600;
+  padding: 70px 0 10% 7%;
+}
+.image_block {
+  display: flex;
+  align-items: flex-end;
+}
+
+.text_about {
+  margin: 52px 0 0 0;
+  font-size: 1vw;
+  font-weight: 400;
+  color: #fff;
+}
+.order_link {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  margin: 62px 0 0 0;
+}
+.site {
+  display: flex;
+  padding: 3% 0;
+  color: #fff;
+  font-weight: 400;
+  font-size: 0.9vw;
+}
+.link {
+  text-decoration: none;
+  color: #fff;
+  font-weight: 700;
+}
+.order > a {
+  display: flex;
+  width: 50%;
+  margin: 0 0 0 50%;
+  border-radius: 12px;
+  justify-content: center;
+  padding: 3% 0;
+  color: #fff;
+  font-size: 0.8vw;
+  font-weight: 600;
+  text-decoration: none;
+  border: 2px solid #165659;
+}
+
+.mobile_app {
+  width: 100%;
+  margin: 0 auto;
+  background-color: #0e3032;
+}
+.mobile_app > h1 {
+  letter-spacing: 8%;
+  font-size: 4vw;
+  font-weight: 800;
+  margin: 8vw 0 0 0;
+  color: #fff;
+  letter-spacing: 10px;
+  text-align: center;
+}
+.about_app {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  justify-content: center;
+  justify-items: center;
+  margin: 70px 18% 0;
+}
+.about span {
+  font-weight: 700;
+}
+.about {
+  margin: 10% 0;
+  align-content: center;
+}
+.about > h1 {
+  font-size: 1.1vw;
+  font-weight: 500;
+  color: #fff;
+}
+.about > li {
+  font-size: 0.8vw;
+  color: #fff;
+  margin: 20px 0;
+}
+.app_store_logo img {
+  margin: 19px 32px 0 0;
+}
+.button_loyalty {
+  display: flex;
+  justify-content: center;
+  margin: 42px 0 0 0;
+}
+.button_loyalty > a {
+  width: 100%;
+  border-radius: 12px;
+  padding: 5% 0;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 600;
+  text-align: center;
+  text-decoration: none;
+  border: 2px solid #165659;
+}
+.footer {
+  background-color: #082627;
+  padding: 50px 0;
+  width: 100%;
+}
+.footer_upper_text {
+  display: grid;
+  color: #fff;
+  font-size: 18px;
+  text-align: center;
+  justify-content: center;
+  grid-template-columns: repeat(3, 1fr);
+}
+.social_media_icons img {
+  margin: 0 20px;
+}
+.politics {
+  grid-column: 2/4;
+  padding: 30px 0 0 10%;
+  text-align: center;
+}
+.politics span {
+  padding: 0 0 0 20px;
+}
+.dots span {
+  margin: 0 60px 0 0;
+}
+.politics > span {
+  opacity: 60%;
+  margin: 0 22px 0 0;
+}
+.dots span::before {
+  margin: 10px 0px 0 -35px;
+  position: absolute;
+  content: "";
+  vertical-align: middle;
+  width: 6px;
+  border-radius: 100%;
+  height: 6px;
+  opacity: 100%;
+  background-color: #165659;
+}
+.politics > div {
+  margin: 0 40px 0 0;
+}
+.controll_prog {
+  padding: 30px 9% 0 0;
+}
+.controll_prog {
+  opacity: 60%;
+}
+.controll_prog > span {
+  font-weight: 600;
 }
