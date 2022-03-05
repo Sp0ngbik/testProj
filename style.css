@@ -8,9 +8,10 @@ body {
 }
 .header {
   position: relative;
-  width: 70%;
+  padding: 0 15%;
   margin: 20px auto 0;
 }
+
 .upper_block {
   display: flex;
   justify-content: space-between;
@@ -21,7 +22,7 @@ body {
 .select_country a {
   margin: 0 2px 0 0;
   color: #fff;
-  font-weight: 200;
+  font-weight: 400;
   font-size: 20px;
   text-decoration: none;
 }
@@ -63,20 +64,22 @@ body {
 }
 .nav_block > img {
   width: 100%;
+  border-radius: 12px;
 }
 .nav_links {
   overflow-x: auto;
-
   display: flex;
+  padding: 0 220px;
 }
 .nav_links a {
   margin: 30px auto;
   justify-content: space-between;
   text-decoration: none;
-  font-size: 1vw;
+  font-size: 20px;
   text-align: center;
   font-weight: 400;
   color: #fff;
+  white-space: nowrap;
   opacity: 50%;
 }
 .nav_links a:hover {
@@ -98,7 +101,7 @@ body {
   font-size: 32px;
   justify-content: center;
   align-items: center;
-  margin: 20px 0 55px 0;
+  margin: 20px 0 55px;
 }
 .coffe_bar > div > h3 {
   margin-right: 10px;
@@ -158,7 +161,7 @@ body {
   background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #000000 100%);
   opacity: 0.9;
   color: white;
-  font-size: 20px;
+  font-size: 22px;
   z-index: 1;
   font-weight: 600;
   padding: 70px 0 10% 7%;
@@ -166,7 +169,7 @@ body {
 
 .our_adress_links > div {
   margin: 5px 0 0 0;
-  font-size: 20px;
+  font-size: 18px;
   font-weight: 400;
 }
 .our_adress_arrow {
@@ -180,14 +183,16 @@ body {
   grid-template-columns: repeat(4, 1fr);
   width: 70%;
   text-align: center;
-  font-size: 22px;
+  font-size: 26px;
   color: #fff;
   margin: 80px auto;
+  white-space: nowrap;
 }
 .food_nav_bar > div {
   padding: 0 0 25px;
   border-bottom: 3px solid #165659;
 }
+
 .deserts:hover {
   padding: 0 0 25px;
   border-bottom: 3px solid #fff;
@@ -200,7 +205,7 @@ body {
   width: 21.5%;
   padding: 20px 0;
   color: #fff;
-  font-size: 16px;
+  font-size: 18px;
   font-weight: 600;
   text-decoration: none;
   border: 2px solid #165659;
@@ -268,10 +273,10 @@ body {
 }
 .order > a {
   display: flex;
-  width: 50%;
   margin: 0 0 0 49.5%;
   border-radius: 12px;
   justify-content: center;
+  width: 240px;
   padding: 3% 0;
   color: #fff;
   font-size: 0.8vw;
@@ -310,7 +315,7 @@ body {
   align-content: center;
 }
 .about > h1 {
-  font-size: 1.1vw;
+  font-size: 20px;
   font-weight: 500;
   color: #fff;
 }
@@ -319,7 +324,8 @@ body {
   color: #fff;
   margin: 20px 0;
 }
-.app_store_logo img {
+
+.google_app_store {
   margin: 19px 32px 0 0;
 }
 .button_loyalty {
@@ -332,7 +338,7 @@ body {
   border-radius: 12px;
   padding: 5% 0;
   color: #fff;
-  font-size: 16px;
+  font-size: 18px;
   font-weight: 600;
   text-align: center;
   text-decoration: none;
@@ -389,68 +395,100 @@ body {
 }
 .controll_prog {
   padding: 30px 9% 0 0;
-}
-.controll_prog {
   opacity: 60%;
 }
+
 .controll_prog > span {
   font-weight: 600;
 }
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 1280px) {
   .logo > img {
     width: 150px;
   }
+  .nav_block > img {
+    border-radius: 0;
+  }
+  .upper_block {
+    margin: 14px 16px;
+  }
+  .header {
+    padding: 0;
+    width: 100%;
+  }
+
   .select_country {
     display: flex;
   }
+  .nav_links a {
+    display: none;
+    width: 100%;
+    text-align: center;
+    margin: 23px 15px 11px 0;
+  }
+
   .select_country > img {
     width: 10px;
   }
+  .coffe_bar > div {
+    margin: 30px 5% 15px;
+  }
   .coffe_bar > h1 {
     font-size: 12vw;
+    margin: 60px 0 37px 0;
   }
   .coffe_bar img {
     margin: 2% 0 0 2%;
   }
   .our_adress_and_food {
     grid-template-columns: 1fr;
+    width: 90%;
+    grid-gap: 20px;
   }
   .food_nav_bar {
     width: 100%;
+    overflow-x: auto;
+    margin: 50px 0 16px 0;
   }
 
+  .food_nav_bar > div {
+    padding: 0 25px 18px 25px;
+    margin: 0 0 20px 0;
+  }
   .button_more > a {
-    width: 380px;
+    margin: 5% auto 50px;
+    width: 90%;
   }
   .confectionery {
-    width: 100%;
+    width: 99%;
   }
   .confectionery > h1 {
     font-size: 8vw;
   }
   .site {
     display: grid;
-    grid-template-rows: 1fr 1fr 1fr;
-  }
-  .site {
+    width: 70%;
+    grid-template-rows: 1fr 0.2fr;
     grid-column: 1/3;
+    margin: 20px 0 0 0;
   }
-  .order > a {
-    grid-row: 2/2;
-  }
-  .text_about {
-    margin: 0 20px;
-  }
-  .order_link {
-    margin: 0 20px;
+  .order {
+    grid-column: 1/3;
+    margin: 0;
   }
   .order > a {
     display: flex;
-    margin: 0 auto;
-    border-radius: 12px;
-    justify-content: center;
-    width: 380px;
+    margin: 15px auto;
+    padding: 15px 5%;
     font-size: 18px;
+    width: 90%;
+    justify-content: center;
+    grid-row: 2/2;
+  }
+  .text_about {
+    margin: 27px 20px 0 20px;
+  }
+  .order_link {
+    margin: 0 20px;
   }
   .mobile_app > h1 {
     padding: 50px 0 0 0;
@@ -458,6 +496,7 @@ body {
   }
   .mobile_app_image {
     grid-row: 1/1;
+    width: 100%;
   }
   .about h1 {
     font-size: 20px;
@@ -468,10 +507,14 @@ body {
   }
   .about_app {
     grid-template-columns: 1fr;
+    margin: 70px 5% 0;
   }
+  .app_store_logo {
+    width: 100%;
+  }
+
   .politics span {
     display: flex;
-    padding: 0;
     flex-direction: column-reverse;
   }
   .politics > span {
@@ -479,27 +522,35 @@ body {
     margin: 20px 0;
     flex-direction: column-reverse;
   }
+  .politics span {
+    padding: 0;
+  }
   .politics {
     margin: 0 auto;
-    width: 350px;
+    width: 300px;
+    white-space: nowrap;
     text-align: center;
     grid-column: 2/3;
     grid-row: 4/4;
   }
   .paragraph_food {
-    width: 120%;
+    width: 100%;
   }
+
   .footer_block {
+    grid-template-columns: repeat(3, 0.4fr);
     grid-template-rows: 0.3fr 0.3fr 0.3fr 0.5fr;
   }
   .dots span::before {
     margin: 0;
     opacity: 0%;
   }
-
+  .dots {
+    align-content: center;
+  }
   .dots > div {
     text-align: center;
-    margin: 0 50px 0 0;
+    margin: 0 50px 0 -15px;
   }
   .controll_prog {
     padding: 0;
@@ -519,7 +570,7 @@ body {
   }
   .social_media_icons {
     grid-row: 3/4;
-    grid-column: 2/3;
+    grid-column: 1/4;
   }
   .trademark {
     grid-row: 1/2;
