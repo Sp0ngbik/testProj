@@ -254,6 +254,9 @@ body {
   font-size: 18px;
   color: #fff;
 }
+.our_team {
+  display: none;
+}
 .order_link {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -486,6 +489,15 @@ body {
   }
   .text_about {
     margin: 27px 20px 0 20px;
+  }
+  .our_team {
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    font-size: 20px;
+    margin: 22px 0;
+    color: #fff;
+    font-weight: 700;
   }
   .order_link {
     margin: 0 20px;
