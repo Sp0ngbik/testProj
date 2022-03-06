@@ -11,7 +11,9 @@ body {
   padding: 0 15%;
   margin: 20px auto 0;
 }
-
+.mob_ver {
+  display: none;
+}
 .upper_block {
   display: flex;
   justify-content: space-between;
@@ -404,7 +406,7 @@ body {
 .controll_prog > span {
   font-weight: 600;
 }
-@media screen and (max-width: 1280px) {
+@media screen and (max-width: 950px) {
   .logo > img {
     width: 150px;
   }
@@ -428,7 +430,18 @@ body {
     text-align: center;
     margin: 23px 15px 11px 0;
   }
-
+  .nav_links {
+    padding: 0;
+  }
+  .mob_ver {
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    font-size: 20px;
+    margin: 22px 0;
+    color: #fff;
+    font-weight: 700;
+  }
   .select_country > img {
     width: 10px;
   }
@@ -499,6 +512,7 @@ body {
     color: #fff;
     font-weight: 700;
   }
+
   .order_link {
     margin: 0 20px;
   }
