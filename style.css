@@ -195,7 +195,8 @@ body {
   border-bottom: 3px solid #165659;
 }
 
-.deserts:hover {
+.food_nav_bar div:hover {
+  cursor: pointer;
   padding: 0 0 25px;
   border-bottom: 3px solid #fff;
 }
