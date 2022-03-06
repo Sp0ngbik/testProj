@@ -8,7 +8,7 @@ body {
 }
 .header {
   position: relative;
-  padding: 0 15%;
+  width: 70%;
   margin: 20px auto 0;
 }
 .mob_ver {
@@ -71,7 +71,7 @@ body {
 .nav_links {
   overflow-x: auto;
   display: flex;
-  padding: 0 220px;
+  padding: 0 95px;
 }
 .nav_links a {
   margin: 30px auto;
@@ -191,7 +191,7 @@ body {
   white-space: nowrap;
 }
 .food_nav_bar > div {
-  padding: 0 0 25px;
+  padding: 0 0 38px;
   border-bottom: 3px solid #165659;
 }
 
@@ -230,7 +230,7 @@ body {
 }
 .image_block > img {
   width: 100%;
-  margin: 29px 0 0 0;
+  margin: 64px 0 0 0;
   border-radius: 12px;
 }
 .image_shadow {
@@ -278,11 +278,11 @@ body {
 }
 .order > a {
   display: flex;
-  margin: 0 0 0 49.5%;
+  margin: 0 0 0 52.5%;
   border-radius: 12px;
   justify-content: center;
-  width: 240px;
-  padding: 3% 0;
+  width: 210px;
+  padding: 2% 51px;
   color: #fff;
   font-size: 0.8vw;
   font-weight: 600;
@@ -294,12 +294,12 @@ body {
   width: 100%;
   margin: 0 auto;
   background-color: #0e3032;
+  padding: 103px 0 0 0;
 }
 .mobile_app > h1 {
   letter-spacing: 8%;
   font-size: 4vw;
   font-weight: 800;
-  margin: 8vw 0 0 0;
   color: #fff;
   letter-spacing: 10px;
   text-align: center;
@@ -311,6 +311,7 @@ body {
   justify-content: center;
   justify-items: center;
   margin: 70px 18% 0;
+  padding: 0 0 131.79px 0;
 }
 .about span {
   font-weight: 700;
@@ -406,7 +407,54 @@ body {
 .controll_prog > span {
   font-weight: 600;
 }
-@media screen and (max-width: 950px) {
+@media screen and (max-width: 1280px) {
+  .header {
+    width: 90%;
+  }
+  .nav_links a {
+    justify-content: space-between;
+    text-decoration: none;
+    text-align: center;
+    font-weight: 400;
+    color: #fff;
+    margin: 30px 9px;
+    white-space: nowrap;
+    opacity: 50%;
+  }
+  .button_more > a {
+    width: 27%;
+  }
+  .nav_links {
+    justify-content: space-around;
+    overflow-x: auto;
+    display: flex;
+    padding: 0;
+  }
+  .our_adress_and_food {
+    width: 90%;
+  }
+  .order > a {
+    font-size: 16px;
+    margin: 0px 0 0 45.5%;
+  }
+  .food_nav_bar {
+    width: 90%;
+  }
+  .confectionery {
+    width: 90%;
+  }
+  .politics {
+    white-space: nowrap;
+    padding: 30px 0 0 0;
+  }
+  .politics span {
+    padding: 0;
+  }
+  .dots span {
+    margin: 0 45px 0 0;
+  }
+}
+@media screen and (max-width: 1024px) {
   .logo > img {
     width: 150px;
   }
@@ -482,8 +530,9 @@ body {
   }
   .site {
     display: grid;
-    width: 70%;
-    grid-template-rows: 1fr 0.2fr;
+    width: 90%;
+    white-space: nowrap;
+    grid-template-rows: 1.3fr 0.2fr;
     grid-column: 1/3;
     margin: 20px 0 0 0;
   }
@@ -501,6 +550,7 @@ body {
     grid-row: 2/2;
   }
   .text_about {
+    line-height: 24.62px;
     margin: 27px 20px 0 20px;
   }
   .our_team {
@@ -575,11 +625,11 @@ body {
     align-content: center;
   }
   .dots span {
-    margin: 0 60px 8px 0;
+    margin: 0 0 8px 0;
   }
   .dots > div {
     text-align: center;
-    margin: 0 50px 0 -15px;
+    margin: 0;
   }
   .controll_prog {
     padding: 0;
