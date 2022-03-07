@@ -71,11 +71,12 @@ body {
 .nav_links {
   overflow-x: auto;
   display: flex;
-  padding: 0 95px;
+  justify-content: space-between;
+  justify-items: center;
+  padding: 0 50px;
 }
 .nav_links a {
   margin: 30px auto;
-  justify-content: space-between;
   text-decoration: none;
   font-size: 20px;
   text-align: center;
@@ -84,9 +85,9 @@ body {
   white-space: nowrap;
   opacity: 50%;
 }
+
 .nav_links a:hover {
   opacity: 100%;
-  font-weight: 700;
 }
 .coffe_bar > h1 {
   letter-spacing: 8%;
@@ -213,6 +214,9 @@ body {
   text-decoration: none;
   border: 2px solid #165659;
 }
+.button_more > a:hover {
+  background-color: #165659;
+}
 .confectionery {
   margin: 0 auto;
   width: 70%;
@@ -290,7 +294,9 @@ body {
   text-decoration: none;
   border: 2px solid #165659;
 }
-
+.order > a:hover {
+  background-color: #118181;
+}
 .mobile_app {
   width: 100%;
   margin: 0 auto;
@@ -340,6 +346,9 @@ body {
   justify-content: center;
   margin: 42px 0 0 0;
 }
+.button_loyalty :hover {
+  background-color: #165659;
+}
 .button_loyalty > a {
   width: 100%;
   border-radius: 12px;
@@ -351,6 +360,7 @@ body {
   text-decoration: none;
   border: 2px solid #165659;
 }
+
 .footer {
   background-color: #082627;
   padding: 50px 0;
@@ -367,6 +377,7 @@ body {
 .social_media_icons img {
   margin: 0 20px;
 }
+
 .politics {
   grid-column: 2/4;
   padding: 30px 0 0 10%;
@@ -386,6 +397,7 @@ body {
   display: inline;
   margin: 0 50px 0 0;
 }
+
 .dots span::before {
   margin: 10px 0px 0 -35px;
   position: absolute;
@@ -400,6 +412,7 @@ body {
 .politics > div {
   margin: 0 40px 0 0;
 }
+
 .controll_prog {
   padding: 30px 9% 0 0;
   opacity: 60%;
