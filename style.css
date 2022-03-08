@@ -130,14 +130,16 @@ body {
   font-size: 18px;
 }
 .adress {
-  background: #165659;
-  border-radius: 8px;
   margin: 0 3px 0;
   height: 90%;
 }
 .map {
   margin: 0 3px 0;
   height: 90%;
+}
+.adress_map div:hover {
+  background: #165659;
+  border-radius: 8px;
 }
 .our_adress_and_food {
   text-align: center;
