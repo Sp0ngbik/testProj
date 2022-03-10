@@ -8,7 +8,8 @@ body {
 }
 .header {
   position: relative;
-  width: 70%;
+  width: 100%;
+  max-width: 1226px;
   margin: 20px auto 0;
 }
 .mob_ver {
@@ -118,6 +119,7 @@ body {
   text-align: center;
   border: 2px #165659 solid;
   border-radius: 12px;
+  width: 70%;
   box-sizing: border-box;
   height: 60px;
 }
@@ -145,6 +147,7 @@ body {
   text-align: center;
   width: 70%;
   margin: 0 auto;
+  max-width: 1226px;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 50px;
@@ -200,7 +203,6 @@ body {
 
 .food_nav_bar div:hover {
   cursor: pointer;
-  padding: 0 0 25px;
   border-bottom: 3px solid #fff;
 }
 .button_more > a {
