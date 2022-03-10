@@ -33,10 +33,66 @@ body {
 .select_country > img {
   width: 15px;
 }
-.line_select {
+
+.sidebar {
+  height: 100%;
+  max-width: 535px;
+  min-height: 900px;
+  width: 0;
+  top: 0;
+  right: 0;
+  position: fixed;
+  z-index: 3;
+  background-color: #0f3739;
+  overflow-x: hidden;
+  padding: 125px 0 0 0;
+  transition: 0.2s;
+}
+#shadow_side_bar {
+  content: "";
+  width: 101%;
+  height: 194%;
+  background-color: #000000;
+  position: fixed;
+  opacity: 50%;
+  margin: 0 0 0 -25%;
+  opacity: 0%;
+}
+.guest_card {
+  width: 42px;
+  margin: 0 15px 0 0;
+}
+
+.sidebar a {
+  display: flex;
+  text-decoration: none;
+  padding: 0 70px 35px;
+  color: #fff;
+  font-size: 36px;
+  text-align: right;
+  justify-content: flex-end;
+}
+.sidebar a:hover {
+  font-weight: 700;
+}
+.sidebar .closebtn {
+  position: absolute;
+  top: 34px;
+  right: 0;
+  font-size: 40px;
+  margin: 0 0 0 70px;
+}
+.sidebar .social_media_icons {
+  margin: 0 0 0 150px;
+}
+/* #side_bar_container {
+  transition: margin-left 0.5s;
+} */
+.openbtn {
+  border: none;
   margin: 0 35px 10px 0;
 }
-.line_select::before {
+.openbtn::before {
   position: absolute;
   content: "";
   vertical-align: middle;
@@ -44,7 +100,7 @@ body {
   height: 2px;
   background-color: #e0e0e0;
 }
-.line_select::after {
+.openbtn::after {
   margin: 10px 0 0 0px;
   position: absolute;
   content: "";
@@ -53,6 +109,9 @@ body {
   height: 2px;
   background-color: #e0e0e0;
 }
+.openbtn:hover {
+  cursor: pointer;
+}
 .logo {
   position: relative;
   height: 15%;
@@ -60,7 +119,6 @@ body {
 }
 .logo > img {
   width: 100%;
-  margin: 0 14px 0 0;
 }
 .upper_header > img {
   width: 100%;
@@ -557,6 +615,22 @@ body {
   }
   .nav_links a {
     font-size: 16px;
+  }
+  .sidebar {
+    max-width: 375px;
+    width: 375px;
+    bottom: 50%;
+    max-height: 700px;
+    height: 10%;
+  }
+  .sidebar a {
+    display: flex;
+    text-decoration: none;
+    padding: 0 70px 26px;
+    color: #fff;
+    font-size: 24px;
+    text-align: right;
+    justify-content: flex-end;
   }
   .site {
     display: block;
