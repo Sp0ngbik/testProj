@@ -308,64 +308,66 @@ body {
   background-color: #0e3032;
   padding: 103px 0 0 0;
 }
-.mobile_app > h1 {
-  letter-spacing: 8%;
+.mobile_app > h2 {
+  letter-spacing: 10px;
   font-size: 4vw;
+  line-height: 103px;
   font-weight: 800;
   color: #fff;
   letter-spacing: 10px;
   text-align: center;
+  padding: 0 0 63px;
 }
 
 .about_app {
+  max-width: 1226px;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   justify-content: center;
   justify-items: center;
-  margin: 70px 18% 0;
+  margin: 0 auto;
   padding: 0 0 131.79px 0;
 }
 .about span {
   font-weight: 700;
 }
 .about {
-  margin: 10% 0;
+  width: 411px;
+  height: 257px;
+  margin: 29px 71px 0 0;
   align-content: center;
 }
-.about > h1 {
+.about > h2 {
   font-size: 20px;
   font-weight: 500;
   color: #fff;
 }
 .about > li {
-  font-size: 18px;
+  font-size: 20px;
   color: #fff;
   margin: 20px 0;
 }
-
+.app_store_logo {
+  margin: 39px 0 31px;
+}
 .google_app_store {
-  margin: 19px 32px 0 0;
+  width: 148.5px;
+  height: 44px;
+  margin: 0 31px 0 0;
 }
-.button_loyalty {
-  display: flex;
-  justify-content: center;
-  margin: 42px 0 0 0;
+.apple_app_store {
+  width: 131.63px;
+  height: 44px;
 }
-.button_loyalty :hover {
-  background-color: #165659;
+.about_app .button_style {
+  width: 310px;
 }
-.button_loyalty > a {
-  width: 100%;
-  border-radius: 12px;
-  padding: 5% 0;
-  color: #fff;
-  font-size: 18px;
-  font-weight: 600;
-  text-align: center;
-  text-decoration: none;
-  border: 2px solid #165659;
+.about_app .button_style:hover {
+  background-color: #118181;
 }
-
+.mobile_app_image {
+  max-width: 393px;
+}
 .footer {
   background-color: #082627;
   padding: 50px 0;
@@ -392,19 +394,20 @@ body {
   padding: 0 0 0 20px;
 }
 .dots span {
-  margin: 0 60px 0 0;
+  margin: 0 0 0 0;
+  padding: 0 20px;
 }
 .politics > span {
   opacity: 60%;
-  margin: 0 22px 0 0;
+  margin: 0 0 0 0;
 }
 .dots > div {
   display: inline;
-  margin: 0 50px 0 0;
+  margin: 0 20px 0 0;
 }
 
 .dots span::before {
-  margin: 10px 0px 0 -35px;
+  margin: 10px 20px 0 0px;
   position: absolute;
   content: "";
   vertical-align: middle;
@@ -428,7 +431,7 @@ body {
 }
 @media screen and (max-width: 1280px) {
   .header {
-    width: 90%;
+    width: 100%;
   }
   .nav_links a {
     justify-content: space-between;
@@ -440,9 +443,7 @@ body {
     white-space: nowrap;
     opacity: 50%;
   }
-  .button_more > a {
-    width: 27%;
-  }
+
   .nav_links {
     justify-content: space-around;
     overflow-x: auto;
@@ -450,7 +451,7 @@ body {
     padding: 0 30px;
   }
   .our_adress_and_food {
-    width: 90%;
+    width: 100%;
   }
 
   .order > a {
@@ -489,10 +490,10 @@ body {
   .about_app > div {
     margin: 0;
   }
-  .mobile_app_image {
+  /* .mobile_app_image {
     width: 112%;
     margin: 0 0 0 190px;
-  }
+  } */
   .politics {
     white-space: normal;
   }
@@ -567,7 +568,7 @@ body {
     padding: 0 25px 18px 25px;
     margin: 0 0 20px 0;
   }
-  .button_more > a {
+  .paragraph_food > .button_style {
     margin: 5% auto 50px;
     width: 90%;
   }
@@ -621,7 +622,6 @@ body {
   }
   .mobile_app_image {
     grid-row: 1/1;
-    width: 90%;
     margin: 0 0 42px 0;
     grid-column: 2/2;
   }
