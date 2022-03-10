@@ -90,9 +90,9 @@ body {
 .nav_links a:hover {
   opacity: 100%;
 }
-.coffe_bar > h1 {
+.coffe_bar > h2 {
   letter-spacing: 8%;
-  font-size: 4vw;
+  font-size: 90px;
   font-weight: 800;
   margin: 3vw 0 0 0;
   color: #fff;
@@ -105,7 +105,6 @@ body {
   font-size: 32px;
   justify-content: center;
   align-items: center;
-  margin: 20px 0 55px;
 }
 .coffe_bar > div > h3 {
   margin-right: 10px;
@@ -119,9 +118,11 @@ body {
   text-align: center;
   border: 2px #165659 solid;
   border-radius: 12px;
-  width: 70%;
+  width: 100%;
+  max-width: 1226px;
   box-sizing: border-box;
   height: 60px;
+  margin: 50px auto 43px;
 }
 .adress_map div {
   justify-content: space-around;
@@ -145,12 +146,12 @@ body {
 }
 .our_adress_and_food {
   text-align: center;
-  width: 70%;
+  width: 100%;
   margin: 0 auto;
   max-width: 1226px;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-gap: 50px;
+  grid-gap: 43px;
 }
 .our_adress_and_food a {
   position: relative;
@@ -189,7 +190,8 @@ body {
 .food_nav_bar {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  width: 70%;
+  width: 100%;
+  max-width: 1226px;
   text-align: center;
   font-size: 26px;
   color: #fff;
@@ -223,9 +225,10 @@ body {
 }
 .confectionery {
   margin: 0 auto;
-  width: 70%;
+  width: 100%;
+  max-width: 1226px;
 }
-.confectionery > h1 {
+.confectionery > h2 {
   letter-spacing: 8%;
   font-size: 4vw;
   font-weight: 800;
@@ -233,6 +236,7 @@ body {
   color: #fff;
   text-align: center;
 }
+/* button_more button_order button_loyalty*/
 .image_block {
   width: 100%;
   position: relative;
