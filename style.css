@@ -2,6 +2,7 @@
   margin: 0;
   padding: 0;
 }
+
 body {
   background-color: #0f3739;
   font-family: "Raleway", sans-serif;
@@ -115,6 +116,7 @@ body {
   margin: 0.5vw 0 0 0.2vw;
 }
 .adress_map {
+  min-width: 343px;
   text-align: center;
   border: 2px #165659 solid;
   border-radius: 12px;
@@ -228,7 +230,7 @@ body {
 .paragraph_food > .button_style {
   margin: 50px auto 0;
 }
-.paragraph_food > .button_style:hover {
+.button_style:hover {
   cursor: pointer;
   background-color: #165659;
 }
@@ -240,13 +242,12 @@ body {
 }
 .confectionery > h2 {
   letter-spacing: 8%;
-  font-size: 4vw;
+  font-size: 90px;
   font-weight: 800;
   margin: 104px 0 0 0;
   color: #fff;
   text-align: center;
 }
-/* button_more button_order button_loyalty*/
 .image_block {
   width: 100%;
   position: relative;
@@ -310,8 +311,7 @@ body {
 }
 .mobile_app > h2 {
   letter-spacing: 10px;
-  font-size: 4vw;
-  line-height: 103px;
+  font-size: 90px;
   font-weight: 800;
   color: #fff;
   letter-spacing: 10px;
@@ -377,7 +377,9 @@ body {
   display: grid;
   color: #fff;
   font-size: 18px;
-  text-align: center;
+  margin: 0 auto;
+  max-width: 1226px;
+  text-align: left;
   justify-content: center;
   grid-template-columns: repeat(3, 1fr);
 }
@@ -387,27 +389,24 @@ body {
 
 .politics {
   grid-column: 2/4;
-  padding: 30px 0 0 10%;
-  text-align: center;
+  margin: 30px 0 0;
+  text-align: left;
 }
-.politics span {
-  padding: 0 0 0 20px;
-}
+
 .dots span {
-  margin: 0 0 0 0;
-  padding: 0 20px;
+  margin: 0 23px 0 0;
 }
 .politics > span {
   opacity: 60%;
-  margin: 0 0 0 0;
+  margin: 0 22px 0 0;
 }
 .dots > div {
   display: inline;
-  margin: 0 20px 0 0;
+  margin: 0 22px 0 0;
 }
 
 .dots span::before {
-  margin: 10px 20px 0 0px;
+  margin: 10px 0 0 -20px;
   position: absolute;
   content: "";
   vertical-align: middle;
@@ -429,9 +428,13 @@ body {
 .controll_prog > span {
   font-weight: 600;
 }
+
 @media screen and (max-width: 1280px) {
   .header {
     width: 100%;
+  }
+  .upper_block {
+    margin: 0 68px 21px 70px;
   }
   .nav_links a {
     justify-content: space-between;
@@ -454,28 +457,104 @@ body {
     width: 100%;
   }
 
-  .order > a {
-    font-size: 16px;
-    margin: 0px 0 0 45.5%;
-  }
   .food_nav_bar {
-    width: 90%;
+    width: 100%;
+  }
+  .text_about {
+    margin: 0 70px;
+  }
+  .site {
+    white-space: nowrap;
+    padding: 0 0 24px 0;
+  }
+  .order_link {
+    grid-template-rows: 0.2fr 0.5fr;
+    margin: 62px 70px 0;
+    justify-content: space-between;
+  }
+  .order_link .button_style {
+    margin: 0;
+    grid-row: 2/2;
+    margin: 0 0 70px;
   }
   .confectionery {
-    width: 90%;
+    width: 100%;
   }
-  .politics {
-    white-space: nowrap;
-    padding: 30px 0 0 0;
+
+  .politics span {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  .politics > span {
+    display: flex;
+    margin: 20px 0;
+    flex-direction: column-reverse;
   }
   .politics span {
     padding: 0;
   }
+  .politics {
+    margin: 0 auto;
+    width: 300px;
+    white-space: nowrap;
+    text-align: center;
+    grid-column: 2/3;
+    grid-row: 4/4;
+  }
+  .paragraph_food {
+    width: 100%;
+  }
+
+  .footer_block {
+    grid-template-columns: repeat(3, 0.4fr);
+    grid-template-rows: 0.3fr 0.3fr 0.3fr 0.5fr;
+  }
+  .footer_block div {
+    text-align: center;
+  }
+  .dots span::before {
+    margin: 0;
+    opacity: 0%;
+  }
+  .dots {
+    align-content: center;
+  }
   .dots span {
-    margin: 0 45px 0 0;
+    margin: 8px 0 8px 0;
+  }
+  .dots > div {
+    text-align: center;
+    margin: 0;
+  }
+  .controll_prog {
+    padding: 0;
+    grid-column: 2/3;
+    grid-row: 4/4;
+  }
+  .trademark {
+    grid-row: 1/2;
+    grid-column: 1/2;
+  }
+  .office_link {
+    grid-row: 1/2;
+    grid-column: 2/3;
+  }
+  .office_link {
+    grid-row: 2/3;
+  }
+  .social_media_icons {
+    grid-row: 3/4;
+    grid-column: 1/4;
+  }
+  .trademark {
+    grid-row: 1/2;
+    grid-column: 2/3;
   }
 }
 @media screen and (max-width: 1024px) {
+  .upper_block {
+    margin: 0 16px 11px 20px;
+  }
   .nav_links a {
     font-size: 16px;
   }
@@ -490,18 +569,14 @@ body {
   .about_app > div {
     margin: 0;
   }
-  /* .mobile_app_image {
-    width: 112%;
-    margin: 0 0 0 190px;
-  } */
+  .mobile_app_image {
+    max-width: 287px;
+  }
   .politics {
     white-space: normal;
   }
   .politics span {
     padding: 0;
-  }
-  .dots span {
-    margin: 0 0px 0 107px;
   }
 }
 @media screen and (max-width: 912px) {
@@ -544,10 +619,11 @@ body {
     width: 10px;
   }
   .coffe_bar > div {
-    margin: 30px 5% 15px;
+    width: 90%;
+    margin: 0 auto 50px;
   }
-  .coffe_bar > h1 {
-    font-size: 12vw;
+  .coffe_bar > h2 {
+    font-size: 34px;
     margin: 60px 0 37px 0;
   }
   .coffe_bar img {
@@ -568,34 +644,31 @@ body {
     padding: 0 25px 18px 25px;
     margin: 0 0 20px 0;
   }
-  .paragraph_food > .button_style {
-    margin: 5% auto 50px;
-    width: 90%;
-  }
+
   .confectionery {
     width: 99%;
   }
-  .confectionery > h1 {
-    font-size: 8vw;
+  .confectionery > h2 {
+    font-size: 34px;
+  }
+  .order_link {
+    display: grid;
+    grid-template-columns: 1.3fr 0.2fr;
+    margin: 0 20px;
   }
   .site {
-    display: grid;
     width: 90%;
     white-space: nowrap;
-    grid-template-rows: 1.3fr 0.2fr;
-    grid-column: 1/3;
+    grid-column: 1/4;
     margin: 20px 0 0 0;
   }
-  .order {
+
+  .order_link > .button_style {
     grid-column: 1/3;
-    margin: 0;
-  }
-  .order > a {
     display: flex;
-    margin: 15px auto;
+    margin: 15px auto 70px 0;
     padding: 15px 5%;
     font-size: 18px;
-    width: 90%;
     justify-content: center;
     grid-row: 2/2;
   }
@@ -613,19 +686,31 @@ body {
     font-weight: 700;
   }
 
-  .order_link {
-    margin: 0 20px;
-  }
-  .mobile_app > h1 {
+  .mobile_app > h2 {
     padding: 50px 0 0 0;
-    font-size: 8vw;
+    font-size: 34px;
   }
   .mobile_app_image {
     grid-row: 1/1;
     margin: 0 0 42px 0;
     grid-column: 2/2;
   }
-  .about h1 {
+  .mobile_app_image {
+    grid-column: 1/3;
+  }
+  .about_app {
+    grid-template-columns: 1fr;
+    margin: 70px 5% 0;
+  }
+  .mobile_app {
+    padding: 0 0 156px 0;
+  }
+  .about {
+    width: 320px;
+    margin: 0 auto;
+    grid-column: 1/3;
+  }
+  .about h2 {
     font-size: 20px;
   }
   .about li {
@@ -675,9 +760,7 @@ body {
   .dots {
     align-content: center;
   }
-  .dots span {
-    margin: 0 0 8px 0;
-  }
+
   .dots > div {
     text-align: center;
     margin: 0;
@@ -708,10 +791,28 @@ body {
   }
 }
 @media screen and (max-width: 540px) {
+  .coffe_bar > div {
+    max-width: 343px;
+  }
+  .order_link {
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr 1fr;
+  }
+  .site {
+    grid-row: 1/2;
+    white-space: normal;
+  }
+  .order_link .button_style {
+    grid-row: 3/3;
+  }
   .our_adress_and_food {
     grid-template-columns: 1fr;
-    width: 90%;
+    width: 100%;
+    max-width: 343px;
     grid-gap: 20px;
+  }
+  .order_link .button_style {
+    margin: 0 0 70px;
   }
   .mobile_app_image {
     grid-column: 1/3;
@@ -719,5 +820,13 @@ body {
   .about_app {
     grid-template-columns: 1fr;
     margin: 70px 5% 0;
+  }
+}
+@media screen and (max-width: 400px) {
+  .button_style {
+    width: 280px;
+  }
+  .mobile_app > h2 {
+    font-size: 24px;
   }
 }
