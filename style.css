@@ -299,12 +299,8 @@ body {
   color: #fff;
   font-weight: 700;
 }
-.mobile_app .button_style {
-  display: flex;
-  justify-content: flex-end;
-  align-content: flex-end;
-  align-items: flex-end;
-  justify-items: flex-end;
+.order_link .button_style {
+  margin: 0 0 0 351px;
 }
 .mobile_app {
   width: 100%;
