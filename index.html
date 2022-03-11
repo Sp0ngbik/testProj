@@ -273,6 +273,45 @@
         <img class="mobile_app_image" src="./Image.png" alt="/image.png not found">
       </div>
     </section>
+    <section class="form_block">
+      <div class="form_container">
+        <div class="form_head">
+          <h2>Анкета гостя</h2>
+          <img class="close_form_button" src="./TimesForm.svg" alt="TimesForm.svg not found">
+        </div>
+        <h3>Заполните все поля и станьте обладателем карты постоянного гостя</h3>
+        <form class="form_fields" onsubmit="getData();return false;">
+          <input class="username" id="name" type="text" placeholder="Имя">
+          <input class="lastName"  id="lastname" type="text" placeholder="Фамилия">
+          <div class="radio_buttons">
+          <input type="radio"  name="sex" value="male" id="male">
+            <label class="maleRadio" for="male">Мужской</label>
+          <input type="radio" name="sex" value="female" id="female">
+          <label for="female">Женский</label>
+          </div>
+          <div class="birth_day">
+            <h2>Дата рождения</h2>
+            <input type="datetime" id="day" class="day_input" name="date_day" placeholder="День">
+            <input type="datetime" id="mounth" class="mounth_input" name="date_mounth" placeholder="Месяц">
+            <input type="datetime" id="year" name="date_year" placeholder="Год">
+          </div>
+          <div class="username_contacts">
+            <input class="phoneNumber" id="phoneNumber" type="tel" placeholder="Номер телефона">
+            <input class="email" id="email" type="email" placeholder="Email">
+          </div>
+          <div class="select_coffee_bar">
+            <h3>Выберите кофейню, в которой вы приобрели карту:</h3>
+            <input class="place"  type="text" placeholder="Брест. Карбышева, 32">
+          </div>
+          <div class="permission_container">
+            <input class="rules_checkbox" id="request" type="checkbox" onchange="checkForRules()">
+            <label for="request">Я разрешаю ООО «ПараграфБрест» использовать указанные мной данные в маркетинговых целях.</label>
+          </div>
+          <h3 class="terms">Необходимо согласиться с условиями</h3>
+          <button class="disableButton" id="button_send" type="submit">Отправить</button>
+          </form>
+      </div>
+    </section>
     <footer class="footer">
       <div class="footer_block">
         <div class="trademark">© 2021 ООО «ПараграфБрест»</div>
