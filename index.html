@@ -281,8 +281,8 @@
         </div>
         <h3>Заполните все поля и станьте обладателем карты постоянного гостя</h3>
         <form class="form_fields" onsubmit="getData();return false;">
-          <input class="username" id="name" type="text" placeholder="Имя">
-          <input class="lastName"  id="lastname" type="text" placeholder="Фамилия">
+          <input class="username" autocomplete="off" id="name" type="text" placeholder="Имя">
+          <input class="lastName" autocomplete="off" id="lastname" type="text" placeholder="Фамилия">
           <div class="radio_buttons">
           <input type="radio"  name="sex" value="male" class="radioButton" id="male">
             <label class="maleRadio" for="male">Мужской</label>
@@ -291,17 +291,27 @@
           </div>
           <div class="birth_day">
             <h2>Дата рождения</h2>
-            <input type="datetime" id="day" class="day_input" name="date_day" placeholder="День">
-            <input type="datetime" id="mounth" class="mounth_input" name="date_mounth" placeholder="Месяц">
-            <input type="datetime" id="year" name="date_year" placeholder="Год">
+              <select class="day_input" type="datetime" id="day" name="date_day" >
+                  <option value="day">День</option>
+                  <option value="day">День</option>
+              </select>
+            <select type="datetime" id="mounth" class="mounth_input" name="date_mounth">
+              <option value="mounth">Месяц</option>
+            </select>
+            <select type="datetime" id="year" name="date_year">
+              <option value="year">Год</option>
+            </select>
           </div>
           <div class="username_contacts">
-            <input class="phoneNumber" id="phoneNumber" type="tel" placeholder="Номер телефона">
-            <input class="email" id="email" type="email" placeholder="Email">
+            <input class="phoneNumber" autocomplete="off" id="phoneNumber" type="tel" placeholder="Номер телефона">
+            <input class="email" autocomplete="off" id="email" type="email" placeholder="Email">
           </div>
           <div class="select_coffee_bar">
             <h3>Выберите кофейню, в которой вы приобрели карту:</h3>
-            <input class="place"  type="text" placeholder="Брест. Карбышева, 32">
+            
+            <select class="place"  type="text" placeholder="Брест. Карбышева, 32">
+              <option value="Карбышева">Брест. Карбышева, 32</option>
+            </select>
           </div>
           <div class="permission_container">
             <input class="rules_checkbox" id="request" type="checkbox" onchange="checkForRules()">

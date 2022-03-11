@@ -530,9 +530,7 @@ body {
 .femaleRadio {
   margin: 0 0 0 9px;
 }
-.birth_day {
-  max-width: 488px;
-}
+
 .radioButton {
   position: absolute;
   z-index: -1;
@@ -564,7 +562,58 @@ body {
   background-color: #118181;
   background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='3' fill='%23fff'/%3e%3c/svg%3e");
 }
+.rules_checkbox {
+  position: absolute;
+  z-index: -1;
+  opacity: 0;
+}
+.rules_checkbox + label {
+  display: inline-flex;
+  user-select: none;
+}
+.rules_checkbox + label::before {
+  content: "";
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  flex-shrink: 0;
+  flex-grow: 0;
+  border: 2px solid #118181;
+  border-radius: 0.25em;
+  margin-right: 0.5em;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+.rules_checkbox:checked + label::before {
+  border-color: #118181;
+  background-image: url("./Checkbox-active.svg");
+}
 
+.birth_day {
+  width: 100%;
+  max-width: 488px;
+}
+.day_input option:hover {
+  background-color: black;
+}
+.day_input option {
+  opacity: 50%;
+}
+.birth_day select {
+  width: 100%;
+  max-width: 152px;
+  height: 50px;
+  background-color: #0d4749;
+  border: none;
+  color: #fff;
+  font-size: 18px;
+  padding: 11px 18px 11px 20px;
+  border-radius: 12px;
+  background-image: url("./angle-down.svg");
+  appearance: none;
+  background-position: right 16.5px top 50%;
+  background-repeat: no-repeat;
+}
 .birth_day > h2 {
   text-align: left;
   margin: 33px 0 16px 8px;
@@ -572,17 +621,6 @@ body {
   color: #fff;
   font-weight: 400;
   line-height: 24px;
-}
-.birth_day input {
-  width: 130px;
-  padding: 11px 0 12px 20px;
-  height: 25px;
-}
-.birth_day input {
-  border-radius: 12px;
-  background-image: url("./angle-down.svg");
-  background-position: right 16.5px top 50%;
-  background-repeat: no-repeat;
 }
 .mounth_input {
   margin: 0 11.5px;
@@ -620,6 +658,23 @@ body {
 .place::-webkit-input-placeholder {
   color: #fff;
 }
+.place {
+  margin: 16px 0 33px;
+  padding: 11px 12px 11px 20px;
+  width: 100%;
+  color: #fff;
+  max-width: 488px;
+  height: 50px;
+  font-size: 18px;
+  max-height: 100%;
+  border-radius: 12px;
+  background-color: #0d4749;
+  border: 1px solid #0d4749;
+  background-image: url("./angle-down.svg");
+  appearance: none;
+  background-position: right 16.5px top 50%;
+  background-repeat: no-repeat;
+}
 .permission_container {
   display: flex;
   width: 488px;
@@ -640,7 +695,7 @@ body {
   letter-spacing: 0.02em;
 }
 .terms {
-  margin: 6px 0 24px 66px;
+  margin: 6px 0 24px 75px;
   font-size: 14px;
   opacity: 0.8;
   color: #fff;
