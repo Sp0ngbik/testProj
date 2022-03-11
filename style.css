@@ -34,11 +34,15 @@ body {
   width: 15px;
 }
 
-.sidebar {
+.sidebarOff {
+  width: 0;
+  position: fixed;
+  overflow-x: hidden;
+}
+.sidebarActive {
   height: 100%;
   max-width: 535px;
   min-height: 900px;
-  width: 0;
   top: 0;
   right: 0;
   position: fixed;
@@ -46,24 +50,31 @@ body {
   background-color: #0f3739;
   overflow-x: hidden;
   padding: 125px 0 0 0;
-  transition: 0.2s;
+  width: 100%;
 }
-#shadow_side_bar {
+
+.shadow_side_bar_off {
+  position: fixed;
+  opacity: 0%;
+  z-index: -1;
+}
+.shadow_side_bar_active {
+  cursor: pointer;
   content: "";
-  width: 101%;
+  width: 110%;
   height: 194%;
   background-color: #000000;
   position: fixed;
+  margin: 0 0 0 -45%;
   opacity: 50%;
-  margin: 0 0 0 -25%;
-  opacity: 0%;
+  z-index: 2;
 }
 .guest_card {
   width: 42px;
   margin: 0 15px 0 0;
 }
 
-.sidebar a {
+.sidebarActive a {
   display: flex;
   text-decoration: none;
   padding: 0 70px 35px;
@@ -72,17 +83,17 @@ body {
   text-align: right;
   justify-content: flex-end;
 }
-.sidebar a:hover {
+.sidebarActive a:hover {
   font-weight: 700;
 }
-.sidebar .closebtn {
+.sidebarActive .closebtn {
   position: absolute;
   top: 34px;
   right: 0;
   font-size: 40px;
   margin: 0 0 0 70px;
 }
-.sidebar .social_media_icons {
+.sidebarActive .social_media_icons {
   margin: 0 0 0 150px;
 }
 /* #side_bar_container {
@@ -615,6 +626,13 @@ body {
   }
   .nav_links a {
     font-size: 16px;
+  }
+
+  .sidebar {
+    padding-top: 15px;
+  }
+  .sidebar a {
+    font-size: 18px;
   }
   .sidebar {
     max-width: 375px;
