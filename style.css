@@ -33,7 +33,25 @@ body {
 .select_country > img {
   width: 15px;
 }
-
+.food_window_off {
+  position: fixed;
+  overflow-x: hidden;
+  width: 0;
+}
+.food_window_on {
+  position: fixed;
+  z-index: 99;
+  background-color: #0d4749;
+  display: flex;
+  font-size: 20px;
+  justify-content: center;
+  justify-items: center;
+  align-items: center;
+  align-content: center;
+  width: 912px;
+  height: 464px;
+  margin: 22% 9% 0;
+}
 .sidebarOff {
   width: 0;
   position: fixed;

@@ -1,47 +1,50 @@
 function openNav() {
-  document.getElementById("mySidebar").className='sidebarActive';
-  document.getElementById("shadow_side_bar").className = "shadow_side_bar_active";
-
+  document.getElementById("mySidebar").className = "sidebarActive";
+  document.getElementById("shadow_side_bar").className =
+    "shadow_side_bar_active";
 }
 
 function closeNav() {
   document.getElementById("mySidebar").className = "sidebarOff";
   document.getElementById("shadow_side_bar").className = "shadow_side_bar_off";
-
 }
 
-function getData(){
+function getData() {
   let userInfo = {
-    name:document.getElementById('name').value,
-    lastName:document.getElementById('lastname').value,
-    birthDay:document.getElementById('day').value,
-    birthMounth:document.getElementById('mounth').value,
-    birthYear:document.getElementById('year').value,
-    userMale: document.getElementById('male').value,
-    userFemale: document.getElementById('female').value,
-    phoneNumber:document.getElementById('phoneNumber').value,
-    email:document.getElementById('email').value,
-    rules:document.querySelector('input[type=checkbox]'),
-    gender:document.querySelector('input[type=radio]'),
-    get getUser(){
+    name: document.getElementById("name").value,
+    lastName: document.getElementById("lastname").value,
+    birthDay: document.getElementById("day").value,
+    birthMounth: document.getElementById("mounth").value,
+    birthYear: document.getElementById("year").value,
+    userMale: document.getElementById("male").value,
+    userFemale: document.getElementById("female").value,
+    phoneNumber: document.getElementById("phoneNumber").value,
+    email: document.getElementById("email").value,
+    rules: document.querySelector("input[type=checkbox]"),
+    gender: document.querySelector("input[type=radio]"),
+    get getUser() {
       return `      
       Имя: ${this.name} 
       Фамилия: ${this.lastName} 
       Дата рождения: ${this.birthDay} . ${this.birthMounth} . ${this.birthYear} 
       Телефон: ${this.phoneNumber}
       Почта: ${this.email}
-      Пол:${this.gender.checked?this.userMale:this.userFemale}
-      Согласие с правилами: ${this.rules.checked}`
-    }
+      Пол:${this.gender.checked ? this.userMale : this.userFemale}
+      Согласие с правилами: ${this.rules.checked}`;
+    },
+  };
+  console.log(userInfo.getUser);
+  return false;
+}
+function checkForRules() {
+  let rules = document.querySelector("input[type=checkbox]");
+  if (rules.checked) {
+    document.getElementById("button_send").className = "submit_button";
+  } else {
+    document.getElementById("button_send").className = "disableButton";
   }
-  console.log(userInfo.getUser)
-  return false
-} 
-function checkForRules(){
-  let rules = document.querySelector('input[type=checkbox]')
-  if(rules.checked){
-    document.getElementById('button_send').className='submit_button'
-  }else{
-    document.getElementById('button_send').className='disableButton'
-  }
+}
+
+function food_window(id, src) {
+  document.getElementById("food_info").className = "food_window_on";
 }
