@@ -45,6 +45,28 @@ function checkForRules() {
   }
 }
 
-function food_window(id, src) {
-  document.getElementById("food_info").className = "food_window_on";
+
+
+
+function open_model_food() {
+  const imageArr = document.querySelectorAll(".food_info");
+  imageArr.forEach(el=>{
+    el.addEventListener('click',function(){
+      let image_src = this.querySelector('img').src;
+      let title = this.querySelector('span').innerHTML;
+      document.getElementById('modal_title').innerHTML = title;
+      document.querySelector('.modal_food_image').src = image_src;
+      document.querySelector('.food_window_off').className = 'food_window_on'
+      document.getElementById('modal_shadow_window').className = 'modal_shadow_window_on'
+      console.log(this.querySelector('img').src)
+      console.log(this.querySelector('span').innerHTML)
+    })
+  })
 }
+open_model_food()
+
+function close_model_food(){
+document.getElementById('modal_shadow_window').className = 'modal_shadow_off'
+document.getElementById('model_window').className = 'food_window_off'
+}
+

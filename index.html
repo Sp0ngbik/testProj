@@ -24,15 +24,7 @@
           <div class="logo">
             <img src="./Logo.svg" alt="/Logo.svg not found" />
           </div>
-          <div class="food_window_off" id="food_info">
-            <img src="" alt="food_img not found">
-            <div>
-              <h2>
-        Торт «Малибу» 
-              </h2>
-              <img>
-            </div>
-          </div>
+     
        <div  id="mySidebar" class="sidebarOff">
          <a href="javascript:void(0)" class="closebtn" onClick="closeNav()">
            <img src="./Times.svg" alt="Times.svg not found"></a>
@@ -52,6 +44,20 @@
            <img src="./social_media/FB.svg" alt="fb.svg not found">
            <img src="./social_media/telegram-plane 1.svg" alt="telegram.svg">
           </div>
+        </div>
+        <div onclick="close_model_food()" id="modal_shadow_window" onclass="modal_shadow_window_on" ></div>
+        <div  class="food_window_off" id="model_window">
+          <img class="modal_food_image" src="" alt="">
+          <div class="modal_info">
+            <h2 id="modal_title"></h2>
+            <h3 id="food_weight">90г / 4.55р.</h3>
+            <h3 class="modal_upper_block">Бисквит дакуаз, кокосовое пралине, малиновое 
+              конфи и нежный мусс с белым шоколадом. </h3>
+              <div class="modal_bottom_block">Состав: <span class="composition">кокосовая стружка, яйцо, миндальная мука,
+                масло сливочное, кукурузные хлопья,
+                желатин, сахар, молоко, сливки натуральные,
+                белый шоколад, малина.</span></div>
+              </div>
         </div>
     <span onclick="closeNav()" id="shadow_side_bar" class="shadow_side_bar_off"></span>
 
@@ -172,60 +178,59 @@
         <div class="drinks">Напитки</div>
       </div>
       <div class="our_adress_and_food">
-        <a >
+        <a class="food_info">
           <div  class="our_adress_links">
             <span> Торт «Эстерхази» </span>
           </div>
-          <img onclick="food_window(id,src)"   id="food_1" src="./food_img/image 18.jpg" alt="/image 18.jpg not found" />
+          <img src="./food_img/image 18.jpg" alt="/image 18.jpg not found" />
         </a>
-        <a >
+        <a class="food_info">
+          <div  class="our_adress_links">
+            <span > Торт «Эстерхази» </span>
+          </div>
+          <img src="./food_img/image 16.jpg"  alt="image 16.jp not found"
+        /></a>
+        <a class="food_info">
           <div  class="our_adress_links">
             <span> Торт «Эстерхази» </span>
           </div>
-          <img onclick="food_window(id,src)" src="./food_img/image 16.jpg"  id="food_2" alt="image 16.jp not found"
+          <img  src="./food_img/image 15.jpg" alt=" image 15.jpg not found"
         /></a>
-        <a >
-          <div  class="our_adress_links">
-            <span> Торт «Эстерхази» </span>
-          </div>
-          <img onclick="food_window(id,src)"  id="food_3" src="./food_img/image 15.jpg" alt=" image 15.jpg not found"
-        /></a>
-        <a >
+        <a class="food_info">
           <div  class="our_adress_links" >
             <span> Торт «Эстерхази» </span>
           </div>
-          <img onclick="food_window(id,src)" id="food_4" src="./food_img/image 14.jpg" alt="/image 14.jpg not found"
+          <img src="./food_img/image 14.jpg" alt="/image 14.jpg not found"
         /></a>
-        <a >
+        <a class="food_info">
           <div  class="our_adress_links">
             <span> Торт «Эстерхази» </span>
           </div>
-          <img onclick="food_window(id,src)"  id="food_5" src="./food_img/image 9.jpg" alt="/image 9.jpg not found" />
+          <img  src="./food_img/image 9.jpg" alt="/image 9.jpg not found" />
         </a>
-        <a >
+        <a class="food_info">
           <div  class="our_adress_links" >
             <span> Торт «Эстерхази» </span>
           </div>
-          <img onclick="food_window(id,src)" id="food_6" src="./food_img/image 18.jpg" alt="/image 18.jpg not found" />
+          <img  src="./food_img/image 18.jpg" alt="/image 18.jpg not found" />
         </a>
-
-        <a >
+        <a class="food_info"> 
           <div  class="our_adress_links" >
             <span> Торт «Эстерхази» </span>
           </div>
-          <img onclick="food_window(id,src)" id="food_7" src="./food_img/image 15.jpg" alt=" image 15.jpg not found"
+          <img  src="./food_img/image 15.jpg" alt=" image 15.jpg not found"
         /></a>
-        <a >
+        <a class="food_info">
           <div  class="our_adress_links">
             <span> Торт «Эстерхази» </span>
           </div>
-          <img onclick="food_window(id,src)"  id="food_8" src="./food_img/image 14.jpg" alt="/image 14.jpg not found"
+          <img  src="./food_img/image 14.jpg" alt="/image 14.jpg not found"
         /></a>
-        <a >
+        <a class="food_info">
           <div  class="our_adress_links" >
             <span> Торт «Эстерхази» </span>
           </div>
-          <img onclick="food_window(id,src)" id="food_9" src="./food_img/image 9.jpg" alt="/image 9.jpg not found" />
+          <img  src="./food_img/image 9.jpg" alt="/image 9.jpg not found" />
         </a>
       </div>
       <button class="button_style"><a href="#">        
