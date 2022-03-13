@@ -100,7 +100,10 @@ body {
   margin: 0 0 0 -45%;
   opacity: 70%;
   z-index: 4;
-  backdrop-filter: blur(20px);
+  /* backdrop-filter: blur(20px); */
+}
+.food_cost {
+  font-weight: 600;
 }
 .modal_info .close_form_button {
   position: absolute;
