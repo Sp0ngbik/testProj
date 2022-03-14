@@ -71,13 +71,15 @@ body {
 }
 .modal_window {
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
+  /* justify-items: flex-end;
+  align-content: flex-end; */
 }
 .food_window_on {
   position: fixed;
   z-index: 5;
-  top: 20%;
+  height: 100%;
   background-color: #0d4749;
   display: flex;
   font-size: 20px;
@@ -1050,9 +1052,6 @@ body {
     font-size: 16px;
   }
 
-  .food_window_on {
-    top: 12%;
-  }
   .sidebar {
     padding-top: 15px;
   }
@@ -1394,9 +1393,7 @@ body {
   .order_link .button_style {
     grid-row: 3/3;
   }
-  .food_window_on {
-    top: 5%;
-  }
+
   .our_adress_and_food {
     grid-template-columns: 1fr;
     width: 100%;
@@ -1436,12 +1433,6 @@ body {
   }
 }
 
-@media screen and (max-width: 300px) {
-  .food_window_on {
-    right: 0%;
-    top: 9%;
-  }
-}
 /* @media screen and (max-height: 450px) {
   .sidebar {padding-top: 15px;}
   .sidebar a {font-size: 18px;}
