@@ -50,7 +50,7 @@ body {
   max-width: 900px;
   height: 100%;
   max-height: 450px;
-  margin: 50% 0 0 6%;
+  margin: 50% 0 0 7%;
 }
 
 .modal_info {
@@ -563,7 +563,7 @@ body {
   margin: 0 auto;
   color: #fff;
   font-size: 16px;
-  width: 352px;
+  width: 70%;
   line-height: 25px;
   height: 50px;
 }
@@ -572,7 +572,8 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 488px;
+  width: 100%;
+  max-width: 560px;
   margin: 0 auto;
 }
 .form_fields input {
@@ -787,7 +788,7 @@ body {
 }
 
 .submit_button {
-  width: 560px;
+  width: 100%;
   height: 60px;
   border-radius: 0 0 12px 12px;
   background-color: #165659;
@@ -799,7 +800,7 @@ body {
 }
 .disableButton {
   cursor: not-allowed;
-  width: 560px;
+  width: 100%;
   height: 60px;
   border-radius: 0 0 12px 12px;
   background-color: #0d4749;
@@ -891,7 +892,9 @@ body {
     white-space: nowrap;
     opacity: 50%;
   }
-
+  .food_window_on {
+    margin: 70% 0 0 0;
+  }
   .nav_links {
     justify-content: space-around;
     overflow-x: auto;
@@ -1112,7 +1115,7 @@ body {
     white-space: nowrap;
     -webkit-line-clamp: 4;
     -webkit-box-orient: horizontal;
-    overflow: hidden;
+    overflow-x: auto;
   }
   .composition {
     font-size: 16px;
@@ -1161,16 +1164,16 @@ body {
     grid-template-columns: 1.3fr 0.2fr;
     margin: 0 20px;
   }
-  .form_block {
-    padding: 0;
-  }
+
   .site {
     width: 90%;
     white-space: nowrap;
     grid-column: 1/4;
     margin: 20px 0 0 0;
   }
-
+  .form_container {
+    max-height: none;
+  }
   .order_link > .button_style {
     grid-column: 1/3;
     display: flex;
@@ -1193,7 +1196,9 @@ body {
     color: #fff;
     font-weight: 700;
   }
-
+  .birth_day select {
+    width: 32%;
+  }
   .mobile_app > h2 {
     padding: 50px 0 0 0;
     font-size: 34px;
@@ -1298,7 +1303,29 @@ body {
     grid-column: 2/3;
   }
 }
-
+@media screen and (max-width: 560px) {
+  .form_fields input {
+    width: 70%;
+  }
+  .birth_day {
+    width: 90%;
+  }
+  .select_coffee_bar {
+    width: 90%;
+  }
+  .select_coffee_bar > h3 {
+    width: 90%;
+  }
+  .permission_container {
+    width: 90%;
+  }
+  .terms {
+    width: 90%;
+  }
+  .form_block {
+    padding: 200px 0;
+  }
+}
 @media screen and (max-width: 540px) {
   .coffe_bar > div {
     max-width: 343px;
@@ -1310,6 +1337,9 @@ body {
   .site {
     grid-row: 1/2;
     white-space: normal;
+  }
+  .birth_day select {
+    width: 29%;
   }
   .order_link .button_style {
     grid-row: 3/3;
@@ -1326,19 +1356,32 @@ body {
   .mobile_app_image {
     grid-column: 1/3;
   }
+  .form_head .close_form_button {
+    margin: -5% 0 0 48%;
+  }
   .about_app {
     grid-template-columns: 1fr;
     margin: 70px 5% 0;
   }
 }
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 412px) {
   .button_style {
     width: 280px;
+  }
+  .birth_day {
+    width: 60%;
+  }
+  .birth_day > h2 {
+    margin: 33px 0 16px 17%;
+  }
+  .birth_day select {
+    width: 70%;
   }
   .mobile_app > h2 {
     font-size: 24px;
   }
 }
+
 /* @media screen and (max-height: 450px) {
   .sidebar {padding-top: 15px;}
   .sidebar a {font-size: 18px;}
