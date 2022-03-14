@@ -45,7 +45,44 @@
            <img src="./social_media/telegram-plane 1.svg" alt="telegram.svg">
           </div>
         </div>
-          <div onclick="close_model_food()" id="modal_shadow_window" class="modal_shadow_window_off" ></div>
+        
+   <div onclick="close_model_food()" id="modal_shadow_window" class="modal_shadow_window_off" ></div>
+
+    <span onclick="closeNav()" id="shadow_side_bar" class="shadow_side_bar_off"></span>
+
+    <div id="side_bar_container">
+    <button onclick="openNav()" class="openbtn" href="#"> </button>
+  </div>
+        </div>
+        <div class="nav_block">
+          <img
+          src="./Новая_иллюстрация 1.png"
+          alt="/Новая_иллюстрация 1.png not found"
+          />
+          <nav class="nav_links">
+            <a href="#">Завтраки</a>
+            <a href="#">Мобильное приложение</a>
+            <a href="#">Кофе в зёрнах</a>
+            <a href="#">Круассаны</a>
+          <a href="#">Чайная карта</a>
+          <a href="#">Новый какао</a>
+          <div class="mob_ver">Мобильное приложение</div>
+        </header>
+        
+      </nav>
+    </div>
+    <section class="coffe_bar">
+      <h2>КОФЕЙНИ</h2>
+        <div>
+          <div >Брест</div>
+          <img src="./Arrow.svg" alt="/Arrow.svg not found" />
+        </div>
+        <div class="adress_map">
+          <div class="adress">Наши адреса</div>
+          <div class="map">На карте</div>
+        </div>
+      </section>
+<section class="modal_window">
   <div  class="food_window_off" id="model_window">
     <img class="modal_food_image" src="" alt="">
     <div class="modal_info">
@@ -60,41 +97,7 @@
             белый шоколад, малина.</span></div>
           </div>
         </div>
-    <span onclick="closeNav()" id="shadow_side_bar" class="shadow_side_bar_off"></span>
-
-    <div id="side_bar_container">
-    <button onclick="openNav()" class="openbtn" href="#"> </button>
-  </div>
-        </div>
-        <div class="nav_block">
-          <img
-          src="./Новая_иллюстрация 1.png"
-          alt="/Новая_иллюстрация 1.png not found"
-          />
-          <div class="nav_links">
-            <a href="#">Завтраки</a>
-            <a href="#">Мобильное приложение</a>
-            <a href="#">Кофе в зёрнах</a>
-            <a href="#">Круассаны</a>
-          <a href="#">Чайная карта</a>
-          <a href="#">Новый какао</a>
-          <div class="mob_ver">Мобильное приложение</div>
-        </header>
-        
-      </div>
-    </div>
-    <section class="coffe_bar">
-      <h2>КОФЕЙНИ</h2>
-        <div>
-          <div >Брест</div>
-          <img src="./Arrow.svg" alt="/Arrow.svg not found" />
-        </div>
-        <div class="adress_map">
-          <div class="adress">Наши адреса</div>
-          <div class="map">На карте</div>
-        </div>
-      </section>
-
+</section>
     <section class="our_adress_and_food">
       <a href="#">
         <div class="our_adress_links">
@@ -172,12 +175,12 @@
       /></a>
     </section>
     <section class="paragraph_food">
-      <div class="food_nav_bar">
+      <nav class="food_nav_bar">
         <div class="deserts">Десерты</div>
         <div class="food">Еда</div>
         <div class="ice_cream">Мороженое</div>
         <div class="drinks">Напитки</div>
-      </div>
+      </nav>
       <div class="our_adress_and_food">
         <a class="food_info">
           <div  class="our_adress_links">
@@ -248,14 +251,14 @@
             <img src="./2020-02-20 01.06.jpg" alt="/2020-02-20 01.06.jpg not found" />
       </div>
       
-      <div class="nav_links">
+      <nav class="nav_links">
         <a href="#">Сырники</ф>
         <a href="#">Команда</a>
         <a href="#">Круассаны</a>
         <a href="#">Торты</a>
         <a href="#">Киши</a>
         <a href="#">Праздник</a>
-      </div>
+        </nav>
       <div class="our_team">Наша команда</div>
       <div class="text_about">Мы создали собственное производство десертов, которые готовим с
          большой любовью для вас только из натуральных ингредиентов.
@@ -295,7 +298,7 @@
           <img class="close_form_button" src="./TimesForm.svg" alt="TimesForm.svg not found">
         </div>
         <h3>Заполните все поля и станьте обладателем карты постоянного гостя</h3>
-        <form class="form_fields" onsubmit="getData();return false;">
+        <form class="form_fields" onsubmit="getData()">
           <input class="username" autocomplete="off" id="name" type="text" placeholder="Имя">
           <input class="lastName" autocomplete="off" id="lastname" type="text" placeholder="Фамилия">
           <div class="radio_buttons">
