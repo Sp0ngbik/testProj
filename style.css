@@ -142,7 +142,10 @@ body {
   opacity: 70%;
   z-index: 4;
 }
-
+.modal_bottom_block {
+  overflow-y: auto;
+  height: 135px;
+}
 .food_cost {
   font-weight: 600;
 }
@@ -1161,7 +1164,6 @@ body {
     margin: -370px 0px 0 295px;
   }
   .modal_bottom_block {
-    overflow-y: auto;
     width: 297px;
     height: 45px;
   }
