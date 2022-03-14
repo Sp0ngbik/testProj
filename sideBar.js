@@ -66,7 +66,7 @@ function open_model_food() {
 open_model_food()
 
 function close_model_food(){
-document.getElementById('modal_shadow_window').className = 'modal_shadow_off'
+document.getElementById('modal_shadow_window').className = 'modal_shadow_window_off'
 document.getElementById('model_window').className = 'food_window_off'
 }
 

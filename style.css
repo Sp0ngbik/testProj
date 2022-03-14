@@ -16,6 +16,9 @@ body {
 .mob_ver {
   display: none;
 }
+#side_bar_container {
+  padding: 0 0 20px 0;
+}
 .upper_block {
   display: flex;
   justify-content: space-between;
@@ -93,6 +96,7 @@ body {
   width: 394px;
 }
 .modal_shadow_window_off {
+  position: fixed;
   width: 0;
 }
 .modal_shadow_window_on {
@@ -100,7 +104,7 @@ body {
   background-color: #000000;
   content: "";
   width: 150%;
-  height: 194%;
+  height: 200%;
   position: fixed;
   margin: 0 0 0 -45%;
   opacity: 70%;
@@ -114,7 +118,7 @@ body {
   position: absolute;
   width: 40px;
   justify-content: center;
-  margin: -52px 0px 0px 403px;
+  margin: -45px 0px 0px 397px;
 }
 .modal_title {
   font-size: 26px;
@@ -956,7 +960,9 @@ body {
   .paragraph_food {
     width: 100%;
   }
-
+  .form_block {
+    width: 93%;
+  }
   .footer_block {
     grid-template-columns: repeat(3, 0.4fr);
     grid-template-rows: 0.3fr 0.3fr 0.3fr 0.5fr;
@@ -1117,7 +1123,7 @@ body {
     letter-spacing: 0.02em;
   }
   .modal_info .close_form_button {
-    margin: -380px 0px 0 300px;
+    margin: -370px 0px 0 295px;
   }
   .modal_bottom_block {
     overflow-y: auto;
@@ -1388,7 +1394,7 @@ body {
     width: 70%;
   }
   .food_window_on {
-    margin: 170% 5% 0 5%;
+    margin: 170% 5% 0 0;
   }
   .mobile_app > h2 {
     font-size: 24px;
