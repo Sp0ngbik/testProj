@@ -72,21 +72,20 @@ body {
 .modal_window {
   display: flex;
   align-items: center;
-  justify-content: center;
-  /* justify-items: flex-end;
-  align-content: flex-end; */
 }
 .food_window_on {
+  position: absolute;
   position: fixed;
   z-index: 5;
-  height: 100%;
   background-color: #0d4749;
   display: flex;
   font-size: 20px;
   border-radius: 12px;
   width: 100%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   max-width: 900px;
-  height: 100%;
   max-height: 450px;
 }
 
