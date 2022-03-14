@@ -111,7 +111,7 @@ body {
   position: absolute;
   width: 40px;
   justify-content: center;
-  margin: -108px 0px 0px 305px;
+  margin: -50px 0px 0px 414px;
 }
 .modal_title {
   font-size: 26px;
@@ -894,7 +894,7 @@ body {
     opacity: 50%;
   }
   .food_window_on {
-    margin: 70% 0 0 0;
+    margin: 50% 0 0 5%;
   }
   .nav_links {
     justify-content: space-around;
@@ -1061,6 +1061,7 @@ body {
   .upper_block {
     margin: 14px 16px;
   }
+
   .header {
     padding: 0;
     width: 100%;
@@ -1091,7 +1092,7 @@ body {
   .food_window_on {
     max-width: 343px;
     max-height: 590px;
-    margin: 120% 25% 0;
+    margin: 170% 25% 0;
     flex-direction: column;
   }
   .modal_food_image {
@@ -1107,10 +1108,11 @@ body {
   }
   .modal_info h3 {
     margin: 13px 0;
+    width: 100%;
     font-size: 16px;
   }
   .modal_info .close_form_button {
-    margin: -415px 0px 0 215px;
+    margin: -380px 0px 0 300px;
   }
   .modal_bottom_block {
     white-space: nowrap;
@@ -1345,6 +1347,9 @@ body {
   .order_link .button_style {
     grid-row: 3/3;
   }
+  .food_window_on {
+    margin: 120% 0 0 15%;
+  }
   .our_adress_and_food {
     grid-template-columns: 1fr;
     width: 100%;
@@ -1365,7 +1370,7 @@ body {
     margin: 70px 5% 0;
   }
 }
-@media screen and (max-width: 412px) {
+@media screen and (max-width: 414px) {
   .button_style {
     width: 280px;
   }
@@ -1377,6 +1382,9 @@ body {
   }
   .birth_day select {
     width: 70%;
+  }
+  .food_window_on {
+    margin: 170% 5% 0 5%;
   }
   .mobile_app > h2 {
     font-size: 24px;
