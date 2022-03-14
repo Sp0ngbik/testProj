@@ -47,30 +47,31 @@ body {
   font-size: 20px;
   border-radius: 12px;
   width: 100%;
-  max-width: 900px;
+  max-width: 912px;
   height: 100%;
-  max-height: 450px;
+  max-height: 464px;
   margin: 50% 0 0 7%;
 }
 
 .modal_info {
-  margin: 35.1px 35px 59px 28px;
+  margin: 35.1px 40px 59px 28px;
   color: #fff;
 }
 .modal_info div {
   font-weight: 700;
+  line-height: 150%;
+  letter-spacing: 0.02em;
 }
 .modal_info > span {
   font-weight: 700;
 }
 
-.modal_info div {
-  margin: 19px 0 0 0;
-}
 .modal_info h3 {
   font-weight: 400;
   font-size: 18px;
   margin: 20px 0 20px;
+  height: 81px;
+  width: 394px;
 }
 .food_weight {
   margin: 14.2px 0 19.8px;
@@ -93,7 +94,7 @@ body {
 }
 .modal_shadow_window_on {
   cursor: pointer;
-  background: black;
+  background-color: #000000;
   content: "";
   width: 150%;
   height: 194%;
@@ -101,8 +102,8 @@ body {
   margin: 0 0 0 -45%;
   opacity: 70%;
   z-index: 4;
-  /* backdrop-filter: blur(20px); */
 }
+
 .food_cost {
   font-weight: 600;
 }
