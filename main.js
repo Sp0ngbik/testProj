@@ -1,3 +1,15 @@
+function mainSlideSelect() {
+  let slider = $("#main_slide");
+  let nav_links = $("*#test");
+  let mobile_version_title = $("#mob_ver_title");
+  nav_links.on("click", function (e) {
+    slider.attr("src", $(e.target).attr("src"));
+    mobile_version_title.text($(e.target).text());
+    // console.log(mobile_version_title.text());
+    // console.log($(e.target).text());
+  });
+}
+mainSlideSelect();
 function openNav() {
   document.getElementById("mySidebar").className = "sidebarActive";
   document.getElementById("shadow_side_bar").className =
@@ -45,28 +57,26 @@ function checkForRules() {
   }
 }
 
-
-
-
 function open_model_food() {
   const imageArr = document.querySelectorAll(".food_info");
-  imageArr.forEach(el=>{
-    el.addEventListener('click',function(){
-      let image_src = this.querySelector('img').src;
-      let title = this.querySelector('span').innerHTML;
-      document.getElementById('modal_title').innerHTML = title;
-      document.querySelector('.modal_food_image').src = image_src;
-      document.querySelector('.food_window_off').className = 'food_window_on'
-      document.getElementById('modal_shadow_window').className = 'modal_shadow_window_on'
-      console.log(this.querySelector('img').src)
-      console.log(this.querySelector('span').innerHTML)
-    })
-  })
+  imageArr.forEach((el) => {
+    el.addEventListener("click", function () {
+      let image_src = this.querySelector("img").src;
+      let title = this.querySelector("span").innerHTML;
+      document.getElementById("modal_title").innerHTML = title;
+      document.querySelector(".modal_food_image").src = image_src;
+      document.querySelector(".food_window_off").className = "food_window_on";
+      document.getElementById("modal_shadow_window").className =
+        "modal_shadow_window_on";
+      console.log(this.querySelector("img").src);
+      console.log(this.querySelector("span").innerHTML);
+    });
+  });
 }
-open_model_food()
+open_model_food();
 
-function close_model_food(){
-document.getElementById('modal_shadow_window').className = 'modal_shadow_window_off'
-document.getElementById('model_window').className = 'food_window_off'
+function close_model_food() {
+  document.getElementById("modal_shadow_window").className =
+    "modal_shadow_window_off";
+  document.getElementById("model_window").className = "food_window_off";
 }
-

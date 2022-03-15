@@ -235,6 +235,9 @@ body {
 
 .nav_block > img {
   width: 100%;
+  max-width: 1226px;
+  height: 100%;
+  max-height: 630px;
   border-radius: 12px;
 }
 .nav_links {
