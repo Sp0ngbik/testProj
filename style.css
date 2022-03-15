@@ -152,13 +152,12 @@ body {
   cursor: pointer;
   content: "";
   width: 100%;
-  height: 100%;
+  height: 100vw;
   background-color: #000000;
   position: fixed;
-  /* margin: 0 0 0 -45%; */
+  margin: 0 0 0 -45%;
   opacity: 50%;
   z-index: 2;
-  /* доделать */
 }
 .guest_card {
   width: 42px;
@@ -259,6 +258,7 @@ body {
 .nav_links a:hover {
   opacity: 100%;
 }
+
 .coffe_bar > h2 {
   font-size: 90px;
   font-weight: 800;
@@ -266,6 +266,7 @@ body {
   color: #fff;
   text-align: center;
 }
+
 .coffe_bar > div {
   display: flex;
   font-weight: 600;
@@ -318,6 +319,7 @@ body {
   text-align: center;
   width: 100%;
   margin: 0 auto;
+  /* padding: 0 70px; */
   max-width: 1226px;
 
   display: grid;
@@ -342,7 +344,6 @@ body {
 .our_adress_links {
   width: 100%;
   box-sizing: border-box;
-  max-width: 380px;
   position: absolute;
   border-radius: 12px;
   background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #000000 100%);
@@ -1074,10 +1075,11 @@ body {
     font-size: 16px;
   }
 
-  .order > a {
-    font-size: 16px;
-    margin: 0px 0 0 31.5%;
+  .site {
+    display: block;
+    padding: 1% 0 5%;
   }
+
   .about_app > div {
     margin: 0;
   }
@@ -1148,8 +1150,7 @@ body {
   }
   .modal_info h3 {
     margin: 13px 0;
-    width: 97%;
-    height: 52%;
+    width: 100%;
     font-size: 16px;
     letter-spacing: 0.02em;
   }
@@ -1169,8 +1170,11 @@ body {
   .select_country > img {
     width: 10px;
   }
+  .coffe_bar {
+    width: 100%;
+  }
   .coffe_bar > div {
-    width: 90%;
+    width: 100%;
     margin: 0 auto 50px;
   }
   .coffe_bar > h2 {
@@ -1178,12 +1182,13 @@ body {
     margin: 60px 0 37px 0;
   }
   .coffe_bar img {
-    margin: 2% 0 0 2%;
+    margin: 5px 0 0 5px;
   }
   .our_adress_and_food {
     grid-template-columns: 1fr 1fr;
-    width: 90%;
+    width: 100%;
     grid-gap: 20px;
+    justify-content: center;
   }
   .food_nav_bar {
     width: 100%;
@@ -1204,8 +1209,7 @@ body {
   }
   .order_link {
     display: grid;
-    grid-template-columns: 1.3fr 0.2fr;
-    margin: 0 20px;
+    margin: 0 20px 50px;
   }
 
   .site {
@@ -1221,7 +1225,6 @@ body {
     grid-column: 1/3;
     display: flex;
     margin: 15px auto 70px 0;
-    padding: 15px 5%;
     font-size: 18px;
     justify-content: center;
     grid-row: 2/2;
@@ -1252,10 +1255,7 @@ body {
   .mobile_app_image {
     grid-column: 1/3;
   }
-  .about_app {
-    grid-template-columns: 1fr;
-    margin: 70px 5% 0;
-  }
+
   .mobile_app {
     padding: 0 0 156px 0;
   }
@@ -1273,7 +1273,6 @@ body {
   }
   .about_app {
     grid-template-columns: repeat(2, 1fr);
-    margin: 70px 5% 0;
   }
   .app_store_logo {
     width: 100%;
@@ -1301,47 +1300,6 @@ body {
   }
   .paragraph_food {
     width: 100%;
-  }
-
-  .footer_block {
-    grid-template-columns: repeat(3, 0.4fr);
-    grid-template-rows: 0.3fr 0.3fr 0.3fr 0.5fr;
-  }
-  .dots span::before {
-    margin: 0;
-    opacity: 0%;
-  }
-  .dots {
-    align-content: center;
-  }
-
-  .dots > div {
-    text-align: center;
-    margin: 0;
-  }
-  .controll_prog {
-    padding: 0;
-    grid-column: 2/3;
-    grid-row: 4/4;
-  }
-  .trademark {
-    grid-row: 1/2;
-    grid-column: 1/2;
-  }
-  .office_link {
-    grid-row: 1/2;
-    grid-column: 2/3;
-  }
-  .office_link {
-    grid-row: 2/3;
-  }
-  .social_media_icons {
-    grid-row: 3/4;
-    grid-column: 1/4;
-  }
-  .trademark {
-    grid-row: 1/2;
-    grid-column: 2/3;
   }
 }
 @media screen and (max-width: 560px) {
@@ -1375,7 +1333,10 @@ body {
   .order_link .button_style {
     grid-row: 3/3;
   }
-
+  .button_style {
+    width: 100%;
+    max-width: 343px;
+  }
   .our_adress_and_food {
     grid-template-columns: 1fr;
     width: 100%;
@@ -1388,17 +1349,8 @@ body {
   .mobile_app_image {
     grid-column: 1/3;
   }
-
-  .about_app {
-    grid-template-columns: 1fr;
-    margin: 70px 5% 0;
-  }
 }
 @media screen and (max-width: 414px) {
-  .button_style {
-    width: 280px;
-  }
-
   .mobile_app > h2 {
     font-size: 24px;
   }
