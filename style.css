@@ -568,10 +568,12 @@ body {
   max-width: 393px;
 }
 .form_block {
+  position: relative;
   padding: 80px 0 80px 0;
   display: flex;
-  justify-content: center;
+  margin: 0 auto;
   width: 100%;
+  max-width: 560px;
   background-color: #0f3739;
 }
 
@@ -587,10 +589,7 @@ body {
   background-color: #0d4749;
   border-radius: 12px 12px 0 0;
 }
-.form_head .close_form_button {
-  position: absolute;
-  margin: -11px 0 0 300px;
-}
+
 .close_form_button {
   cursor: pointer;
 }
@@ -626,15 +625,19 @@ body {
   max-width: 560px;
   margin: 0 auto;
 }
+.form_fields input::-webkit-input-placeholder {
+  color: rgba(255, 255, 255, 0.5);
+}
 .form_fields input {
   padding: 11px 12px 11px 56px;
-  width: 100%;
+  width: 74.7%;
   color: #fff;
-  max-width: 418px;
+  max-width: 488px;
   height: 26px;
   font-size: 18px;
   max-height: 100%;
   border-radius: 8px;
+  outline: none;
   background-color: #0d4749;
   border: 1px solid #0d4749;
 }
@@ -723,41 +726,51 @@ body {
   background-image: url("./Checkbox-active.svg");
 }
 
-.birth_day {
-  width: 100%;
-  max-width: 488px;
-}
 .day_input option:hover {
   background-color: black;
 }
 .day_input option {
   opacity: 50%;
 }
-.birth_day select {
-  width: 100%;
-  max-width: 152px;
+.birth_day {
+  width: 92%;
+  max-width: 488px;
   height: 50px;
+  justify-content: center;
+  white-space: nowrap;
+}
+.birth_day select {
+  outline: none;
+  width: 30.5%;
   background-color: #0d4749;
   border: none;
-  color: #fff;
-  font-size: 18px;
+  color: rgba(255, 255, 255, 0.5);
   padding: 11px 18px 11px 20px;
   border-radius: 12px;
+  font-size: 18px;
+  max-width: 152px;
+  height: 50px;
   background-image: url("./angle-down.svg");
   appearance: none;
-  background-position: right 16.5px top 50%;
+  background-position: right 12% top 50%;
   background-repeat: no-repeat;
 }
-.birth_day > h2 {
+/* select option:first-child {
+  color: red;
+} */
+
+.birth_day_title {
   text-align: left;
-  margin: 33px 0 16px 8px;
+  margin: 33px 0 16px 10px;
   font-size: 16px;
+  width: 90%;
+  max-width: 488px;
   color: #fff;
   font-weight: 400;
   line-height: 24px;
 }
 .mounth_input {
-  margin: 0 11.5px;
+  margin: 0 2.5%;
 }
 .phoneNumber {
   margin: 16px 0;
@@ -773,7 +786,6 @@ body {
 }
 .select_coffee_bar > h3 {
   color: #fff;
-  margin: 0 0 16px;
   width: 488px;
   font-size: 16px;
   font-weight: 400;
@@ -789,14 +801,12 @@ body {
   margin: 0 0 33px;
 }
 
-.place::-webkit-input-placeholder {
-  color: #fff;
-}
 .place {
   margin: 16px 0 33px;
   padding: 11px 12px 11px 20px;
   width: 100%;
   color: #fff;
+  outline: none;
   max-width: 488px;
   height: 50px;
   font-size: 18px;
@@ -829,11 +839,11 @@ body {
   letter-spacing: 0.02em;
 }
 .terms {
-  margin: 6px 0 24px 75px;
+  margin: 6px 0 24px 0;
   font-size: 14px;
   opacity: 0.8;
   color: #fff;
-  width: 488px;
+  width: 267px;
   text-align: left;
   line-height: 21px;
 }
@@ -1026,9 +1036,7 @@ body {
   .paragraph_food {
     width: 100%;
   }
-  .form_block {
-    width: 93%;
-  }
+
   .footer_block {
     grid-template-columns: repeat(3, 0.4fr);
     grid-template-rows: 0.3fr 0.3fr 0.3fr 0.5fr;
@@ -1252,9 +1260,7 @@ body {
     color: #fff;
     font-weight: 700;
   }
-  .birth_day select {
-    width: 32%;
-  }
+
   .mobile_app > h2 {
     padding: 50px 0 0 0;
     font-size: 34px;
@@ -1360,12 +1366,6 @@ body {
   }
 }
 @media screen and (max-width: 560px) {
-  .form_fields input {
-    width: 70%;
-  }
-  .birth_day {
-    width: 90%;
-  }
   .select_coffee_bar {
     width: 90%;
   }
@@ -1375,9 +1375,7 @@ body {
   .permission_container {
     width: 90%;
   }
-  .terms {
-    width: 90%;
-  }
+
   .form_block {
     padding: 200px 0;
   }
@@ -1394,9 +1392,7 @@ body {
     grid-row: 1/2;
     white-space: normal;
   }
-  .birth_day select {
-    width: 29%;
-  }
+
   .order_link .button_style {
     grid-row: 3/3;
   }
@@ -1413,9 +1409,7 @@ body {
   .mobile_app_image {
     grid-column: 1/3;
   }
-  .form_head .close_form_button {
-    margin: -5% 0 0 48%;
-  }
+
   .about_app {
     grid-template-columns: 1fr;
     margin: 70px 5% 0;
@@ -1425,22 +1419,11 @@ body {
   .button_style {
     width: 280px;
   }
-  .birth_day {
-    width: 60%;
-  }
-  .birth_day > h2 {
-    margin: 33px 0 16px 17%;
-  }
-  .birth_day select {
-    width: 70%;
-  }
 
   .mobile_app > h2 {
     font-size: 24px;
   }
+  .birth_day select {
+    font-size: 14px;
+  }
 }
-
-/* @media screen and (max-height: 450px) {
-  .sidebar {padding-top: 15px;}
-  .sidebar a {font-size: 18px;}
-} */

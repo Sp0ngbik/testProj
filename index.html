@@ -293,7 +293,6 @@
       <div class="form_container">
         <div class="form_head">
           <h2>Анкета гостя</h2>
-          <img class="close_form_button" src="./TimesForm.svg" alt="TimesForm.svg not found">
         </div>
         <h3>Заполните все поля и станьте обладателем карты постоянного гостя</h3>
         <form class="form_fields" onsubmit="getData()">
@@ -305,20 +304,20 @@
           <input type="radio" class="radioButton" name="sex" value="female" id="female">
           <label class="femaleRadio" for="female">Женский</label>
           </div>
+          <h2 class="birth_day_title">Дата рождения</h2>
           <div class="birth_day">
-            <h2>Дата рождения</h2>
               <select class="day_input" type="datetime" id="day" name="date_day" >
-                  <option value="day">День</option>
-                  <option value="30">30</option>
+                <option value="day">День</option>
+                <option value="30">30</option>
               </select>
-            <select type="datetime" id="mounth" class="mounth_input" name="date_mounth">
-              <option value="mounth">Месяц</option>
-              <option value="august">Август</option>
-            </select>
-            <select type="datetime" id="year" name="date_year">
-              <option value="year">Год</option>
-              <option value="1998">1998</option>
-            </select>
+              <select type="datetime" id="mounth" class="mounth_input" name="date_mounth">
+                <option value="mounth">Месяц</option>
+                <option value="august">Август</option>
+              </select>
+              <select type="datetime" id="year" name="date_year">
+                <option value="year">Год</option>
+                <option value="1998">1998</option>
+              </select>
           </div>
           <div class="username_contacts">
             <input class="phoneNumber" autocomplete="off" id="phoneNumber" type="tel" placeholder="Номер телефона">
