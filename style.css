@@ -71,7 +71,9 @@ body {
   width: 100%;
   top: 50%;
   align-items: center;
+  /* backdrop-filter: blur(20px); */
 }
+
 .food_window_off {
   position: absolute;
   overflow-x: hidden;
@@ -137,12 +139,12 @@ body {
 }
 .modal_shadow_window_on {
   cursor: pointer;
-  background-color: #000000;
+  background: rgba(0, 0, 0, 0.75);
   content: "";
   width: 100%;
   height: 100%;
   position: fixed;
-  opacity: 70%;
+  backdrop-filter: blur(20px);
   z-index: 4;
 }
 .modal_bottom_block {
@@ -208,7 +210,6 @@ body {
   margin: 0 0 0 70px;
 }
 .sidebarActive > .social_media_icons {
-  /* margin: 0 0 0 150px; */
   padding: 0 70px 0 0;
   text-align: right;
 }
@@ -217,7 +218,6 @@ body {
   height: 100%;
   width: 100%;
   max-width: 535px;
-  /* max-height: 900px; */
   top: 0;
   right: 0;
   position: fixed;
