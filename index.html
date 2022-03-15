@@ -109,7 +109,7 @@
             />
           </div>
         </div>
-        <img src="./image 1.jpg" alt="/image 1.jpg not found" />
+        <img src="./Google_Homepage.svg.png" alt="/image 1.jpg not found" />
       </a>
       <a href="#">
         <div class="our_adress_links">
@@ -295,9 +295,12 @@
           <h2>Анкета гостя</h2>
         </div>
         <h3>Заполните все поля и станьте обладателем карты постоянного гостя</h3>
-        <form class="form_fields" onsubmit="getData()">
-          <input class="username" autocomplete="off" id="name" type="text" placeholder="Имя">
-          <input class="lastName" autocomplete="off" id="lastname" type="text" placeholder="Фамилия">
+        <form  onsubmit="getData()">
+          <div class="form_fields">
+            <div class="user_tags">
+              <input class="username" autocomplete="off" id="name" type="text" placeholder="Имя">
+              <input class="lastName" autocomplete="off" id="lastname" type="text" placeholder="Фамилия">
+            </div>
           <div class="radio_buttons">
           <input type="radio"  name="sex" value="male" class="radioButton" id="male">
             <label class="maleRadio" for="male">Мужской</label>
@@ -305,19 +308,25 @@
           <label class="femaleRadio" for="female">Женский</label>
           </div>
           <h2 class="birth_day_title">Дата рождения</h2>
-          <div class="birth_day">
+          <div class="birth_date">
+            <div class="birth_day">
               <select class="day_input" type="datetime" id="day" name="date_day" >
                 <option value="day">День</option>
                 <option value="30">30</option>
               </select>
+            </div>
+            <div class="birth_mounth">
               <select type="datetime" id="mounth" class="mounth_input" name="date_mounth">
                 <option value="mounth">Месяц</option>
                 <option value="august">Август</option>
               </select>
+            </div>
+            <div class="birth_year">
               <select type="datetime" id="year" name="date_year">
                 <option value="year">Год</option>
                 <option value="1998">1998</option>
               </select>
+            </div>
           </div>
           <div class="username_contacts">
             <input class="phoneNumber" autocomplete="off" id="phoneNumber" type="tel" placeholder="Номер телефона">
@@ -335,6 +344,7 @@
             <label class="custom_checkbox" for="request">Я разрешаю ООО «ПараграфБрест» использовать указанные мной данные в маркетинговых целях.</label>
           </div>
           <h3 class="terms">Необходимо согласиться с условиями</h3>
+        </div>
           <button class="disableButton" id="button_send" type="submit">Отправить</button>
           </form>
       </div>

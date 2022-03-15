@@ -8,32 +8,6 @@ body {
   font-family: "Raleway", sans-serif;
 }
 
-.sticker_block {
-  width: 1366;
-  height: 921px;
-}
-.scroll_bar {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  justify-items: center;
-  margin: 0 auto;
-}
-.scroll_bar button {
-  cursor: pointer;
-  background-color: rgba(0, 0, 0, 0);
-  border: none;
-}
-.sticker_block h2 {
-  text-align: center;
-  font-size: 80px;
-  color: #fff;
-}
-.slides {
-  width: 1366px;
-  height: 921px;
-}
-
 .header {
   position: relative;
   width: 100%;
@@ -71,7 +45,6 @@ body {
   width: 100%;
   top: 50%;
   align-items: center;
-  /* backdrop-filter: blur(20px); */
 }
 
 .food_window_off {
@@ -158,7 +131,7 @@ body {
   position: absolute;
   width: 40px;
   justify-content: center;
-  margin: -45px 0px 0px 397px;
+  margin: -45px 0px 0px 398px;
 }
 .modal_title {
   font-size: 26px;
@@ -178,13 +151,14 @@ body {
 .shadow_side_bar_active {
   cursor: pointer;
   content: "";
-  width: 110%;
-  height: 194%;
+  width: 100%;
+  height: 100%;
   background-color: #000000;
   position: fixed;
-  margin: 0 0 0 -45%;
+  /* margin: 0 0 0 -45%; */
   opacity: 50%;
   z-index: 2;
+  /* доделать */
 }
 .guest_card {
   width: 42px;
@@ -250,18 +224,16 @@ body {
 .openbtn:hover {
   cursor: pointer;
 }
-.logo {
+/* .logo {
   position: relative;
-  height: 15%;
+  height: 25%;
   display: flex;
-}
+} */
 .logo > img {
   width: 100%;
+  max-width: 248px;
 }
-.upper_header > img {
-  width: 100%;
-  display: flex;
-}
+
 .nav_block > img {
   width: 100%;
   border-radius: 12px;
@@ -288,10 +260,9 @@ body {
   opacity: 100%;
 }
 .coffe_bar > h2 {
-  letter-spacing: 8%;
   font-size: 90px;
   font-weight: 800;
-  margin: 3vw 0 0 0;
+  margin: 120px 0 0 0;
   color: #fff;
   text-align: center;
 }
@@ -307,9 +278,10 @@ body {
   margin-right: 10px;
   font-size: 1.5vw;
 }
+
 .coffe_bar img {
   width: 20px;
-  margin: 0.5vw 0 0 0.2vw;
+  margin: 0 0 0 8px;
 }
 .adress_map {
   min-width: 343px;
@@ -347,6 +319,7 @@ body {
   width: 100%;
   margin: 0 auto;
   max-width: 1226px;
+
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 43px;
@@ -356,16 +329,20 @@ body {
   display: flex;
   align-items: flex-end;
   text-align: left;
+  flex: 1;
 }
 .our_adress_and_food > a > img {
   border-radius: 12px;
   width: 100%;
+  height: 100%;
 }
 .our_adress_and_food img {
   cursor: pointer;
 }
 .our_adress_links {
-  width: 93.2%;
+  width: 100%;
+  box-sizing: border-box;
+  max-width: 380px;
   position: absolute;
   border-radius: 12px;
   background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #000000 100%);
@@ -374,7 +351,7 @@ body {
   font-size: 22px;
   z-index: 1;
   font-weight: 600;
-  padding: 70px 0 10% 7%;
+  padding: 70px 0 27px 29px;
 }
 
 .our_adress_links > div {
@@ -457,7 +434,8 @@ body {
   border-radius: 12px;
 }
 .image_shadow {
-  width: 93.2%;
+  width: 100%;
+  box-sizing: border-box;
   position: absolute;
   border-radius: 12px;
   background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #000000 100%);
@@ -466,8 +444,9 @@ body {
   font-size: 1vw;
   z-index: 1;
   border-radius: 12px;
+  height: 100%;
+  max-height: 222px;
   font-weight: 600;
-  padding: 70px 0 10% 7%;
 }
 .image_block {
   display: flex;
@@ -489,7 +468,7 @@ body {
 }
 .site {
   display: flex;
-  padding: 3% 0 131px;
+  padding: 0 0 131px;
   color: #fff;
   font-weight: 400;
   font-size: 18px;
@@ -525,7 +504,7 @@ body {
   justify-content: center;
   justify-items: center;
   margin: 0 auto;
-  padding: 0 0 131.79px 0;
+  padding: 0 0 132px 0;
 }
 .about span {
   font-weight: 700;
@@ -612,35 +591,39 @@ body {
   margin: 0 auto;
   color: #fff;
   font-size: 16px;
-  width: 70%;
+  max-width: 352px;
+  width: 100%;
   line-height: 25px;
   height: 50px;
 }
 .form_fields {
+  box-sizing: border-box;
+  padding: 0 36px;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
   width: 100%;
-  max-width: 560px;
+  max-width: 488px;
   margin: 0 auto;
 }
+
 .form_fields input::-webkit-input-placeholder {
   color: rgba(255, 255, 255, 0.5);
 }
 .form_fields input {
+  box-sizing: border-box;
   padding: 11px 12px 11px 56px;
-  width: 74.7%;
+  width: 100%;
   color: #fff;
   max-width: 488px;
-  height: 26px;
+  height: 50px;
   font-size: 18px;
-  max-height: 100%;
   border-radius: 8px;
   outline: none;
   background-color: #0d4749;
   border: 1px solid #0d4749;
 }
+
 .username {
   margin: 28px 0 16px;
   background-image: url("./User.svg");
@@ -653,7 +636,7 @@ body {
   background-repeat: no-repeat;
 }
 .radio_buttons {
-  margin: 20px 0 0 0;
+  margin: 20px auto 0;
   display: flex;
   justify-content: center;
   color: #fff;
@@ -717,7 +700,7 @@ body {
   flex-grow: 0;
   border: 2px solid #118181;
   border-radius: 0.25em;
-  margin-right: 0.5em;
+  margin-right: 9px;
   background-repeat: no-repeat;
   background-position: center center;
 }
@@ -729,49 +712,54 @@ body {
 .day_input option:hover {
   background-color: black;
 }
-.day_input option {
-  opacity: 50%;
-}
-.birth_day {
-  width: 92%;
+
+.birth_date {
+  width: 100%;
+  display: flex;
   max-width: 488px;
-  height: 50px;
-  justify-content: center;
   white-space: nowrap;
 }
-.birth_day select {
+.birth_date > div {
+  width: 100%;
+}
+.birth_day {
+  margin: 0 8px 0 0;
+}
+.birth_mounth {
+  margin: 0 8px;
+}
+.birth_year {
+  margin: 0 0 0 8px;
+}
+.birth_date select {
   outline: none;
-  width: 30.5%;
+  display: block;
+  width: 100%;
   background-color: #0d4749;
   border: none;
   color: rgba(255, 255, 255, 0.5);
   padding: 11px 18px 11px 20px;
   border-radius: 12px;
   font-size: 18px;
-  max-width: 152px;
   height: 50px;
   background-image: url("./angle-down.svg");
   appearance: none;
   background-position: right 12% top 50%;
   background-repeat: no-repeat;
+  flex: 1;
 }
-/* select option:first-child {
-  color: red;
-} */
 
 .birth_day_title {
   text-align: left;
-  margin: 33px 0 16px 10px;
+  margin: 33px 0 16px 0;
   font-size: 16px;
-  width: 90%;
+  width: 100%;
   max-width: 488px;
   color: #fff;
   font-weight: 400;
   line-height: 24px;
 }
-.mounth_input {
-  margin: 0 2.5%;
-}
+
 .phoneNumber {
   margin: 16px 0;
   background-image: url("./Phone.svg");
@@ -832,14 +820,13 @@ body {
 
 .permission_container > label {
   text-align: left;
-  margin: 0 0 0 9px;
   font-size: 16px;
   line-height: 25px;
   color: #fff;
   letter-spacing: 0.02em;
 }
 .terms {
-  margin: 6px 0 24px 0;
+  margin: 6px 0 24px 29px;
   font-size: 14px;
   opacity: 0.8;
   color: #fff;
@@ -891,7 +878,7 @@ body {
   grid-template-columns: repeat(3, 1fr);
 }
 .social_media_icons img {
-  margin: 0 0 0 8.5%;
+  margin: 0 0 0 40px;
 }
 .politics {
   grid-column: 2/4;
@@ -927,7 +914,7 @@ body {
 }
 
 .controll_prog {
-  padding: 30px 9% 0 0;
+  padding: 30px 0 0 0;
   opacity: 60%;
 }
 
@@ -938,9 +925,6 @@ body {
 @media screen and (max-width: 1280px) {
   .header {
     width: 100%;
-  }
-  .upper_block {
-    margin: 0 68px 21px 70px;
   }
   .nav_links a {
     justify-content: space-between;
@@ -970,16 +954,16 @@ body {
     padding: 0 70px 25px 0;
   }
 
-  .sidebar {
+  /* .sidebar {
     max-width: 375px;
     padding-top: 15px;
     width: 375px;
     bottom: 50%;
     max-height: 700px;
-    height: 10%;
-  }
+    height: 10000%;
+  } */
 
-  .sidebar a {
+  /* .sidebar a {
     display: flex;
     font-size: 18px;
     text-decoration: none;
@@ -988,7 +972,7 @@ body {
     font-size: 24px;
     text-align: right;
     justify-content: flex-end;
-  }
+  } */
   .food_nav_bar {
     width: 100%;
   }
@@ -1000,7 +984,7 @@ body {
     padding: 0 0 24px 0;
   }
   .order_link {
-    grid-template-rows: 0.2fr 0.5fr;
+    grid-template-rows: 55px 50px;
     margin: 62px 70px 0;
     justify-content: space-between;
   }
@@ -1038,8 +1022,7 @@ body {
   }
 
   .footer_block {
-    grid-template-columns: repeat(3, 0.4fr);
-    grid-template-rows: 0.3fr 0.3fr 0.3fr 0.5fr;
+    grid-template-rows: 30px 45px 52px 150px;
   }
   .footer_block div {
     text-align: center;
@@ -1091,10 +1074,6 @@ body {
     font-size: 16px;
   }
 
-  .site {
-    display: block;
-    padding: 1% 0 5%;
-  }
   .order > a {
     font-size: 16px;
     margin: 0px 0 0 31.5%;
@@ -1367,13 +1346,13 @@ body {
 }
 @media screen and (max-width: 560px) {
   .select_coffee_bar {
-    width: 90%;
+    width: 100%;
   }
   .select_coffee_bar > h3 {
-    width: 90%;
+    width: 100%;
   }
   .permission_container {
-    width: 90%;
+    width: 100%;
   }
 
   .form_block {
@@ -1423,7 +1402,7 @@ body {
   .mobile_app > h2 {
     font-size: 24px;
   }
-  .birth_day select {
+  .birth_date select {
     font-size: 14px;
   }
 }
