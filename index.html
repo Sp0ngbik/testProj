@@ -17,29 +17,24 @@
 
   <body>
       <header class="header">
-        <div class="upper_block">
-          <div class="select_country">
-            <a href="#">Брест</a>
-            <img src="./main_img/Arrow.svg" alt="/Arrow.svg not found" />
-          </div>
-          <div class="logo">
-            <img src="./main_img/Logo.svg" alt="/Logo.svg not found" />
+       <div class="upper_block">
+          <div class="header_nav">
+            <div class="select_country">
+              <a href="#">Брест</a>
+              <img src="./main_img/Arrow.svg" alt="/Arrow.svg not found" />
+            </div>
+            <div class="logo">
+              <img src="./main_img/Logo.svg" alt="/Logo.svg not found" />
+            </div>
+            <button onclick="openNav()" class="openbtn" href="#"><img src="./Burger.svg" alt=""> </button>
           </div>
      
+          <div id="side_bar_container">
+          </div>
+          <span onclick="closeNav()" id="shadow_side_bar" class="shadow_side_bar_off"></span>
        <div  id="mySidebar"  class="sidebarOff">
          <a href="javascript:void(0)" class="closebtn" onClick="closeNav()">
            <img  class="close_side_bar" src="./Times.svg" alt="Times.svg not found"></a>
-           <div class="mobile_version_sidebar">
-            <div class="select_country_sidebar">
-              <a href="#">Брест
-              <img class="arrow_select_sidebar" src="./main_img/Arrow.svg" alt="/Arrow.svg not found" />
-              </a>
-            </div>
-            <div class="logo_sidebar">
-              <img src="./main_img/Logo.svg" alt="/Logo.svg not found" />
-            </div>
-            <img class="close_sidebar_mobile_verison" src="./Times.svg" alt="Times.svg not found"></a>
-          </div>
          <a  href="#">Акции</a>
          <a href="#">Кофейни</a>
          <a href="#">Меню</a>
@@ -57,10 +52,7 @@
            <img src="./social_media/telegram-plane 1.svg" alt="telegram.svg">
           </div>
         </div>
-    <span onclick="closeNav()" id="shadow_side_bar" class="shadow_side_bar_off"></span>
-    <div id="side_bar_container">
-    <button onclick="openNav()" class="openbtn" href="#"> </button>
-  </div>
+   
         </div>
         <div class="nav_block">
           <img id="main_slide"
@@ -186,68 +178,68 @@
     </section>
     <section class="paragraph_food">
       <nav class="food_nav_bar">
-        <div class="deserts">Десерты</div>
-        <div class="food">Еда</div>
-        <div class="ice_cream">Мороженое</div>
-        <div class="drinks">Напитки</div>
+        <div data-filter="desert_filter" class="deserts">Десерты</div>
+        <div data-filter="main_food_filter" class="food">Еда</div>
+        <div data-filter="ice_cream_filter" class="ice_cream">Мороженое</div>
+        <div data-filter="drinks_filter" class="drinks">Напитки</div>
       </nav>
-      <div class="our_adress_and_food">
-        <a class="food_info">
-          <div  class="our_adress_links">
+      <div class="our_adress_and_food second_block">
+        <a  class="food_info desert_filter">
+          <div class="our_adress_links">
             <span> Торт «Эстерхази» </span>
           </div>
           <img src="./food_img/image 18.jpg" alt="/image 18.jpg not found" />
         </a>
-        <a class="food_info">
-          <div  class="our_adress_links">
-            <span > Торт «Эстерхази» </span>
+        <a class="food_info desert_filter">
+          <div class="our_adress_links">
+            <span> Торт «Эстерхази» </span>
           </div>
           <img src="./food_img/image 16.jpg"  alt="image 16.jp not found"
         /></a>
-        <a class="food_info">
-          <div  class="our_adress_links">
+        <a class="food_info desert_filter">
+          <div class="our_adress_links">
             <span> Торт «Эстерхази» </span>
           </div>
           <img  src="./food_img/image 15.jpg" alt=" image 15.jpg not found"
         /></a>
-        <a class="food_info">
-          <div  class="our_adress_links" >
+        <a   class="food_info main_food_filter">
+          <div class="our_adress_links" >
             <span> Торт «Эстерхази» </span>
           </div>
           <img src="./food_img/image 14.jpg" alt="/image 14.jpg not found"
         /></a>
-        <a class="food_info">
-          <div  class="our_adress_links">
+        <a  class="food_info main_food_filter">
+          <div class="our_adress_links">
             <span> Торт «Эстерхази» </span>
           </div>
           <img  src="./food_img/image 9.jpg" alt="/image 9.jpg not found" />
         </a>
-        <a class="food_info">
-          <div  class="our_adress_links" >
+        <a class="food_info ice_cream_filter">
+          <div class="our_adress_links" >
             <span> Торт «Эстерхази» </span>
           </div>
-          <img  src="./food_img/image 18.jpg" alt="/image 18.jpg not found" />
+          <img src="./food_img/image 18.jpg" alt="/image 18.jpg not found" />
         </a>
-        <a class="food_info"> 
-          <div  class="our_adress_links" >
+        <a class="food_info drinks_filter"> 
+          <div class="our_adress_links" >
             <span> Торт «Эстерхази» </span>
           </div>
-          <img  src="./food_img/image 15.jpg" alt=" image 15.jpg not found"
+          <img src="./food_img/image 15.jpg" alt=" image 15.jpg not found"
         /></a>
-        <a class="food_info">
-          <div  class="our_adress_links">
+        <a class="food_info drinks_filter">
+          <div class="our_adress_links">
             <span> Торт «Эстерхази» </span>
           </div>
           <img  src="./food_img/image 14.jpg" alt="/image 14.jpg not found"
         /></a>
-        <a class="food_info">
-          <div  class="our_adress_links" >
+        <a class="food_info ice_cream_filter">
+          <div class="our_adress_links" >
             <span> Торт «Эстерхази» </span>
           </div>
-          <img  src="./food_img/image 9.jpg" alt="/image 9.jpg not found" />
+          <img src="./food_img/image 9.jpg" alt="/image 9.jpg not found" />
         </a>
       </div>
-      <button class="button_style"><a href="#">        
+      <button class="button_style food_more_button"><a >        
         Показать больше
       </a>
     </button>

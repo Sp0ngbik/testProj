@@ -5,20 +5,41 @@ function mainSlideSelect() {
   nav_links.on("click", function (e) {
     slider.attr("src", $(e.target).attr("data-src"));
     mobile_version_title.text($(e.target).text());
-    // console.log(mobile_version_title.text());
-    // console.log($(e.target).text());
   });
 }
 mainSlideSelect();
+
+function desertSelector(){
+  let item = $('.food_info')
+$('.food_nav_bar').on('click', function(e){
+  let checkValue = $(e.target).attr("data-filter");
+  $(item).not('.'+checkValue).hide();
+  $(item).filter('.'+checkValue).show();
+  }
+)
+$('.food_more_button').on('click',function(e){
+  $(item).show();
+})
+}
+desertSelector();
+
+
+
 function openNav() {
   document.getElementById("mySidebar").className = "sidebarActive";
   document.getElementById("shadow_side_bar").className =
     "shadow_side_bar_active";
+     $('.header_nav').addClass('header_nav_fixed');
+     $('.select_country').addClass('select_country_fixed');
+     $('.logo').addClass('logo_fixed');
 }
 
 function closeNav() {
   document.getElementById("mySidebar").className = "sidebarOff";
   document.getElementById("shadow_side_bar").className = "shadow_side_bar_off";
+  $('.header_nav').removeClass('header_nav_fixed');
+  $('.select_country').removeClass('select_country_fixed');
+  $('.logo').removeClass('logo_fixed');
 }
 
 function getData() {
@@ -68,8 +89,7 @@ function open_model_food() {
       document.querySelector(".food_window_off").className = "food_window_on";
       document.getElementById("modal_shadow_window").className =
         "modal_shadow_window_on";
-      console.log(this.querySelector("img").src);
-      console.log(this.querySelector("span").innerHTML);
+
     });
   });
 }
