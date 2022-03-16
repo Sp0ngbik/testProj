@@ -1,3 +1,15 @@
+function owlTest (){
+  //Owl Carousel
+  let owl = $('.owl-carousel');
+  owl.owlCarousel({
+    items:1,
+    margin:0,
+    loop:true,
+    nav:false,
+    dots:false,
+  })
+}
+owlTest()
 function mainSlideSelect() {
   let slider = $("#main_slide");
   let nav_links = $("*#test");
