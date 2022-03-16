@@ -10,7 +10,9 @@ function mainSlideSelect() {
 mainSlideSelect();
 
 function desertSelector(){
-  let item = $('.food_info')
+  let item = $('.food_info');
+  $(item).not('.desert_filter').hide();
+  $(item).filter('.desert_filter').show();
 $('.food_nav_bar').on('click', function(e){
   let checkValue = $(e.target).attr("data-filter");
   $(item).not('.'+checkValue).hide();
