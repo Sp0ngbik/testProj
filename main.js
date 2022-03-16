@@ -3,7 +3,7 @@ function mainSlideSelect() {
   let nav_links = $("*#test");
   let mobile_version_title = $("#mob_ver_title");
   nav_links.on("click", function (e) {
-    slider.attr("src", $(e.target).attr("src"));
+    slider.attr("src", $(e.target).attr("data-src"));
     mobile_version_title.text($(e.target).text());
     // console.log(mobile_version_title.text());
     // console.log($(e.target).text());
