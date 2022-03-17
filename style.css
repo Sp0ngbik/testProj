@@ -31,17 +31,18 @@ body {
   max-height: 100%;
   height: 90px;
 }
-
-.select_country a {
-  margin: 0 2px 0 0;
-  color: #fff;
-  font-weight: 400;
+.select_country select {
   font-size: 20px;
-  text-decoration: none;
-  top: 50%;
-}
-.select_country > img {
-  width: 15px;
+  width: 80px;
+  border: none;
+  background-color: rgba(0, 0, 0, 0);
+  color: #fff;
+  background-image: url("./main_img/Arrow.svg");
+  background-repeat: no-repeat;
+  background-position: right 10% top 60%;
+  appearance: none;
+  background-size: 13px;
+  outline: none;
 }
 
 .modal_window {
@@ -999,9 +1000,7 @@ body {
     margin: 30px 9px;
     white-space: nowrap;
   }
-  .select_country a {
-    font-size: 14px;
-  }
+
   .logo > img {
     max-width: 142px;
   }
@@ -1388,6 +1387,10 @@ body {
   }
   .logo {
     z-index: 9;
+  }
+  .select_country select {
+    font-size: 14px;
+    background-position: right 40% top 70%;
   }
   .select_country {
     z-index: 9;
