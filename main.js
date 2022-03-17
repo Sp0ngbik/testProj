@@ -6,7 +6,11 @@ function owlTest (){
     margin:0,
     loop:true,
     nav:false,
-    dots:false,
+    dots:true,
+    dotsContainer: $('#custom_owl_dots')
+  })
+  $('#custom_owl_dots').on('click','a',function(){
+    owl.trigger('to.owl.carousel',[$(this).index(),300]);
   })
 }
 owlTest()
