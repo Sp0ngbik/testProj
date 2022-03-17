@@ -238,11 +238,16 @@ body {
   text-align: center;
   font-weight: 400;
   cursor: pointer;
-  color: #fff;
   white-space: nowrap;
+}
+.owl_dot {
+  color: #fff;
   opacity: 50%;
 }
-
+.active {
+  color: #fff;
+  opacity: 100%;
+}
 .nav_links a:hover {
   opacity: 100%;
 }
@@ -370,15 +375,19 @@ body {
   margin: 80px auto;
   white-space: nowrap;
 }
+
 .food_nav_bar > div {
   padding: 0 0 38px;
   border-bottom: 3px solid #165659;
 }
-
+.food_nav_bar_active {
+  border-bottom: 3px solid #fff !important;
+}
 .food_nav_bar div:hover {
   cursor: pointer;
   border-bottom: 3px solid #fff;
 }
+
 .button_style {
   display: flex;
   justify-content: center;
@@ -898,6 +907,13 @@ body {
 .social_media_icons img {
   margin: 0 0 0 40px;
 }
+.social_media_icons {
+  display: flex;
+  justify-content: flex-end;
+}
+.office_link {
+  margin: 0 auto;
+}
 .politics {
   grid-column: 2/4;
   margin: 30px 0 0;
@@ -905,11 +921,15 @@ body {
 }
 
 .dots span {
-  margin: 0 23px 0 0;
+  margin: 0 10px 0 10px;
+}
+.dots span:last-child {
+  margin: 0 0 0 10px;
 }
 .politics > span {
   opacity: 60%;
-  margin: 0 22px 0 0;
+  display: flex;
+  justify-content: flex-end;
 }
 .dots > div {
   display: inline;
@@ -917,7 +937,7 @@ body {
 }
 
 .dots span::before {
-  margin: 10px 0 0 -20px;
+  margin: 10px 0 0 -15px;
   position: absolute;
   content: "";
   vertical-align: middle;

@@ -1,4 +1,4 @@
-function owlTest (){
+function owlConfig (){
   //Owl Carousel
   let owl = $('.owl-carousel');
   owl.owlCarousel({
@@ -12,8 +12,11 @@ function owlTest (){
   $('#custom_owl_dots').on('click','a',function(){
     owl.trigger('to.owl.carousel',[$(this).index(),300]);
   })
+  $('#custom_owl_dots').change(function(){
+  })
+ console.log($('.owl-dot.active').text())
 }
-owlTest()
+owlConfig()
 function mainSlideSelect() {
   let slider = $("#main_slide");
   let nav_links = $("*#test");
@@ -29,7 +32,10 @@ function desertSelector(){
   let item = $('.food_info');
   $(item).not('.desert_filter').hide();
   $(item).filter('.desert_filter').show();
-$('.food_nav_bar').on('click', function(e){
+  $('.deserts').addClass('food_nav_bar_active')
+  $('.food_nav_bar').on('click', function(e){
+  $('.food_nav_bar div').removeClass('food_nav_bar_active');
+  $(e.target).addClass('food_nav_bar_active')
   let checkValue = $(e.target).attr("data-filter");
   $(item).not('.'+checkValue).hide();
   $(item).filter('.'+checkValue).show();
