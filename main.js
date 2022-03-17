@@ -12,8 +12,7 @@ function owlConfig (){
   $('#custom_owl_dots').on('click','a',function(){
     owl.trigger('to.owl.carousel',[$(this).index(),300]);
   })
-  $('#custom_owl_dots').change(function(){
-  })
+  
 }
 owlConfig()
 function mainSlideSelect() {
