@@ -1426,6 +1426,7 @@ body {
   .our_adress_and_food {
     grid-template-columns: 1fr;
     width: 100%;
+    box-sizing: content-box;
     max-width: 343px;
     grid-gap: 20px;
   }
