@@ -939,7 +939,8 @@ body {
 }
 
 .dots span {
-  margin: 0 10px 0 10px;
+  font-size: 16px;
+  margin: 0 25px 0 25px;
 }
 .dots span:last-child {
   margin: 0 0 0 10px;
@@ -951,11 +952,12 @@ body {
 }
 .dots > div {
   display: inline;
+  font-size: 16px;
   margin: 0 22px 0 0;
 }
 
 .dots span::before {
-  margin: 10px 0 0 -15px;
+  margin: 8px 0 0 -25px;
   position: absolute;
   content: "";
   vertical-align: middle;
