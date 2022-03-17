@@ -61,7 +61,7 @@
           src="./slider/Новая_иллюстрация 1.png"
           alt="/Новая_иллюстрация 1.png not found"
           />
-          <nav id="header_slider" class="nav_links">
+          <nav id="header_slider" class="nav_links header_links">
             <a data-src="./slider/Google-Chrome-Slezhka-Inkognito-42.png"  id="test" >Завтраки</a>
             <a data-src="./slider/Новая_иллюстрация 1.png" id="test">Мобильное приложение</a>
             <a data-src="./slider/images.png" id="test">Кофе в зёрнах</a>
@@ -80,8 +80,8 @@
           <img src="./main_img/Arrow.svg" alt="/Arrow.svg not found" />
         </div>
         <div class="adress_map">
-          <div class="adress">Наши адреса</div>
-          <div class="map">На карте</div>
+          <div data-adress-map-filter="adress-filter" class="adress">Наши адреса</div>
+          <div data-adress-map-filter="map-filter" class="map">На карте</div>
         </div>
       </section>
 <section class="modal_window">
@@ -102,8 +102,8 @@
           </div>
         </div>
 </section>
-    <section class="our_adress_and_food">
-      <a href="#">
+    <section class="our_adress_and_food first_block">
+      <a class="adress-filter" href="#">
         <div class="our_adress_links">
           <span> Карбышева, 32 </span>
           <div>
@@ -117,7 +117,7 @@
         </div>
         <img src="./Google_Homepage.svg.png" alt="/image 1.jpg not found" />
       </a>
-      <a href="#">
+      <a class="adress-filter" href="#">
         <div class="our_adress_links">
           <span> Советская, 30 </span>
           <div>
@@ -133,7 +133,7 @@
           src="./83178823_821878324945683_4128994838076324542_n 1.jpg"
           alt="not found"
       /></a>
-      <a href="#">
+      <a class="adress-filter" href="#">
         <div class="our_adress_links">
           <span> Советская, 66 </span>
           <div>
@@ -147,7 +147,7 @@
         </div>
         <img src="./IMG_0026 1.jpg" alt="/IMG_0026 1.jpg not found"
       /></a>
-      <a href="#">
+      <a class="adress-filter" href="#">
         <div class="our_adress_links">
           <span> Набережная Ф. Скорины, 2 </span>
           <div>
@@ -163,7 +163,7 @@
           src="./3B8EC3B2-03B0-440E-9415-2D907C620837-14409-0000032E3E145857 1.jpg"
           alt="./3B8EC3B2-03B0-440E-9415-2D907C620837-14409-0000032E3E145857 1.jpg not found"
       /></a>
-      <a href="#">
+      <a class="adress-filter" href="#">
         <div class="our_adress_links">
           <span> Орловская, 10 </span>
           <div>
@@ -177,6 +177,12 @@
         </div>
         <img src="./1231233 1.jpg" alt="/1231233 1.jpg not found"
       /></a>
+      <div class="map-block">
+        <a class="map-filter" href="#">
+          <img class="map-style" src="./1504860266_1q.png" alt="/1504860266_1q.jpg not found"
+          /></a>
+        </div>
+     
     </section>
     <section class="paragraph_food">
       <nav class="food_nav_bar">
@@ -295,9 +301,9 @@
           <img  src="./food_img/image 14.jpg" alt="/image 14.jpg not found"
         /></a>
       </div>
-      <button class="button_style food_more_button"><a >        
+      <button class="button_style food_more_button" data-filter="desert_filter">
         Показать больше
-      </a>
+    
     </button>
     </section>
     <section class="confectionery">
@@ -341,9 +347,9 @@
           <div>
             <div class="order_link">
               <div class="site">Всю продукцию можно приобрести на  &nbsp;<a class="link" href="#"> paragraphcake.by</a></div>
-              <button class="button_style"><a href="#">
+              <button class="button_style">
                 Посмотреть и заказать
-              </a>
+             
             </button>
             </div>
           </div>
@@ -360,7 +366,7 @@
           <li><span>Бонусы</span>&nbsp; для каждого</li>
           <div class="app_store_logo"><img class = "google_app_store" src="./main_img/Google Play.png" alt="Google Play.png not found">
             <img class="apple_app_store" src="./main_img/App Store.png" alt="App store.png not found"></div>
-          <button class="button_style"><a href="#">Программа лояльности</a></button>
+          <button class="button_style">Программа лояльности</button>
         </div>
         <img class="mobile_app_image" src="./main_img/Image.png" alt="/image.png not found">
       </div>

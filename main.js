@@ -14,7 +14,6 @@ function owlConfig (){
   })
   $('#custom_owl_dots').change(function(){
   })
- console.log($('.owl-dot.active').text())
 }
 owlConfig()
 function mainSlideSelect() {
@@ -28,6 +27,19 @@ function mainSlideSelect() {
 }
 mainSlideSelect();
 
+function mapAddressSwitcher(){
+  $('.adress').addClass('activeSwitch')
+  $('.first_block a').not('.adress-filter').hide()
+  $('.adress_map div').on('click',function(e){
+    $('.adress_map div').removeClass('activeSwitch')
+    $(e.target).addClass('activeSwitch')
+    let filterValue = $(e.target).attr('data-adress-map-filter')
+    $('.first_block a').filter('.'+filterValue).show()
+    $('.first_block a').not('.'+filterValue).hide()
+  })
+}
+mapAddressSwitcher()
+
 function desertSelector(){
   let item = $('.food_info');
   $(item).not('.desert_filter').hide();
@@ -36,20 +48,20 @@ function desertSelector(){
   slicerBeforeClick.slice(0,3).show();
   $('.deserts').addClass('food_nav_bar_active')
   $('.food_nav_bar').on('click', function(e){
-    let checkValue = $(e.target).attr("data-filter");
-    let rightFilter = $(item).filter('.'+checkValue);
-    let slicer = rightFilter.slice(0,3)
-  $(slicer).filter('.'+checkValue).show();
+   let checkValue = $(e.target).attr("data-filter");
+   let rightFilter = $(item).filter('.'+checkValue);
+   let slicer = rightFilter.slice(0,3)
+ $(slicer).filter('.'+checkValue).show();
   $(item).not('.'+checkValue).hide();
-  $('.food_nav_bar div').removeClass('food_nav_bar_active');
+  $('.food_more_button').attr('data-filter',checkValue)
+ $('.food_nav_bar div').removeClass('food_nav_bar_active');
   $(e.target).addClass('food_nav_bar_active')
-  // $('.food_more_button').on('click',function(e){
-  //   $(item).filter('.'+checkValue).show();
-  // })
-  }
-)
-
-}
+})}
+$('.food_more_button').on('click',function(e){
+  let dataAttribute = $('.food_more_button').attr('data-filter')
+  $('.food_info').filter('.'+dataAttribute).show()
+  $('.food_info').not('.'+dataAttribute).hide()
+})
 desertSelector();
 
 

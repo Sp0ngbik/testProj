@@ -240,6 +240,13 @@ body {
   cursor: pointer;
   white-space: nowrap;
 }
+.header_links a {
+  color: #fff;
+  opacity: 50%;
+}
+.header_links a:hover {
+  opacity: 100%;
+}
 .owl_dot {
   color: #fff;
   opacity: 50%;
@@ -248,9 +255,7 @@ body {
   color: #fff;
   opacity: 100%;
 }
-.nav_links a:hover {
-  opacity: 100%;
-}
+
 .coffe_bar {
   box-sizing: border-box;
   margin: 0 auto;
@@ -286,32 +291,46 @@ body {
   border: 2px #165659 solid;
   border-radius: 12px;
   width: 100%;
-
   max-width: 1226px;
-  box-sizing: border-box;
   height: 60px;
   margin: 50px auto 43px;
 }
 .adress_map div {
+  box-sizing: border-box;
   justify-content: space-around;
   font-weight: 500;
   display: flex;
   width: 100%;
+  cursor: pointer;
   align-items: center;
   font-size: 18px;
 }
 .adress {
-  margin: 0 3px 0;
+  margin: 0 0 0 3px;
   height: 90%;
 }
 .map {
-  margin: 0 3px 0;
+  margin: 0 3px 0 0;
   height: 90%;
 }
-.adress_map div:hover {
+.map-block {
+  grid-column: 1/4;
+}
+.map-style {
+  height: 100%;
+  max-height: 630px;
+  width: 100%;
+  max-width: 1226px;
+  display: flex;
+  object-fit: cover;
+  grid-column: 1/4;
+  border-radius: 12px;
+}
+.activeSwitch {
   background: #165659;
   border-radius: 8px;
 }
+
 .our_adress_and_food {
   text-align: center;
   width: 100%;
@@ -394,6 +413,7 @@ body {
   align-items: center;
   font-size: 18px;
   height: 50px;
+  color: #fff;
   width: 380px;
   border-radius: 8px;
   background-color: rgba(0, 0, 0, 0);
@@ -975,9 +995,9 @@ body {
     text-align: center;
     font-weight: 400;
     color: #fff;
+    opacity: 50%;
     margin: 30px 9px;
     white-space: nowrap;
-    opacity: 50%;
   }
   .select_country a {
     font-size: 14px;
