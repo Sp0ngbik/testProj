@@ -31,19 +31,24 @@ mainSlideSelect();
 function desertSelector(){
   let item = $('.food_info');
   $(item).not('.desert_filter').hide();
-  $(item).filter('.desert_filter').show();
+  $(item).filter('.desert_filter').hide();
+  let slicerBeforeClick = $(item).filter('.desert_filter');
+  slicerBeforeClick.slice(0,3).show();
   $('.deserts').addClass('food_nav_bar_active')
   $('.food_nav_bar').on('click', function(e){
+    let checkValue = $(e.target).attr("data-filter");
+    let rightFilter = $(item).filter('.'+checkValue);
+    let slicer = rightFilter.slice(0,3)
+  $(slicer).filter('.'+checkValue).show();
+  $(item).not('.'+checkValue).hide();
   $('.food_nav_bar div').removeClass('food_nav_bar_active');
   $(e.target).addClass('food_nav_bar_active')
-  let checkValue = $(e.target).attr("data-filter");
-  $(item).not('.'+checkValue).hide();
-  $(item).filter('.'+checkValue).show();
+  // $('.food_more_button').on('click',function(e){
+  //   $(item).filter('.'+checkValue).show();
+  // })
   }
 )
-$('.food_more_button').on('click',function(e){
-  $(item).show();
-})
+
 }
 desertSelector();
 
