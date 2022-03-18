@@ -14,7 +14,11 @@ function owlConfig (){
   })
   
 }
+
 owlConfig()
+
+
+
 function mainSlideSelect() {
   let slider = $("#main_slide");
   let nav_links = $("*#up_slide_nav");
@@ -36,7 +40,8 @@ function scrollToTop(){
     }
   })
   $(window).scroll(function(){
-    if($(window).scrollTop()>500){
+    let halfSize= $(window).height()/2
+    if($(window).scrollTop()>halfSize){
       $('.go_to_top').show()
     }else{
       $('.go_to_top').hide(700)
@@ -63,7 +68,7 @@ function mapAddressSwitcher(){
 mapAddressSwitcher()
 
 function  scrollToBlock(){
-  let links_block = $('.header_links')
+  let links_block = $('#mySidebar a')
   links_block.on('click',function(e){
   let positionBlock = $(e.target).attr('href')
   if(positionBlock){
@@ -107,18 +112,18 @@ function openNav() {
   document.getElementById("mySidebar").className = "sidebarActive";
   document.getElementById("shadow_side_bar").className =
     "shadow_side_bar_active";
-     $('.header_nav').addClass('header_nav_fixed');
-     $('.select_country').addClass('select_country_fixed');
-     $('.logo').addClass('logo_fixed');
+  if($(window).width()<="560"){
+    $('openbtn_image').attr('data-change-img','times-img')
+  }  
 }
+
 
 function closeNav() {
   document.getElementById("mySidebar").className = "sidebarOff";
   document.getElementById("shadow_side_bar").className = "shadow_side_bar_off";
-  $('.header_nav').removeClass('header_nav_fixed');
-  $('.select_country').removeClass('select_country_fixed');
-  $('.logo').removeClass('logo_fixed');
 }
+
+
 
 function getData() {
   let userInfo = {

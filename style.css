@@ -197,6 +197,7 @@ body {
 }
 .sidebarActive a:hover {
   font-weight: 700;
+  cursor: pointer;
 }
 .sidebarActive .closebtn {
   padding-top: 25px;
@@ -268,10 +269,10 @@ body {
   opacity: 100%;
 }
 .go_to_top {
-  color: #fff;
   text-decoration: none;
+  width: 50px;
+  cursor: pointer;
   position: fixed;
-  font-size: 20px;
   z-index: 4;
   right: 0;
   bottom: 0;
@@ -1022,7 +1023,12 @@ body {
   .upper_block {
     height: 50px;
   }
-
+  .upper_block_container {
+    height: 50px;
+  }
+  .header_nav {
+    margin: 0 16.5px 0 16px;
+  }
   .nav_links a {
     justify-content: space-between;
     text-decoration: none;
@@ -1192,6 +1198,7 @@ body {
     padding: 0;
     width: 100%;
   }
+
   .nav_links a {
     display: none;
     width: 100%;
@@ -1392,9 +1399,7 @@ body {
     font-size: 24px;
     padding: 0 37.8px 26px 0;
   }
-  .header_nav {
-    margin: 0 16.5px 0 16px;
-  }
+
   .sidebarActive > .social_media_icons {
     padding: 29.2px 37.8px 0 0;
   }
@@ -1404,7 +1409,9 @@ body {
   .permission_container {
     width: 100%;
   }
-
+  .closebtn {
+    display: none;
+  }
   .form_block {
     padding: 200px 0;
   }
@@ -1414,8 +1421,9 @@ body {
     max-width: 343px;
   }
   .upper_block_container {
-    height: 50px;
+    z-index: 6;
   }
+
   .order_link {
     grid-template-rows: 1fr;
     grid-template-columns: 1fr 1fr;
@@ -1433,15 +1441,15 @@ body {
   .select_country {
     z-index: 9;
   }
-  .select_country_fixed {
+  /* .select_country_fixed {
     position: fixed;
   }
   .logo_fixed > img {
     position: fixed;
     top: 11px;
     left: 40%;
-    /* на время */
-  }
+    /* на время 
+  } */
   .sidebarActive {
     padding-top: 11px;
   }

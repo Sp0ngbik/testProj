@@ -31,7 +31,8 @@
               <div class="logo">
                 <img src="./main_img/Logo.svg" alt="/Logo.svg not found" />
               </div>
-            <button onclick="openNav()" class="openbtn" href="#"><img src="./Burger.svg" alt=""> </button>
+            <button onclick="openNav()" class="openbtn" href="#"><img class="openbtn_image" 
+              data-change-img="burger-image" src="./Burger.svg" alt=""> </button>
           </div>
         </div>
 
@@ -41,14 +42,14 @@
           <div  id="mySidebar"  class="sidebarOff">
             <a href="javascript:void(0)" class="closebtn" onClick="closeNav()">
               <img  class="close_side_bar" src="./Times.svg" alt="Times.svg not found"></a>
-              <a  href="#">Акции</a>
-         <a href="#">Кофейни</a>
-         <a href="#">Меню</a>
-         <a href="#">Кофе</a>
-         <a href="#">Кондитерская</a>
-         <a href="#">Приложение</a>
-         <a href="#">Контакты</a>
-         <a href="#"> 
+         <a >Акции</a>
+         <a href="#coffe_place">Кофейни</a>
+         <a href="#breakfast_section" >Меню</a>
+         <a >Кофе</a>
+         <a href="#confectionery_block">Кондитерская</a>
+         <a href="#mobile_app_section">Приложение</a>
+         <a >Контакты</a>
+         <a > 
            <img class="guest_card" src="./EnvelopeSimple.png" alt="EnvelopeSimple not found"> Карта гостя</a>
            <div class="social_media_icons">
            <img src="./social_media/Tripadviser.svg" alt="Tripadviser.svg not found">
@@ -66,19 +67,19 @@
         alt="/Новая_иллюстрация 1.png not found"
         />
         <nav id="header_slider" class="nav_links header_links">
-          <a href="#breakfast_section"  data-src="./slider/Google-Chrome-Slezhka-Inkognito-42.png"  id="up_slide_nav" >Завтраки</a>
-          <a href="#mobile_app_section" data-src="./slider/Новая_иллюстрация 1.png" id="up_slide_nav">Мобильное приложение</a>
+          <a data-src="./slider/Google-Chrome-Slezhka-Inkognito-42.png"  id="up_slide_nav" >Завтраки</a>
+          <a data-src="./slider/Новая_иллюстрация 1.png" id="up_slide_nav">Мобильное приложение</a>
           <a data-src="./slider/images.png" id="up_slide_nav">Кофе в зёрнах</a>
-          <a  data-src="./slider/imagess .png" id="up_slide_nav">Круассаны</a>
+          <a data-src="./slider/imagess .png" id="up_slide_nav">Круассаны</a>
           <a data-src="./slider/Google-Chrome-3.png" id="up_slide_nav">Чайная карта</a>
-          <a  data-src="./slider/google.png" id="up_slide_nav" >Новый какао</a>
-          <div href="#mobile_app_section" id="mob_ver_title" class="mob_ver">Мобильное приложение</div>
+          <a data-src="./slider/google.png" id="up_slide_nav" >Новый какао</a>
+          <div id="mob_ver_title" class="mob_ver">Мобильное приложение</div>
         </nav>
       </div>
-      <a href="#" class="go_to_top">Вверх</a>
+      <img src="./Arrow_top_up-256.webp" href="#" class="go_to_top"/>
     </section>
         </header>
-    <section class="coffe_bar">
+    <section id="coffe_place" class="coffe_bar">
       <h2>КОФЕЙНИ</h2>
         <div>
           <div >Брест</div>
@@ -311,7 +312,7 @@
     
     </button>
     </section>
-    <section class="confectionery">
+    <section class="confectionery" id="confectionery_block">
       <h2>КОНДИТЕРСКАЯ</h2>
       <div class="image_block">
           <div class="image_shadow">
