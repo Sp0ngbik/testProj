@@ -349,6 +349,7 @@ body {
   height: 90%;
 }
 .map_block {
+  object-fit: cover;
   padding: 0 70px;
   box-sizing: border-box;
   width: 100%;
@@ -361,7 +362,6 @@ body {
   width: 100%;
   max-width: 1226px;
   display: flex;
-  object-fit: cover;
   grid-column: 1/4;
   border-radius: 12px;
 }
