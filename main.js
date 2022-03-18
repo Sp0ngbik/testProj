@@ -17,8 +17,6 @@ function owlConfig (){
 
 owlConfig()
 
-
-
 function mainSlideSelect() {
   let slider = $("#main_slide");
   let nav_links = $("*#up_slide_nav");
@@ -63,6 +61,11 @@ function mapAddressSwitcher(){
     let filterValue = $(e.target).attr('data-adress-map-filter')
     $('.first_block a').filter('.'+filterValue).show()
     $('.first_block a').not('.'+filterValue).hide()
+    if(filterValue=='map-filter'){
+      $('.first_block').removeClass('our_adress_and_food').addClass('map_block')
+    }else{
+      $('.first_block').removeClass('map_block').addClass('our_adress_and_food')
+    }
   })
 }
 mapAddressSwitcher()
@@ -70,10 +73,12 @@ mapAddressSwitcher()
 function  scrollToBlock(){
   let links_block = $('#mySidebar a')
   links_block.on('click',function(e){
+
   let positionBlock = $(e.target).attr('href')
   if(positionBlock){
     let toTop = $(positionBlock).offset().top;
     $('body, html').animate({scrollTop:toTop},800)
+    closeNav()
   }
  
   })
