@@ -26,23 +26,15 @@ function mainSlideSelect() {
 }
 mainSlideSelect();
 
-
-function  scrollToBlock(){
-  let links_block = $('.header_links')
-  console.log(links_block)
-  links_block.on('click',function(e){
-  let positionBlock = $(e.target).attr('href')
-  let toTop = $(positionBlock).offset().top;
-  $('body, html').animate({scrollTop:toTop},800)
-  // console.log(toTop)
-  })
-
-}
-scrollToBlock()
-
 function scrollToTop(){
-
   $('.go_to_top').hide()
+  $(window).scroll(function(){
+    if($(window).scrollTop()>0){
+      $('#header_nav').addClass('upper_block_container_shadow')
+    }else{
+      $('#header_nav').removeClass('upper_block_container_shadow')
+    }
+  })
   $(window).scroll(function(){
     if($(window).scrollTop()>500){
       $('.go_to_top').show()
@@ -50,7 +42,6 @@ function scrollToTop(){
       $('.go_to_top').hide(700)
     }
   })
-
 $('.header').on('click','.go_to_top',function(e){
   $('body, html').animate({scrollTop:0},800); 
 })
@@ -70,11 +61,27 @@ function mapAddressSwitcher(){
   })
 }
 mapAddressSwitcher()
+
+function  scrollToBlock(){
+  let links_block = $('.header_links')
+  links_block.on('click',function(e){
+  let positionBlock = $(e.target).attr('href')
+  if(positionBlock){
+    let toTop = $(positionBlock).offset().top;
+    $('body, html').animate({scrollTop:toTop},800)
+  }
+ 
+  })
+}
+scrollToBlock()
+
+
 function desertSelector(){
   let item = $('.food_info');
+  let firstChildAttr = $('.food_nav_bar div:first-child',).attr('data-filter')
   $(item).not('.desert_filter').hide();
   $(item).filter('.desert_filter').hide();
-  let slicerBeforeClick = $(item).filter('.desert_filter');
+  let slicerBeforeClick = $(item).filter($('.'+firstChildAttr));
   slicerBeforeClick.slice(0,3).show();
   $('.deserts').addClass('food_nav_bar_active')
   $('.food_nav_bar').on('click', function(e){
@@ -87,13 +94,13 @@ function desertSelector(){
  $('.food_nav_bar div').removeClass('food_nav_bar_active');
   $(e.target).addClass('food_nav_bar_active')
 })}
-$('.food_more_button').on('click',function(e){
+$('.food_more_button').on('click',function(){
   let dataAttribute = $('.food_more_button').attr('data-filter')
   $('.food_info').filter('.'+dataAttribute).show()
   $('.food_info').not('.'+dataAttribute).hide()
 })
-desertSelector();
 
+desertSelector();
 
 
 function openNav() {
