@@ -73,14 +73,13 @@ mapAddressSwitcher()
 function  scrollToBlock(){
   let links_block = $('#mySidebar a')
   links_block.on('click',function(e){
-
   let positionBlock = $(e.target).attr('href')
-  if(positionBlock){
+  if($(positionBlock).length)
+  {
     let toTop = $(positionBlock).offset().top;
-    $('body, html').animate({scrollTop:toTop},800)
     closeNav()
+    $('body, html').animate({scrollTop:toTop},800)
   }
- 
   })
 }
 scrollToBlock()
