@@ -17,7 +17,7 @@ function owlConfig (){
 owlConfig()
 function mainSlideSelect() {
   let slider = $("#main_slide");
-  let nav_links = $("*#test");
+  let nav_links = $("*#up_slide_nav");
   let mobile_version_title = $("#mob_ver_title");
   nav_links.on("click", function (e) {
     slider.attr("src", $(e.target).attr("data-src"));
@@ -25,6 +25,38 @@ function mainSlideSelect() {
   });
 }
 mainSlideSelect();
+
+
+function  scrollToBlock(){
+  let links_block = $('.header_links')
+  console.log(links_block)
+  links_block.on('click',function(e){
+  let positionBlock = $(e.target).attr('href')
+  let toTop = $(positionBlock).offset().top;
+  $('body, html').animate({scrollTop:toTop},800)
+  // console.log(toTop)
+  })
+
+}
+scrollToBlock()
+
+function scrollToTop(){
+
+  $('.go_to_top').hide()
+  $(window).scroll(function(){
+    if($(window).scrollTop()>500){
+      $('.go_to_top').show()
+    }else{
+      $('.go_to_top').hide(700)
+    }
+  })
+
+$('.header').on('click','.go_to_top',function(e){
+  $('body, html').animate({scrollTop:0},800); 
+})
+}
+
+scrollToTop()
 
 function mapAddressSwitcher(){
   $('.adress').addClass('activeSwitch')
@@ -38,7 +70,6 @@ function mapAddressSwitcher(){
   })
 }
 mapAddressSwitcher()
-
 function desertSelector(){
   let item = $('.food_info');
   $(item).not('.desert_filter').hide();

@@ -248,6 +248,20 @@ body {
 .header_links a:hover {
   opacity: 100%;
 }
+.go_to_top {
+  color: #fff;
+  text-decoration: none;
+  position: fixed;
+  font-size: 20px;
+  z-index: 4;
+  right: 0;
+  bottom: 0;
+  border: 1px solid #fff;
+  box-sizing: border-box;
+  border-radius: 12px;
+  padding: 8px;
+  margin: 0 50px 70px 0;
+}
 .owl_dot {
   color: #fff;
   opacity: 50%;
