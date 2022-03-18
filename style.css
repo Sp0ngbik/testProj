@@ -1022,7 +1022,159 @@ body {
 .controll_prog > span {
   font-weight: 600;
 }
+.block_loyalty {
+  display: flex;
+  margin: 0 auto;
+  justify-content: center;
+  align-content: center;
+}
+.loyalty_info {
+  height: 2368px;
+  margin: 29px 36px;
+}
+.loyalty_info h3 {
+  font-size: 16px;
+  color: #fff;
+  font-weight: 400;
+  line-height: 24px;
+}
+.loyalty_info > h2 {
+  font-size: 16px;
+  color: #fff;
+  font-weight: 600;
+  line-height: 24px;
+  margin: 12px 0 5px 0;
+}
+.loyalty_info a {
+  color: #fff;
+}
+.step_member .h3 {
+  margin: 0 5px 0 0;
+}
+.loyalty_discription {
+  margin: 12px 0;
+  line-height: 24px;
+}
+.loyalty_discription h3 {
+  margin: 12px 0;
+}
+.step_member > span {
+  display: flex;
+  color: #fff;
+  font-weight: 600;
+}
+.cash_back_info {
+  margin: 26px 0;
+  display: grid;
+  height: 100%;
+  box-sizing: border-box;
+  max-height: 190px;
+  grid-template-columns: repeat(2, 243px);
+  text-align: center;
+  justify-items: center;
+  justify-content: center;
+  grid-template-rows: repeat(5, 31px);
+}
 
+.loyalty_info > div {
+  font-weight: 600;
+  color: #fff;
+}
+.cash_back_block > div {
+  width: 244px;
+  padding: 10px 0;
+  border-bottom: 1px solid #118181;
+  border-left: 1px solid #118181;
+}
+.cash_back_block > div:last-child {
+  border-bottom: none;
+}
+.accumulation_value > span {
+  font-weight: 600;
+}
+.accumulation_info > div {
+  width: 242px;
+  padding: 10px 0;
+  margin: 0 0 0;
+  font-weight: 400;
+  border-bottom: 1px solid #118181;
+}
+.accumulation_info > div:last-child {
+  border-bottom: none;
+}
+.low_weight > div {
+  font-weight: 400;
+  display: inline;
+}
+.loyalty_container {
+  text-align: left;
+  background-color: #165659;
+  max-width: 560px;
+  width: 100%;
+  border-radius: 12px;
+  height: 100%;
+  max-height: 2368px;
+  z-index: 1;
+}
+.loyalty_head {
+  justify-items: center;
+  justify-content: center;
+  display: flex;
+  height: 60px;
+  width: 100%;
+  max-width: 560px;
+  color: #fff;
+  align-items: center;
+  background-color: #0d4749;
+  border-radius: 12px 12px 0 0;
+}
+.guest_card_info li {
+  font-size: 10px;
+  font-weight: 400;
+  color: #082627;
+  line-height: 24px;
+}
+.guest_card_info span {
+  font-weight: 400;
+  font-size: 16px;
+  color: #fff;
+}
+.guest_card_main_text > span {
+  font-weight: 600;
+}
+.card_advantage > h2 {
+  font-size: 18px;
+  margin: 32px 0 0 0;
+  text-align: center;
+  line-height: 27px;
+}
+.compasion_app_card {
+  display: grid;
+  height: 920px;
+  grid-template-columns: repeat(3, 243px);
+}
+.compasion_app_card {
+  grid-template-rows: repeat(16, fill);
+  font-size: 16px;
+  text-align: center;
+}
+.compasion_app div {
+  grid-template-rows: repeat(16, fill);
+  width: 242px;
+  padding: 10px 0;
+  border-bottom: 1px solid #118181;
+  border-right: 1px solid #118181;
+}
+.compasion_card div {
+  /* display: grid; */
+  /* grid-template-rows: repeat(2, fill); */
+  width: 242px;
+  /* padding: 10px 0; */
+  border-bottom: 1px solid #118181;
+}
+.compasion_null > div {
+  padding: 30px 0;
+}
 @media screen and (max-width: 1280px) {
   .header {
     width: 100%;
