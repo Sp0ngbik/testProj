@@ -7,7 +7,9 @@ body {
   background-color: #0f3739;
   font-family: "Raleway", sans-serif;
 }
-
+.body_overflow {
+  overflow: hidden;
+}
 .header {
   position: relative;
 }
@@ -406,7 +408,7 @@ body {
   opacity: 0.9;
   color: white;
   font-size: 22px;
-  z-index: 1;
+  /* z-index: 0; */
   font-weight: 600;
   padding: 70px 0 27px 29px;
 }
@@ -1022,15 +1024,29 @@ body {
 .controll_prog > span {
   font-weight: 600;
 }
+.block_loyalty_off {
+  display: none;
+  z-index: 12;
+  position: absolute;
+}
 .block_loyalty {
-  display: flex;
+  top: 5%;
+  left: 50%;
   margin: 0 auto;
-  justify-content: center;
-  align-content: center;
+  position: absolute;
+}
+
+.loyalty_head h2 {
+  font-size: 20px;
 }
 .loyalty_info {
-  height: 2368px;
-  margin: 29px 36px;
+  /* position: fixed;
+  margin: 29px 0 0 0; */
+  top: 60px;
+  width: 488px;
+  padding: 0 36px 0 36px;
+  z-index: 6;
+  height: 100%;
 }
 .loyalty_info h3 {
   font-size: 16px;
@@ -1041,13 +1057,14 @@ body {
 .loyalty_info > h2 {
   font-size: 16px;
   color: #fff;
+  margin: 12px 0 5px;
   font-weight: 600;
   line-height: 24px;
-  margin: 12px 0 5px 0;
 }
 .loyalty_info a {
   color: #fff;
 }
+
 .step_member .h3 {
   margin: 0 5px 0 0;
 }
@@ -1066,72 +1083,73 @@ body {
 .cash_back_info {
   margin: 26px 0;
   display: grid;
-  height: 100%;
+  max-width: 488px;
   box-sizing: border-box;
-  max-height: 190px;
-  grid-template-columns: repeat(2, 243px);
+  grid-template-columns: repeat(2, 1fr);
   text-align: center;
-  justify-items: center;
-  justify-content: center;
-  grid-template-rows: repeat(5, 31px);
+  grid-template-rows: repeat(5, 41px);
 }
-
+.cash_back_info div {
+  align-items: center;
+  width: 100%;
+  padding: 13px 0 14px;
+  border-bottom: 1px solid #118181;
+}
+.accumulation {
+  border-right: 1px solid #118181;
+}
 .loyalty_info > div {
   font-weight: 600;
   color: #fff;
 }
-.cash_back_block > div {
-  width: 244px;
-  padding: 10px 0;
-  border-bottom: 1px solid #118181;
-  border-left: 1px solid #118181;
-}
-.cash_back_block > div:last-child {
+.cash_back_info div:last-child {
   border-bottom: none;
 }
-.accumulation_value > span {
-  font-weight: 600;
-}
-.accumulation_info > div {
-  width: 242px;
-  padding: 10px 0;
-  margin: 0 0 0;
-  font-weight: 400;
-  border-bottom: 1px solid #118181;
-}
-.accumulation_info > div:last-child {
+
+.cash_back_info .accumulation_last {
   border-bottom: none;
 }
+
 .low_weight > div {
   font-weight: 400;
   display: inline;
 }
 .loyalty_container {
+  position: fixed;
   text-align: left;
+  top: 59px;
+  margin: 0 0 60px 0;
   background-color: #165659;
   max-width: 560px;
   width: 100%;
-  border-radius: 12px;
+  overflow-y: auto;
   height: 100%;
-  max-height: 2368px;
-  z-index: 1;
+  z-index: 8;
+}
+.loyalty_head_info {
+  margin: 47px 0 0 0;
 }
 .loyalty_head {
   justify-items: center;
+  position: fixed;
   justify-content: center;
   display: flex;
   height: 60px;
+  top: 0;
   width: 100%;
   max-width: 560px;
+  z-index: 200;
   color: #fff;
   align-items: center;
   background-color: #0d4749;
   border-radius: 12px 12px 0 0;
 }
+
 .guest_card_info li {
-  font-size: 10px;
+  font-size: 8px;
+  height: 100%;
   font-weight: 400;
-  color: #082627;
+  color: #118181;
   line-height: 24px;
 }
 .guest_card_info span {
@@ -1144,37 +1162,79 @@ body {
 }
 .card_advantage > h2 {
   font-size: 18px;
-  margin: 32px 0 0 0;
+  padding: 32px 0 26px 0;
   text-align: center;
   line-height: 27px;
 }
 .compasion_app_card {
   display: grid;
-  height: 920px;
-  grid-template-columns: repeat(3, 243px);
-}
-.compasion_app_card {
-  grid-template-rows: repeat(16, fill);
+  width: 100%;
+  max-width: 488px;
+  grid-template-columns: repeat(2, 1fr);
   font-size: 16px;
   text-align: center;
 }
-.compasion_app div {
-  grid-template-rows: repeat(16, fill);
-  width: 242px;
-  padding: 10px 0;
+.compasion_app_card div {
+  height: 100%;
+  letter-spacing: 1px;
+  box-sizing: border-box;
+  font-weight: 400;
+  width: 100%;
+  max-width: 244px;
+}
+.compasion_right_block {
+  border-left: 1px solid #118181;
   border-bottom: 1px solid #118181;
-  border-right: 1px solid #118181;
+  padding: 9px 0 11px 12px;
 }
-.compasion_card div {
-  /* display: grid; */
-  /* grid-template-rows: repeat(2, fill); */
-  width: 242px;
-  /* padding: 10px 0; */
+.compasion_left_block {
   border-bottom: 1px solid #118181;
+  padding: 10px 12px 10px 0;
 }
-.compasion_null > div {
-  padding: 30px 0;
+.compasion_right_block:last-child {
+  border-bottom: none;
 }
+.compasion_app_card .compasion_right_block_first {
+  font-weight: 600;
+}
+.compasion_left_block:first-child {
+  font-weight: 600;
+}
+.compasion_left_block_last {
+  border-bottom: none;
+}
+
+.compasion_right_block {
+  position: relative;
+}
+.compasion_right_block img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+}
+.our_rules {
+  text-align: center;
+  padding: 24px 0;
+  font-size: 16px;
+  opacity: 0.5;
+  font-weight: 400;
+}
+
+/* .thxButton {
+  position: fixed;
+  width: 100%;
+  height: 60px;
+  z-index: 8;
+  bottom: 0;
+  border-radius: 0 0 12px 12px;
+  background-color: #0d4749;
+  max-width: 560px;
+  color: #fff;
+  font-size: 20px;
+  font-weight: 600;
+  border: none;
+  border-top: 2px solid #0d4749;
+} */
 @media screen and (max-width: 1280px) {
   .header {
     width: 100%;

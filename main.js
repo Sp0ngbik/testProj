@@ -165,6 +165,18 @@ function checkForRules() {
   }
 }
 
+function open_loyalty_program(){
+  let loyaltyButton = $('#loyalty_programm');
+  loyaltyButton.on('click',function(){
+    $('#loyalty_block').removeClass('block_loyalty_off').addClass('block_loyalty')
+    $('body').addClass('body_overflow')
+  })
+}
+
+open_loyalty_program()
+
+// function close_loyalty_program(){}
+
 function open_model_food() {
   const imageArr = document.querySelectorAll(".food_info");
   imageArr.forEach((el) => {
