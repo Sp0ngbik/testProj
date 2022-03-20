@@ -31,9 +31,9 @@ function scrollToTop() {
   $(".go_to_top").hide();
   $(window).scroll(function () {
     if ($(window).scrollTop() > 0) {
-      $("#header_nav").addClass("upper_block_container_shadow");
+      $("#header_nav_block").addClass("upper_block_container_shadow");
     } else {
-      $("#header_nav").removeClass("upper_block_container_shadow");
+      $("#header_nav_block").removeClass("upper_block_container_shadow");
     }
   });
   $(window).scroll(function () {
