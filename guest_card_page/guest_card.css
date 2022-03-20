@@ -57,8 +57,9 @@ body {
 .balance_head_info {
   color: #fff;
   justify-content: center;
-  grid-template-columns: repeat(3, 409px);
+  grid-template-columns: repeat(3, 1fr);
   display: grid;
+  box-sizing: border-box;
   padding: 70px 0 0 0;
   width: 100%;
   max-width: 1226px;
