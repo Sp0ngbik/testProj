@@ -1414,16 +1414,17 @@ body {
     grid-column: 2/3;
     grid-row: 4/4;
   }
-  .trademark {
+  /* .trademark {
     grid-row: 1/2;
     grid-column: 1/2;
-  }
-  .office_link {
+  } */
+  /* .office_link {
     grid-row: 1/2;
     grid-column: 2/3;
-  }
+  } */
   .office_link {
     grid-row: 2/3;
+    grid-column: 2/3;
   }
   .social_media_icons {
     display: block;
@@ -1646,15 +1647,14 @@ body {
   .politics span {
     display: flex;
     flex-direction: column-reverse;
+    padding: 0;
   }
   .politics > span {
     display: flex;
     margin: 20px 0;
     flex-direction: column-reverse;
   }
-  .politics span {
-    padding: 0;
-  }
+
   .politics {
     margin: 0 auto;
     width: 300px;

@@ -18,6 +18,7 @@ body {
 }
 .logo > img {
   width: 100%;
+  padding: 0 300px 0 0;
   max-width: 248px;
 }
 .upper_block {
@@ -42,7 +43,7 @@ body {
 }
 .user_greetins {
   font-size: 18px;
-  width: 80px;
+  letter-spacing: 0.5px;
   border: none;
   font-weight: 400;
   line-height: 28px;
@@ -270,4 +271,146 @@ body {
   height: 6px;
   opacity: 100%;
   background-color: #165659;
+}
+@media screen and (max-width: 1240px) {
+  .user_greetins {
+    opacity: 0;
+    width: 30px;
+  }
+  .logo > img {
+    padding: 0;
+    width: 100%;
+    max-width: 142px;
+  }
+  .balance_head_info {
+    grid-template-columns: 1fr;
+    padding: 27px 0 0 0;
+  }
+  .upper_block {
+    height: 50px;
+  }
+  .upper_block_container {
+    height: 50px;
+  }
+  .header_nav {
+    max-width: 375px;
+    margin: 0 16.5px 0 16px;
+  }
+  .balance_log_info_bonus {
+    background-image: url("../angle-down.svg");
+    background-repeat: no-repeat;
+    background-position: right 5% top 50%;
+  }
+  .table_title_bonus {
+    background-image: none;
+  }
+  .balance_info_title {
+    width: 299px;
+    margin: 0 auto;
+    height: 92px;
+    font-size: 38px;
+    line-height: 46px;
+    text-align: center;
+    grid-row: 1/1;
+    margin: 0 auto 16px;
+  }
+  .balance_info {
+    grid-row: 2/2;
+    grid-column: 1/2;
+  }
+  .balance_head_info .balance_info {
+    justify-self: center;
+  }
+  .balance_info_buttons {
+    margin: 10px 0 0 0;
+    display: block;
+    font-size: 0;
+    text-align: center;
+  }
+  .balance_info_buttons > button {
+    padding: 0;
+    margin: 0;
+  }
+  .balance_info_buttons button {
+    flex-direction: row;
+    width: 100%;
+    max-width: 166px;
+  }
+  .balance_info_buttons button:first-child {
+    display: inline-block;
+    margin: 0 10px 0 0;
+  }
+  .balance_log_info_purchase {
+    display: none;
+  }
+  .table_head {
+    max-width: 343px;
+  }
+  .balance_log {
+    max-width: 343px;
+  }
+  .button_style {
+    max-width: 343px;
+  }
+  /* .footer */
+  .footer_block {
+    grid-template-rows: 30px 45px 52px 150px;
+  }
+  .footer_block div {
+    text-align: center;
+  }
+  .trademark {
+    grid-row: 1/2;
+    grid-column: 2/3;
+  }
+  .office_link {
+    grid-row: 2/3;
+    grid-column: 2/3;
+  }
+  .social_media_icons img {
+    margin: 0 0 0 35px;
+  }
+  .social_media_icons {
+    display: block;
+    grid-row: 3/4;
+    grid-column: 1/4;
+  }
+  .controll_prog {
+    padding: 0;
+    grid-column: 2/3;
+    grid-row: 4/4;
+  }
+  .politics {
+    white-space: normal;
+    margin: 0 auto;
+    width: 300px;
+    white-space: nowrap;
+    text-align: center;
+    grid-column: 2/3;
+    grid-row: 4/4;
+  }
+  .politics span {
+    padding: 0;
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  .politics > span {
+    display: flex;
+    margin: 20px 0;
+    flex-direction: column-reverse;
+  }
+  .dots span::before {
+    margin: 0;
+    opacity: 0%;
+  }
+  .dots {
+    align-content: center;
+  }
+  .dots span {
+    margin: 8px 0 8px 0;
+  }
+  .dots > div {
+    text-align: center;
+    margin: 0;
+  }
 }
