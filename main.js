@@ -1,21 +1,20 @@
-function owlConfig (){
+function owlConfig() {
   //Owl Carousel
-  let owl = $('.owl-carousel');
+  let owl = $(".owl-carousel");
   owl.owlCarousel({
-    items:1,
-    margin:0,
-    loop:true,
-    nav:false,
-    dots:true,
-    dotsContainer: $('#custom_owl_dots')
-  })
-  $('#custom_owl_dots').on('click','a',function(){
-    owl.trigger('to.owl.carousel',[$(this).index(),300]);
-  })
-  
+    items: 1,
+    margin: 0,
+    loop: true,
+    nav: false,
+    dots: true,
+    dotsContainer: $("#custom_owl_dots"),
+  });
+  $("#custom_owl_dots").on("click", "a", function () {
+    owl.trigger("to.owl.carousel", [$(this).index(), 300]);
+  });
 }
 
-owlConfig()
+owlConfig();
 
 function mainSlideSelect() {
   let slider = $("#main_slide");
@@ -28,106 +27,117 @@ function mainSlideSelect() {
 }
 mainSlideSelect();
 
-function scrollToTop(){
-  $('.go_to_top').hide()
-  $(window).scroll(function(){
-    if($(window).scrollTop()>0){
-      $('#header_nav').addClass('upper_block_container_shadow')
-    }else{
-      $('#header_nav').removeClass('upper_block_container_shadow')
+function scrollToTop() {
+  $(".go_to_top").hide();
+  $(window).scroll(function () {
+    if ($(window).scrollTop() > 0) {
+      $("#header_nav").addClass("upper_block_container_shadow");
+    } else {
+      $("#header_nav").removeClass("upper_block_container_shadow");
     }
-  })
-  $(window).scroll(function(){
-    let halfSize= $(window).height()/2
-    if($(window).scrollTop()>halfSize){
-      $('.go_to_top').show()
-    }else{
-      $('.go_to_top').hide(700)
+  });
+  $(window).scroll(function () {
+    let halfSize = $(window).height() / 2;
+    if ($(window).scrollTop() > halfSize) {
+      $(".go_to_top").show();
+    } else {
+      $(".go_to_top").hide(700);
     }
-  })
-$('.header').on('click','.go_to_top',function(e){
-  $('body, html').animate({scrollTop:0},800); 
-})
+  });
+  $(".header").on("click", ".go_to_top", function (e) {
+    $("body, html").animate({ scrollTop: 0 }, 800);
+  });
 }
 
-scrollToTop()
+scrollToTop();
 
-function mapAddressSwitcher(){
-  $('.adress').addClass('activeSwitch')
-  $('.first_block a').not('.adress-filter').hide()
-  $('.adress_map div').on('click',function(e){
-    $('.adress_map div').removeClass('activeSwitch')
-    $(e.target).addClass('activeSwitch')
-    let filterValue = $(e.target).attr('data-adress-map-filter')
-    $('.first_block a').filter('.'+filterValue).show()
-    $('.first_block a').not('.'+filterValue).hide()
-    if(filterValue=='map-filter'){
-      $('.first_block').removeClass('our_adress_and_food').addClass('map_block')
-    }else{
-      $('.first_block').removeClass('map_block').addClass('our_adress_and_food')
+function mapAddressSwitcher() {
+  $(".adress").addClass("activeSwitch");
+  $(".first_block a").not(".adress-filter").hide();
+  $(".adress_map div").on("click", function (e) {
+    $(".adress_map div").removeClass("activeSwitch");
+    $(e.target).addClass("activeSwitch");
+    let filterValue = $(e.target).attr("data-adress-map-filter");
+    $(".first_block a")
+      .filter("." + filterValue)
+      .show();
+    $(".first_block a")
+      .not("." + filterValue)
+      .hide();
+    if (filterValue == "map-filter") {
+      $(".first_block")
+        .removeClass("our_adress_and_food")
+        .addClass("map_block");
+    } else {
+      $(".first_block")
+        .removeClass("map_block")
+        .addClass("our_adress_and_food");
     }
-  })
+  });
 }
-mapAddressSwitcher()
+mapAddressSwitcher();
 
-function  scrollToBlock(){
-  let links_block = $('#mySidebar a')
-  links_block.on('click',function(e){
-  let positionBlock = $(e.target).attr('href')
-  if($(positionBlock).length)
-  {
-    let toTop = $(positionBlock).offset().top;
-    closeNav()
-    $('body, html').animate({scrollTop:toTop},800)
-  }
-  })
+function scrollToBlock() {
+  let links_block = $("#mySidebar a");
+  links_block.on("click", function (e) {
+    let positionBlock = $(e.target).attr("href");
+    if ($(positionBlock).length) {
+      let toTop = $(positionBlock).offset().top;
+      closeNav();
+      $("body, html").animate({ scrollTop: toTop }, 800);
+    }
+  });
 }
-scrollToBlock()
+scrollToBlock();
 
-
-function desertSelector(){
-  let item = $('.food_info');
-  let firstChildAttr = $('.food_nav_bar div:first-child',).attr('data-filter')
-  $(item).not('.desert_filter').hide();
-  $(item).filter('.desert_filter').hide();
-  let slicerBeforeClick = $(item).filter($('.'+firstChildAttr));
-  slicerBeforeClick.slice(0,3).show();
-  $('.deserts').addClass('food_nav_bar_active')
-  $('.food_nav_bar').on('click', function(e){
-   let checkValue = $(e.target).attr("data-filter");
-   let rightFilter = $(item).filter('.'+checkValue);
-   let slicer = rightFilter.slice(0,3)
- $(slicer).filter('.'+checkValue).show();
-  $(item).not('.'+checkValue).hide();
-  $('.food_more_button').attr('data-filter',checkValue)
- $('.food_nav_bar div').removeClass('food_nav_bar_active');
-  $(e.target).addClass('food_nav_bar_active')
-})}
-$('.food_more_button').on('click',function(){
-  let dataAttribute = $('.food_more_button').attr('data-filter')
-  $('.food_info').filter('.'+dataAttribute).show()
-  $('.food_info').not('.'+dataAttribute).hide()
-})
+function desertSelector() {
+  let item = $(".food_info");
+  let firstChildAttr = $(".food_nav_bar div:first-child").attr("data-filter");
+  $(item).not(".desert_filter").hide();
+  $(item).filter(".desert_filter").hide();
+  let slicerBeforeClick = $(item).filter($("." + firstChildAttr));
+  slicerBeforeClick.slice(0, 3).show();
+  $(".deserts").addClass("food_nav_bar_active");
+  $(".food_nav_bar").on("click", function (e) {
+    let checkValue = $(e.target).attr("data-filter");
+    let rightFilter = $(item).filter("." + checkValue);
+    let slicer = rightFilter.slice(0, 3);
+    $(slicer)
+      .filter("." + checkValue)
+      .show();
+    $(item)
+      .not("." + checkValue)
+      .hide();
+    $(".food_more_button").attr("data-filter", checkValue);
+    $(".food_nav_bar div").removeClass("food_nav_bar_active");
+    $(e.target).addClass("food_nav_bar_active");
+  });
+}
+$(".food_more_button").on("click", function () {
+  let dataAttribute = $(".food_more_button").attr("data-filter");
+  $(".food_info")
+    .filter("." + dataAttribute)
+    .show();
+  $(".food_info")
+    .not("." + dataAttribute)
+    .hide();
+});
 
 desertSelector();
-
 
 function openNav() {
   document.getElementById("mySidebar").className = "sidebarActive";
   document.getElementById("shadow_side_bar").className =
     "shadow_side_bar_active";
-  if($(window).width()<="560"){
-    $('openbtn_image').attr('data-change-img','times-img')
-  }  
+  if ($(window).width() <= "560") {
+    $("openbtn_image").attr("data-change-img", "times-img");
+  }
 }
-
 
 function closeNav() {
   document.getElementById("mySidebar").className = "sidebarOff";
   document.getElementById("shadow_side_bar").className = "shadow_side_bar_off";
 }
-
-
 
 function getData() {
   let userInfo = {
@@ -165,17 +175,45 @@ function checkForRules() {
   }
 }
 
-function open_loyalty_program(){
-  let loyaltyButton = $('#loyalty_programm');
-  loyaltyButton.on('click',function(){
-    $('#loyalty_block').removeClass('block_loyalty_off').addClass('block_loyalty')
-    $('body').addClass('body_overflow')
-  })
+function open_loyalty_program() {
+  let loyaltyButton = $("#loyalty_programm");
+  loyaltyButton.on("click", function () {
+    $("#loyalty_block")
+      .removeClass("block_loyalty_off")
+      .addClass("block_loyalty");
+    $("body").addClass("body_overflow");
+    $("#loyalty_shadow_window")
+      .removeClass("loyalty_shadow_window_off")
+      .addClass("loyalty_shadow_window_on");
+    $(".upper_block").addClass("upper_block_unfix");
+  });
 }
 
-open_loyalty_program()
+open_loyalty_program();
 
-// function close_loyalty_program(){}
+function close_loyalty_program() {
+  $("#loyalty_shadow_window").on("click", function () {
+    $("#loyalty_block")
+      .removeClass("block_loyalty")
+      .addClass("block_loyalty_off");
+    $("body").removeClass("body_overflow");
+
+    $("#loyalty_shadow_window")
+      .removeClass("loyalty_shadow_window_on")
+      .addClass("loyalty_shadow_window_off");
+    $(".upper_block").removeClass("upper_block_unfix");
+  });
+  $(".loyalty_times").on("click", function () {
+    $(".upper_block").removeClass("upper_block_unfix");
+    $("#loyalty_shadow_window");
+    $("#loyalty_block")
+      .removeClass("block_loyalty")
+      .addClass("block_loyalty_off");
+    $("body").removeClass("body_overflow");
+  });
+}
+
+close_loyalty_program();
 
 function open_model_food() {
   const imageArr = document.querySelectorAll(".food_info");
@@ -188,7 +226,6 @@ function open_model_food() {
       document.querySelector(".food_window_off").className = "food_window_on";
       document.getElementById("modal_shadow_window").className =
         "modal_shadow_window_on";
-
     });
   });
 }
