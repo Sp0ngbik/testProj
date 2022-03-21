@@ -38,7 +38,7 @@ body {
   display: none;
 }
 .upper_block_container_shadow {
-  box-shadow: 5px 2px 2px 2px black;
+  box-shadow: 10px 0 5px 0 black;
 }
 .upper_block_container {
   transition: 0.3s;
@@ -1063,9 +1063,9 @@ body {
   text-align: left;
   padding: 24px 36px 0 36px;
   position: fixed;
-  bottom: 0px;
+  bottom: 50px;
   /* top: 0px; */
-  top: 110px;
+  top: 50px;
   box-sizing: border-box;
   margin: 60px 0 60px 0;
   background-color: #165659;
@@ -1144,14 +1144,6 @@ body {
 }
 .loyalty_container {
   position: relative;
-  /* text-align: left;
-  bottom: 0px;
-  top: 0px;
-  box-sizing: border-box;
-  background-color: #165659;
-  width: 100%;
-  overflow-y: auto;
-  overflow-x: hidden; */
   margin: 0 auto;
   max-width: 560px;
   z-index: 8;
@@ -1165,8 +1157,7 @@ body {
   justify-content: center;
   display: flex;
   height: 60px;
-  top: 110px;
-  /* top: 0; */
+  top: 50px;
   width: 100%;
   max-width: 560px;
   z-index: 200;
@@ -1262,7 +1253,7 @@ body {
   justify-content: center;
   display: flex;
   height: 60px;
-  bottom: 0;
+  bottom: 50px;
   width: 100%;
   font-size: 20px;
   border: none;
