@@ -1034,7 +1034,6 @@ body {
 }
 .block_loyalty {
   top: 0;
-  /* left: 50%; */
   margin: 0 auto;
   position: absolute;
   width: 100%;
@@ -1047,13 +1046,11 @@ body {
 }
 .loyalty_shadow_window_on {
   cursor: pointer;
-  /* background: rgba(0, 0, 0, 0.75); */
   background: black;
   content: "";
   width: 100%;
   height: 100%;
   position: fixed;
-  /* backdrop-filter: blur(20px); */
   z-index: 4;
 }
 .loyalty_head h2 {
@@ -1064,7 +1061,6 @@ body {
   padding: 24px 36px 0 36px;
   position: fixed;
   bottom: 50px;
-  /* top: 0px; */
   top: 50px;
   box-sizing: border-box;
   margin: 60px 0 60px 0;
@@ -1219,55 +1215,11 @@ body {
   text-align: center;
   line-height: 27px;
 }
-/* .compasion_app_card {
-  display: grid;
-  width: 100%;
-  max-width: 488px;
-  grid-template-columns: repeat(2, 1fr);
-  font-size: 16px;
-  text-align: center;
-}
-.compasion_app_card div {
-  height: 100%;
-  letter-spacing: 1px;
-  box-sizing: border-box;
-  font-weight: 400;
-  width: 100%;
-  max-width: 244px;
-}
-.compasion_right_block {
-  border-left: 1px solid #118181;
-  border-bottom: 1px solid #118181;
-  padding: 9px 0 11px 12px;
-}
-.compasion_left_block {
-  border-bottom: 1px solid #118181;
-  padding: 10px 12px 10px 0;
-}
-.compasion_right_block:last-child {
-  border-bottom: none;
-}
-.compasion_app_card .compasion_right_block_first {
-  font-weight: 600;
-}
-.compasion_left_block:first-child {
-  font-weight: 600;
-}
-.compasion_left_block_last {
-  border-bottom: none;
-}
 
-.compasion_right_block {
-  position: relative;
-}
-.compasion_right_block img {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-} */
 .compasion_app_card {
   width: 100%;
   max-width: 488px;
+  margin: 26px 0 24px 0;
   text-align: center;
 }
 .compasion_app_card td {

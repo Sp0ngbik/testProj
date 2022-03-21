@@ -39,3 +39,18 @@ function scrollToTop() {
   }
   
   scrollToTop();
+
+
+function openNav() {
+    document.getElementById("mySidebar").className = "sidebarActive";
+    document.getElementById("shadow_side_bar").className =
+      "shadow_side_bar_active";
+    if ($(window).width() <= "560") {
+      $("openbtn_image").attr("data-change-img", "times-img");
+    }
+  }
+  
+  function closeNav() {
+    document.getElementById("mySidebar").className = "sidebarOff";
+    document.getElementById("shadow_side_bar").className = "shadow_side_bar_off";
+  }
