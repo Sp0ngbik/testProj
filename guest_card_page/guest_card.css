@@ -16,15 +16,13 @@ body {
 .upper_block_container_shadow {
   box-shadow: 10px 0 5px 0 black;
 }
-.openbtn {
-  /* justify-content: flex-end; */
-}
+
 .header {
   position: relative;
 }
 .logo > img {
   display: flex;
-
+  padding: 0 200px 0 0;
   width: 100%;
   max-width: 248px;
 }

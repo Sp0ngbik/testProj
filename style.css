@@ -1108,36 +1108,62 @@ body {
   color: #fff;
   font-weight: 600;
 }
-.cash_back_info {
-  margin: 26px 0;
-  display: grid;
-  max-width: 488px;
-  box-sizing: border-box;
-  grid-template-columns: repeat(2, 1fr);
-  text-align: center;
-  grid-template-rows: repeat(5, 41px);
+
+.cash_back_info td {
+  width: 244px;
 }
-.cash_back_info div {
-  align-items: center;
+.accumulation span {
+  font-weight: 600;
+}
+.cash_back_info td {
+  color: #fff;
+  font-weight: 600;
+}
+.cash_back_info {
   width: 100%;
-  padding: 13px 0 14px;
+  max-width: 488px;
+  text-align: center;
+  border: none;
+  margin: 28px 0 26px 0;
+  border-collapse: collapse;
+}
+
+.cash_back_info th {
+  font-size: 18px;
+  font-weight: 600;
+  color: #fff;
+  border: none;
+  padding: 13px 0;
+  border-right: 1px solid #118181;
   border-bottom: 1px solid #118181;
 }
-.accumulation {
+.cash_back_info th:last-child {
+  border-right: none;
+}
+.cash_back_info td {
+  border: none;
+}
+.cash_back_info td {
+  border-bottom: 1px solid #118181;
   border-right: 1px solid #118181;
+}
+.cash_back_last_ch td {
+  border-bottom: none;
+}
+
+.cash_back_info td:last-child {
+  border-right: none;
 }
 .loyalty_info > div {
   font-weight: 600;
   color: #fff;
 }
-.cash_back_info div:last-child {
-  border-bottom: none;
-}
 
-.cash_back_info .accumulation_last {
-  border-bottom: none;
+.cash_back_info div {
+  align-items: center;
+  width: 100%;
+  padding: 13px 0 14px;
 }
-
 .low_weight > div {
   font-weight: 400;
   display: inline;
@@ -1193,7 +1219,7 @@ body {
   text-align: center;
   line-height: 27px;
 }
-.compasion_app_card {
+/* .compasion_app_card {
   display: grid;
   width: 100%;
   max-width: 488px;
@@ -1238,6 +1264,29 @@ body {
   position: absolute;
   top: 50%;
   left: 50%;
+} */
+.compasion_app_card {
+  width: 100%;
+  max-width: 488px;
+  text-align: center;
+}
+.compasion_app_card td {
+  padding: 11px 12px 10px;
+  font-weight: 400;
+  color: #fff;
+  border-right: 1px solid #118181;
+  border-top: 1px solid #118181;
+}
+.compasion_app_card td:last-child {
+  border-right: none;
+}
+.compasion_app_card th:first-child {
+  border-right: 1px solid #118181;
+}
+.compasion_app_card th {
+  padding: 9px 0;
+  color: #fff;
+  font-weight: 600;
 }
 .our_rules {
   text-align: center;
