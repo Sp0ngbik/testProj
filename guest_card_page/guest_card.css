@@ -487,11 +487,29 @@ body {
   }
 
   .balance_cash_process_active > .balance_log_info_bonus {
-    padding: 13px 0 13px 0px;
-    margin: 0 0px 0 -4px;
+    padding: 13px 19px 13px 0;
+    margin: 0 0px 0 54px;
     background-image: url("../Arrow-up.svg");
     object-fit: cover;
-    background-position: right 27px top 50%;
+    background-position: right 0 top 50%;
+  }
+  .balance_log_background > div {
+    background-color: #fff;
+  }
+  .balance_log_info_bonus {
+    margin: 0 0 0 54px;
+    max-width: 150px;
+    padding: 0 20px 0 0;
+    background-image: url("../angle-down.svg");
+    background-repeat: no-repeat;
+    background-attachment: inherit;
+    background-position: right 0 top 50%;
+  }
+
+  .table_title_bonus {
+    margin: 0;
+    padding: 0;
+    max-width: 299px;
   }
   .balance_cash_process_active > .balance_log_info_date {
     padding: 0 4px;
@@ -514,14 +532,6 @@ body {
 
   .table_head {
     border-bottom: 2px solid #165659;
-  }
-  .balance_log_background > div {
-    background-color: #fff;
-  }
-  .balance_log_info_bonus {
-    background-image: url("../angle-down.svg");
-    background-repeat: no-repeat;
-    background-position: right 23px top 50%;
   }
   .table_title_bonus {
     background-image: none;
