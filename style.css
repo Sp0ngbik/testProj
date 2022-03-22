@@ -1275,21 +1275,76 @@ body {
   background-color: #165659;
   border-radius: 0 0 12px 12px;
 }
-/* .thxButton {
-  position: fixed;
+.table_of_users {
+  border-radius: 12px;
   width: 100%;
-  height: 60px;
-  z-index: 8;
-  bottom: 0;
-  border-radius: 0 0 12px 12px;
-  background-color: #0d4749;
-  max-width: 560px;
+  margin: 70px auto;
+  height: 1200px;
+  background-color: #082627;
+  max-width: 1500px;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+.users_table {
+  box-sizing: border-box;
+  height: 100%;
+  width: 100%;
+}
+.table_of_users th {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  border-right: 2px solid #165659;
+}
+.table_of_users th:last-child {
+  border-right: none;
+}
+.table_of_users_head {
+  box-sizing: border-box;
+  border-bottom: 2px solid #165659;
+  width: 100%;
+  width: 1500px;
   color: #fff;
-  font-size: 20px;
-  font-weight: 600;
-  border: none;
-  border-top: 2px solid #0d4749;
-} */
+  font-size: 16px;
+  height: 70px;
+  align-items: center;
+  display: flex;
+}
+.users_table tr {
+  width: 100%;
+  box-sizing: border-box;
+  border-bottom: 2px solid #165659;
+  max-width: 1500px;
+  color: #fff;
+  font-size: 16px;
+  align-items: center;
+  display: flex;
+  margin: 0 0 0 -2px;
+}
+.users_table td {
+  display: flex;
+  height: 70px;
+  align-items: center;
+  justify-content: center;
+  word-wrap: break-word;
+  width: 100%;
+  border-right: 2px solid #165659;
+  color: #fff;
+}
+.users_table td:last-child {
+  border-right: none;
+}
+.user_info_edit {
+  background-color: #082627;
+  width: 90%;
+  color: #fff;
+  font-size: 18px;
+  border: 1px solid #0f3739;
+  height: 90%;
+  cursor: pointer;
+}
 @media screen and (max-width: 1280px) {
   .header {
     width: 100%;

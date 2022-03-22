@@ -163,15 +163,18 @@ function getData() {
       Согласие с правилами: ${this.rules.checked}`;
     },
   };
+
   console.log(userInfo.getUser);
   return false;
 }
 function checkForRules() {
   let rules = document.querySelector("input[type=checkbox]");
   if (rules.checked) {
-    document.getElementById("button_send").className = "submit_button";
+    $("#button_send").addClass("submit_button");
+    $("#button_send").removeClass("disableButton");
   } else {
-    document.getElementById("button_send").className = "disableButton";
+    $("#button_send").addClass("disableButton");
+    $("#button_send").removeClass("submit_button");
   }
 }
 
@@ -236,3 +239,46 @@ function close_model_food() {
     "modal_shadow_window_off";
   document.getElementById("model_window").className = "food_window_off";
 }
+function user_table_info() {
+  $("#button_send").on("click", function () {
+    let userGenderee;
+    if ($(".radioButton#male[type=radio]").is(":checked")) {
+      userGenderee = "Мужчина";
+    } else if ($(".radioButton#female[type=radio]").is(":checked")) {
+      userGenderee = "Женщина";
+    } else {
+      userGenderee = "Пол не указан";
+    }
+    let user_table = $(".users_table");
+    let cell = $("<tr></tr>");
+    let username = $(`<td></td>`).text(`${$(".username").val()}`);
+    let lastName = $(`<td></td>`).text(`${$(".lastName").val()}`);
+    let userGender = $(`<td></td>`).text(`${userGenderee}`);
+    let userBirth = $(`<td></td>`).text(
+      `${$(".day_input").val()}. ${$(".mounth_input").val()}. ${$(
+        "#year"
+      ).val()}`
+    );
+    let userPhone = $(`<td></td>`).text(`${$(".phoneNumber").val()}`);
+    let userCard = $(`<td></td>`).text(`${$(".place").val()}`);
+    let userMail = $(`<td></td>`).text(`${$(".email").val()}`);
+    let buttonEdit = $(
+      `<td><button class="user_info_edit" id="user_edit_button">
+      Редактировать</button></td>`
+    );
+    cell.append(
+      username,
+      lastName,
+      userGender,
+      userBirth,
+      userPhone,
+      userCard,
+      userMail,
+      buttonEdit
+    );
+    user_table.append(cell);
+    console.log($(".user_info_edit"));
+  });
+}
+
+user_table_info();
