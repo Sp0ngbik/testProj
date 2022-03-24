@@ -1345,6 +1345,115 @@ body {
   height: 90%;
   cursor: pointer;
 }
+.form_fields_edit {
+  box-sizing: border-box;
+  /* padding: 0 36px; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  background-color: #082627;
+  border-radius: 12px;
+  max-width: 488px;
+  margin: 0 auto;
+}
+
+.form_fields_edit input::-webkit-input-placeholder {
+  color: rgba(255, 255, 255, 0.5);
+}
+.form_fields_edit input {
+  box-sizing: border-box;
+  padding: 11px 12px 11px 56px;
+  width: 100%;
+  color: #fff;
+  max-width: 488px;
+  height: 50px;
+  font-size: 18px;
+  border-radius: 8px;
+  outline: none;
+  background-color: #0d4749;
+  border: 1px solid #0d4749;
+}
+.username_edit {
+  background-image: url("./User.svg");
+  background-position: left 16px top 50%;
+  background-repeat: no-repeat;
+  margin: 20px 0;
+  width: 380px;
+}
+.lastName_edit {
+  background-image: url("./User.svg");
+  background-position: left 16px top 50%;
+  background-repeat: no-repeat;
+  margin: 10px 0;
+  width: 380px;
+}
+.birth_day_title_edit {
+  text-align: left;
+  margin: 33px 0 16px 0;
+  font-size: 16px;
+  width: 100%;
+  max-width: 488px;
+  color: #fff;
+  font-weight: 400;
+  line-height: 24px;
+}
+.birth_date_edit {
+  width: 100%;
+  display: flex;
+  max-width: 488px;
+  white-space: nowrap;
+}
+.birth_date_edit > div {
+  width: 100%;
+}
+.birth_date_edit select {
+  outline: none;
+  display: block;
+  width: 100%;
+  background-color: #0d4749;
+  border: none;
+  color: rgba(255, 255, 255, 0.5);
+  padding: 11px 18px 11px 20px;
+  border-radius: 12px;
+  font-size: 18px;
+  height: 50px;
+  background-image: url("./angle-down.svg");
+  appearance: none;
+  background-position: right 12% top 50%;
+  background-repeat: no-repeat;
+  flex: 1;
+}
+.birth_mounth_edit {
+  margin: 0 8px;
+}
+.birth_year_edit {
+  margin: 0 0 0 8px;
+}
+.phoneNumber_edit {
+  margin: 16px 0;
+  background-image: url("./Phone.svg");
+  background-position: left 16px top 50%;
+  background-repeat: no-repeat;
+}
+.email_edit {
+  background-image: url("./EnvelopeSimple.svg");
+  background-position: left 16px top 50%;
+  background-repeat: no-repeat;
+  margin: 0 0 33px 0;
+}
+.save_edits_button {
+  width: 100%;
+  height: 60px;
+  border-radius: 0 0 12px 12px;
+  background-color: #165659;
+  color: #fff;
+  font-size: 20px;
+  font-weight: 600;
+  border: none;
+  border-top: 2px solid #0d4749;
+}
+
 @media screen and (max-width: 1280px) {
   .header {
     width: 100%;

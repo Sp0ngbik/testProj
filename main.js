@@ -250,18 +250,26 @@ function user_table_info() {
       userGenderee = "Пол не указан";
     }
     let user_table = $(".users_table");
-    let cell = $("<tr></tr>");
-    let username = $(`<td></td>`).text(`${$(".username").val()}`);
-    let lastName = $(`<td></td>`).text(`${$(".lastName").val()}`);
-    let userGender = $(`<td></td>`).text(`${userGenderee}`);
-    let userBirth = $(`<td></td>`).text(
-      `${$(".day_input").val()}. ${$(".mounth_input").val()}. ${$(
-        "#year"
-      ).val()}`
+    let cell = $(`<tr class="user_cell"></tr>`);
+    let username = $(`<td class="username_cell"></td>`).text(
+      `${$(".username").val()}`
     );
-    let userPhone = $(`<td></td>`).text(`${$(".phoneNumber").val()}`);
-    let userCard = $(`<td></td>`).text(`${$(".place").val()}`);
-    let userMail = $(`<td></td>`).text(`${$(".email").val()}`);
+    let lastName = $(`<td class="lastname_cell"></td>`).text(
+      `${$(".lastName").val()}`
+    );
+    let userGender = $(`<td class="gender_cell"></td>`).text(`${userGenderee}`);
+    let userBirth = $(`<td class="birthday_cell"></td>`).text(
+      `${$(".day_input").val()}.${$(".mounth_input").val()}.${$("#year").val()}`
+    );
+    let userPhone = $(`<td class="phonenumber_cell"></td>`).text(
+      `${$(".phoneNumber").val()}`
+    );
+    let userCard = $(`<td class="place_cell"></td>`).text(
+      `${$(".place").val()}`
+    );
+    let userMail = $(`<td class="email_cell"></td>`).text(
+      `${$(".email").val()}`
+    );
     let buttonEdit = $(
       `<td><button class="user_info_edit" id="user_edit_button">
       Редактировать</button></td>`
@@ -277,8 +285,23 @@ function user_table_info() {
       buttonEdit
     );
     user_table.append(cell);
-    console.log($(".user_info_edit"));
+    $(".user_info_edit").on("click", function (e) {
+      let block = $(e.target).parent().parent();
+      let blockArr = $(block).find("td");
+      let birthArr = $(blockArr[3]).text().split(".");
+      $(".username_edit").val($(blockArr[0]).text());
+      $(".lastName_edit").val($(blockArr[1]).text());
+      $(".day_input_edit").val(birthArr[0]);
+      $(".mounth_input_edit").val(birthArr[1]);
+      $(".year_input_edit").val(birthArr[2]);
+      $(".phoneNumber_edit").val($(blockArr[4]).text());
+      $(".email_edit").val($(blockArr[6]).text());
+    });
   });
 }
 
 user_table_info();
+
+function edtiUser() {}
+
+edtiUser();
