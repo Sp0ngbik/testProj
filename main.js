@@ -296,6 +296,12 @@ function user_table_info() {
       $(".year_input_edit").val(birthArr[2]);
       $(".phoneNumber_edit").val($(blockArr[4]).text());
       $(".email_edit").val($(blockArr[6]).text());
+      console.log($(blockArr[2]).text());
+      if ($(blockArr[2]).text() === "Мужчина") {
+        $(".radio_edit#male").prop("checked", true);
+      } else if ($(blockArr[2]).text() === "Женщина") {
+        $(".radio_edit#female").prop("checked", true);
+      }
     });
   });
 }
