@@ -164,7 +164,7 @@ function getData() {
     },
   };
 
-  console.log(userInfo.getUser);
+  // console.log(userInfo.getUser);
   return false;
 }
 function checkForRules() {
@@ -249,6 +249,10 @@ function user_table_info() {
     } else {
       userGenderee = "Пол не указан";
     }
+    let day_birth = $(".day_input");
+    let mounth_birth = $(".mounth_input");
+    let year_birth = $("#year");
+    // console.log($(".day_input"));
     let user_table = $(".users_table");
     let cell = $(`<tr class="user_cell"></tr>`);
     let username = $(`<td class="username_cell"></td>`).text(
@@ -259,7 +263,7 @@ function user_table_info() {
     );
     let userGender = $(`<td class="gender_cell"></td>`).text(`${userGenderee}`);
     let userBirth = $(`<td class="birthday_cell"></td>`).text(
-      `${$(".day_input").val()}.${$(".mounth_input").val()}.${$("#year").val()}`
+      `${$(day_birth).val()}.${$(mounth_birth).val()}.${$(year_birth).val()}`
     );
     let userPhone = $(`<td class="phonenumber_cell"></td>`).text(
       `${$(".phoneNumber").val()}`
@@ -296,12 +300,35 @@ function user_table_info() {
       $(".year_input_edit").val(birthArr[2]);
       $(".phoneNumber_edit").val($(blockArr[4]).text());
       $(".email_edit").val($(blockArr[6]).text());
-      console.log($(blockArr[2]).text());
       if ($(blockArr[2]).text() === "Мужчина") {
         $(".radio_edit#male").prop("checked", true);
       } else if ($(blockArr[2]).text() === "Женщина") {
         $(".radio_edit#female").prop("checked", true);
       }
+      $(".place_edit").val($(blockArr[5]).text());
+
+      $(".save_edits_button").on("click", function () {
+        $(block).find(".username_cell").text($(".username_edit").val());
+        $(block).find(".lastname_cell").text($(".lastName_edit").val());
+        $(block).find(".phonenumber_cell").text($(".phoneNumber_edit").val());
+        $(block).find(".email_cell").text($(".email_edit").val());
+        $(block)
+          .find(".birthday_cell")
+          .text(
+            `${$(".day_input_edit").val()}.${$(".mounth_input_edit").val()}.${$(
+              ".year_input_edit"
+            ).val()}`
+          );
+        $(block).find(".place_cell").text($(".place_edit").val());
+        console.log($(".radio_edit#male[type=radio]").is(":checked"));
+        if ($(".radio_edit#male[type=radio]").is(":checked")) {
+          $(block).find(".gender_cell").text("Мужчина");
+        } else if ($(".radio_edit#female[type=radio]").is(":checked")) {
+          $(block).find(".gender_cell").text("Женщина");
+        } else {
+          $(block).find(".gender_cell").text("Пол не указан");
+        }
+      });
     });
   });
 }

@@ -557,6 +557,8 @@
               <select type="datetime" id="year" name="date_year">
                 <option value="year">Год</option>
                 <option value="1998">1998</option>
+              <option value="2022">2022</option>
+
               </select>
             </div>
           </div>
@@ -600,7 +602,7 @@
       </table>
     </section>
     <section class="edit_modal">
-      <form onsubmit="editUser()" >
+      <form onsubmit="getData();return false" >
         <div class="form_fields_edit">
           <div class="user_tags">
             <input class="username_edit" autocomplete="off" id="name" type="text" placeholder="Имя">
@@ -608,9 +610,9 @@
           </div>
           <div class="radio_buttons">
             <input type="radio"  name="sex" value="male" class="radio_edit" id="male">
-              <label class="maleRadio" for="male">Мужской</label>
+              <label class="maleRadio" >Мужской</label>
             <input type="radio" class="radio_edit" name="sex" value="female" id="female">
-            <label class="femaleRadio" for="female">Женский</label>
+            <label class="femaleRadio">Женский</label>
             </div>
         <h2 class="birth_day_title_edit">Дата рождения</h2>
         <div class="birth_date_edit">
@@ -630,6 +632,7 @@
             <select type="datetime" id="year" name="date_year" class="year_input_edit">
               <option value="year">Год</option>
               <option value="1998">1998</option>
+              <option value="2022">2022</option>
             </select>
           </div>
         </div>
@@ -640,11 +643,13 @@
         <div class="select_coffee_bar">
           <h3>Выберите кофейню, в которой вы приобрели карту:</h3>
           
-          <select class="place"  type="text" placeholder="Брест. Карбышева, 32">
+          <select class="place_edit"  type="text" placeholder="Брест. Карбышева, 32">
             <option value="Карбышева">Брест. Карбышева, 32</option>
+            <option value="Орловская">Брест.Орловская</option>
+            <option value="Советская">Брест. Советская</option>
           </select>
         </div>
-        <button class="save_edits_button" id="button_send" type="submit">Отправить</button>
+        <button class="save_edits_button" id="button_send" type="submit">Сохранить</button>
         </form>
     </section>
     <footer class="footer">

@@ -1454,6 +1454,24 @@ body {
   border-top: 2px solid #0d4749;
 }
 
+.place_edit {
+  margin: 16px 0 33px;
+  padding: 11px 12px 11px 20px;
+  width: 100%;
+  color: #fff;
+  outline: none;
+  max-width: 488px;
+  height: 50px;
+  font-size: 18px;
+  max-height: 100%;
+  border-radius: 12px;
+  background-color: #0d4749;
+  border: 1px solid #0d4749;
+  background-image: url("./angle-down.svg");
+  appearance: none;
+  background-position: right 16.5px top 50%;
+  background-repeat: no-repeat;
+}
 @media screen and (max-width: 1280px) {
   .header {
     width: 100%;
