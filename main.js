@@ -164,7 +164,6 @@ function getData() {
     },
   };
 
-  // console.log(userInfo.getUser);
   return false;
 }
 function checkForRules() {
@@ -336,7 +335,6 @@ function user_table_info() {
             ).val()}`
           );
         $(block).find(".place_cell").text($(".place_edit").val());
-        console.log($(".radio_edit#male[type=radio]").is(":checked"));
         if ($(".radio_edit#male[type=radio]").is(":checked")) {
           $(block).find(".gender_cell").text("Мужчина");
         } else if ($(".radio_edit#female[type=radio]").is(":checked")) {
