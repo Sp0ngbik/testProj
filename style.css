@@ -790,7 +790,7 @@ body {
 }
 .rules_checkbox:checked + label::before {
   border-color: #118181;
-  background-image: url("./Checkbox-active.svg");
+  background-image: url("./img/Checkbox-active.svg");
 }
 
 .day_input option:hover {
@@ -846,12 +846,12 @@ body {
 
 .phoneNumber {
   margin: 16px 0;
-  background-image: url("./Phone.svg");
+  background-image: url("./img/Phone.svg");
   background-position: left 16px top 50%;
   background-repeat: no-repeat;
 }
 .email {
-  background-image: url("./EnvelopeSimple.svg");
+  background-image: url("./img/EnvelopeSimple.svg");
   background-position: left 16px top 50%;
   background-repeat: no-repeat;
   margin: 0 0 33px 0;
@@ -1371,14 +1371,14 @@ body {
   display: flex;
 }
 .username_edit {
-  background-image: url("./User.svg");
+  background-image: url("./img/User.svg");
   background-position: left 16px top 50%;
   background-repeat: no-repeat;
   margin: 20px 0;
   width: 380px;
 }
 .lastName_edit {
-  background-image: url("./User.svg");
+  background-image: url("./img/User.svg");
   background-position: left 16px top 50%;
   background-repeat: no-repeat;
   margin: 10px 0;

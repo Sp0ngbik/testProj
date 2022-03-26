@@ -489,7 +489,7 @@ body {
   .balance_cash_process_active > .balance_log_info_bonus {
     padding: 13px 19px 13px 0;
     margin: 0 0px 0 54px;
-    background-image: url("../Arrow-up.svg");
+    background-image: url("../img/Arrow-up.svg");
     object-fit: cover;
     background-position: right 0 top 50%;
   }
@@ -500,7 +500,7 @@ body {
     margin: 0 0 0 54px;
     max-width: 150px;
     padding: 0 20px 0 0;
-    background-image: url("../angle-down.svg");
+    background-image: url("../img/angle-down.svg");
     background-repeat: no-repeat;
     background-attachment: inherit;
     background-position: right 0 top 50%;
