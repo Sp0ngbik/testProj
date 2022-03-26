@@ -241,6 +241,13 @@ function close_model_food() {
 }
 function user_table_info() {
   $("#button_send").on("click", function () {
+    $("#form_add_user")
+      .addClass("form_container_off")
+      .removeClass("form_container_on");
+    $("#form_create_shadow")
+      .removeClass("form_create_shadow_on")
+      .addClass("form_create_shadow_off");
+
     let userGenderee;
     if ($(".radioButton#male[type=radio]").is(":checked")) {
       userGenderee = "Мужчина";
@@ -252,7 +259,6 @@ function user_table_info() {
     let day_birth = $(".day_input");
     let mounth_birth = $(".mounth_input");
     let year_birth = $("#year");
-    // console.log($(".day_input"));
     let user_table = $(".users_table");
     let cell = $(`<tr class="user_cell"></tr>`);
     let username = $(`<td class="username_cell"></td>`).text(
@@ -274,8 +280,9 @@ function user_table_info() {
     let userMail = $(`<td class="email_cell"></td>`).text(
       `${$(".email").val()}`
     );
+
     let buttonEdit = $(
-      `<td><button class="user_info_edit" id="user_edit_button">
+      `<td><button class="user_info_edit" >
       Редактировать</button></td>`
     );
     cell.append(
@@ -290,7 +297,11 @@ function user_table_info() {
     );
     user_table.append(cell);
     $(".user_info_edit").on("click", function (e) {
-      let block = $(e.target).parent().parent();
+      $("#edit_form").addClass("edit_modal_on").removeClass("edit_modal_off");
+      $("#form_create_shadow")
+        .addClass("form_create_shadow_on")
+        .removeClass("form_create_shadow_off");
+      let block = $(e.currentTarget).parent().parent();
       let blockArr = $(block).find("td");
       let birthArr = $(blockArr[3]).text().split(".");
       $(".username_edit").val($(blockArr[0]).text());
@@ -308,6 +319,11 @@ function user_table_info() {
       $(".place_edit").val($(blockArr[5]).text());
 
       $(".save_edits_button").on("click", function () {
+        $("#form_create_shadow")
+          .addClass("form_create_shadow_off")
+          .removeClass("form_create_shadow_on");
+        $("#edit_form").addClass("edit_modal_off").removeClass("edit_modal_on");
+
         $(block).find(".username_cell").text($(".username_edit").val());
         $(block).find(".lastname_cell").text($(".lastName_edit").val());
         $(block).find(".phonenumber_cell").text($(".phoneNumber_edit").val());
@@ -328,13 +344,71 @@ function user_table_info() {
         } else {
           $(block).find(".gender_cell").text("Пол не указан");
         }
+        block = 0;
+      });
+      $("#form_create_shadow").on("click", function () {
+        block = 0;
+
+        $("#form_create_shadow")
+          .removeClass("form_create_shadow_on")
+          .addClass("form_create_shadow_off");
+        $("#edit_form").addClass("edit_modal_off").removeClass("edit_modal_on");
+        $(".username").val("");
+        $(".lastName").val("");
+        $(".radioButton#male").prop("checked", false);
+        $(".radioButton#female").prop("checked", false);
+        $(".day_input").val("day");
+        $(".mounth_input").val("mounth");
+        $(".year_input").val("year");
+        $(".phoneNumber").val("");
+        $(".place").val("Карбышева");
+        $(".email").val("");
+        $(".rules_checkbox").prop("checked", false);
+        $(".usernme_edit").val("");
+        $(".lastName_edit").val("");
+        $(".radio_edit#male").prop("checked", false);
+        $(".radio_edit#female").prop("checked", false);
+        $(".day_input_edit").val("day");
+        $(".mounth_input_edit").val("mounth");
+        $(".year_input_edit").val("year");
+        $(".phoneNumber_edit").val("");
+        $(".email_edit").val("");
+        $(".place_edit").val("Карбышева");
       });
     });
+    $(".username").val("");
+    $(".lastName").val("");
+    $(".radioButton#male").prop("checked", false);
+    $(".radioButton#female").prop("checked", false);
+    $(".day_input").val("day");
+    $(".mounth_input").val("mounth");
+    $(".year_input").val("year");
+    $(".phoneNumber").val("");
+    $(".place").val("Карбышева");
+    $(".email").val("");
+    $(".rules_checkbox").prop("checked", false);
   });
 }
 
 user_table_info();
 
-function edtiUser() {}
+function addUserForm() {
+  $(".add_user_button").on("click", function (e) {
+    $("#form_create_shadow").on("click", function () {
+      $("#form_add_user")
+        .removeClass("form_container_on")
+        .addClass("form_container_off");
+      $("#form_create_shadow")
+        .addClass("form_create_shadow_off")
+        .removeClass("form_create_shadow_on");
+    });
+    $("#form_add_user")
+      .removeClass("form_container_off")
+      .addClass("form_container_on");
+    $("#form_create_shadow")
+      .addClass("form_create_shadow_on")
+      .removeClass("form_create_shadow_off");
+  });
+}
 
-edtiUser();
+addUserForm();

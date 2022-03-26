@@ -108,6 +108,8 @@
           </div>
         </div>
 </section>
+<div  id="form_create_shadow" class="form_create_shadow_off" ></div>
+
     <section class="our_adress_and_food first_block">
       <a class="adress-filter" href="#">
         <div class="our_adress_links">
@@ -190,6 +192,7 @@
         </div>
      
     </section>
+
     <section class="paragraph_food" id="breakfast_section">
       <nav class="food_nav_bar">
         <div data-filter="desert_filter" class="deserts">Десерты</div>
@@ -522,23 +525,23 @@
             <button class="thxButton"  type="submit">Спасибо</button>
             </section>
             <section class="form_block">
-      <div class="form_container">
-        <div class="form_head">
-          <h2>Анкета гостя</h2>
-        </div>
-        <h3>Заполните все поля и станьте обладателем карты постоянного гостя</h3>
-        <form  onsubmit="getData();return false">
-          <div class="form_fields">
-            <div class="user_tags">
-              <input class="username" autocomplete="off" id="name" type="text" placeholder="Имя">
+              <div id="form_add_user"  class="form_container form_container_off">
+                <div class="form_head">
+                  <h2>Анкета гостя</h2>
+                </div>
+                <h3>Заполните все поля и станьте обладателем карты постоянного гостя</h3>
+                <form  onsubmit="getData();return false">
+                  <div class="form_fields">
+                    <div class="user_tags">
+                      <input class="username" autocomplete="off" id="name" type="text" placeholder="Имя">
               <input class="lastName" autocomplete="off" id="lastname" type="text" placeholder="Фамилия">
             </div>
-          <div class="radio_buttons">
+            <div class="radio_buttons">
           <input type="radio"  name="sex" value="male" class="radioButton" id="male">
             <label class="maleRadio" for="male">Мужской</label>
           <input type="radio" class="radioButton" name="sex" value="female" id="female">
           <label class="femaleRadio" for="female">Женский</label>
-          </div>
+        </div>
           <h2 class="birth_day_title">Дата рождения</h2>
           <div class="birth_date">
             <div class="birth_day">
@@ -554,11 +557,11 @@
               </select>
             </div>
             <div class="birth_year">
-              <select type="datetime" id="year" name="date_year">
+              <select type="datetime" id="year" name="date_year" class="year_input">
                 <option value="year">Год</option>
                 <option value="1998">1998</option>
-              <option value="2022">2022</option>
-
+                <option value="2022">2022</option>
+                
               </select>
             </div>
           </div>
@@ -571,23 +574,22 @@
             
             <select class="place"  type="text" placeholder="Брест. Карбышева, 32">
               <option value="Карбышева">Брест. Карбышева, 32</option>
-            <option value="Орловская">Брест.Орловская</option>
-            <option value="Советская">Брест. Советская</option>
-
+              <option value="Орловская">Брест.Орловская</option>
+              <option value="Советская">Брест. Советская</option>
             </select>
-          </div>
-          <div class="permission_container">
-            <input class="rules_checkbox" id="request" type="checkbox" onchange="checkForRules()">
-            <label class="custom_checkbox" for="request">Я разрешаю ООО «ПараграфБрест» использовать указанные мной данные в маркетинговых целях.</label>
-          </div>
-          <h3 class="terms">Необходимо согласиться с условиями</h3>
         </div>
-          <button class="disableButton" id="button_send" type="submit">Отправить</button>
-          </form>
+        <div class="permission_container">
+          <input class="rules_checkbox" id="request" type="checkbox" onchange="checkForRules()">
+          <label class="custom_checkbox" for="request">Я разрешаю ООО «ПараграфБрест» использовать указанные мной данные в маркетинговых целях.</label>
+        </div>
+        <h3 class="terms">Необходимо согласиться с условиями</h3>
       </div>
-    </section>
-    <section class="table_of_users">
-      <table class="users_table" border="0">
+      <button class="disableButton" id="button_send" type="submit">Отправить</button>
+    </form>
+  </div>
+</section>
+<section class="table_of_users">
+  <table class="users_table" border="0">
         <tr class="table_of_users_head">
           <th>Имя</th>
           <th>Фамилия</th>
@@ -601,7 +603,8 @@
     
       </table>
     </section>
-    <section class="edit_modal">
+    <button class="button_style add_user_button">Добавить пользователя</button>
+    <section id="edit_form" class="edit_modal_off">
       <form onsubmit="getData();return false" >
         <div class="form_fields_edit">
           <div class="user_tags">
